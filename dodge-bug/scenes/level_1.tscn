@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://2vi5701wmmtv"]
+
+[ext_resource type="Texture2D" uid="uid://gftq7snuyi2v" path="res://icon.svg" id="1_014kd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bswci"]
+size = Vector2(129, 126)
+
+[node name="level 1" type="Node2D" unique_id=519151207]
+
+[node name="beetle" type="CharacterBody2D" parent="." unique_id=1121395300]
+position = Vector2(250, 152)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="beetle" unique_id=635619805]
+texture = ExtResource("1_014kd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="beetle" unique_id=452425949]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_bswci")
