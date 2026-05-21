@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c3yi0wtlj07wd" path="res://prefabs/beetle.tscn" id="1_014kd"]
 [ext_resource type="PackedScene" uid="uid://bvkm1vu04jt6m" path="res://prefabs/rocks.tscn" id="2_bswci"]
+[ext_resource type="PackedScene" uid="uid://ccncxhesaptmk" path="res://prefabs/walls.tscn" id="3_rus8k"]
 
 [node name="level 1" type="Node2D" unique_id=519151207]
 
@@ -13,10 +14,22 @@ zoom = Vector2(0.5, 0.5)
 position = Vector2(1129, 76)
 
 [node name="rocks" parent="." unique_id=1385581139 instance=ExtResource("2_bswci")]
-position = Vector2(621, 564)
+position = Vector2(311, 282)
 
 [node name="rocks2" parent="." unique_id=1521068965 instance=ExtResource("2_bswci")]
-position = Vector2(1673, 906)
+position = Vector2(1990, 282)
 
 [node name="rocks3" parent="." unique_id=477295588 instance=ExtResource("2_bswci")]
-position = Vector2(620, 1175)
+position = Vector2(311, 1124)
+
+[node name="rocks4" parent="." unique_id=1351111779 instance=ExtResource("2_bswci")]
+position = Vector2(1990, 1124)
+
+[node name="rocks5" parent="." unique_id=17242910 instance=ExtResource("2_bswci")]
+position = Vector2(1147, 642)
+
+[node name="rocks6" parent="." unique_id=1044489272 instance=ExtResource("2_bswci")]
+position = Vector2(1148, 1262)
+
+[node name="walls" parent="." unique_id=1733785245 instance=ExtResource("3_rus8k")]
+position = Vector2(1195, -30)

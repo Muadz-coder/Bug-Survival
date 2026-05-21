@@ -3,17 +3,16 @@
 [ext_resource type="Texture2D" uid="uid://bife4740ovrdb" path="res://sprites/rocks1.png" id="1_2l77g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4nkto"]
-size = Vector2(1244, 24)
+size = Vector2(205, 46.5)
 
 [node name="rocks" type="StaticBody2D" unique_id=1385581139]
-position = Vector2(2, 16)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1081020205]
-position = Vector2(0, 173.875)
-scale = Vector2(9.6875, 5.8476563)
+texture_filter = 1
+scale = Vector2(6.424, 3)
 texture = ExtResource("1_2l77g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1075745759]
-position = Vector2(-3, -6)
+position = Vector2(-0.5, 0.75)
 shape = SubResource("RectangleShape2D_4nkto")
