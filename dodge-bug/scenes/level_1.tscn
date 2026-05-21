@@ -1,8 +1,22 @@
 [gd_scene format=3 uid="uid://2vi5701wmmtv"]
 
 [ext_resource type="PackedScene" uid="uid://c3yi0wtlj07wd" path="res://prefabs/beetle.tscn" id="1_014kd"]
+[ext_resource type="PackedScene" uid="uid://bvkm1vu04jt6m" path="res://prefabs/rocks.tscn" id="2_bswci"]
 
 [node name="level 1" type="Node2D" unique_id=519151207]
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=604065292]
+position = Vector2(1147, 642)
+zoom = Vector2(0.5, 0.5)
+
 [node name="beetle" parent="." unique_id=878632873 instance=ExtResource("1_014kd")]
-position = Vector2(62, 66)
+position = Vector2(1129, 76)
+
+[node name="rocks" parent="." unique_id=1385581139 instance=ExtResource("2_bswci")]
+position = Vector2(621, 564)
+
+[node name="rocks2" parent="." unique_id=1521068965 instance=ExtResource("2_bswci")]
+position = Vector2(1673, 906)
+
+[node name="rocks3" parent="." unique_id=477295588 instance=ExtResource("2_bswci")]
+position = Vector2(620, 1175)
