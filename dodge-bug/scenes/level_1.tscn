@@ -11,25 +11,37 @@ position = Vector2(1147, 642)
 zoom = Vector2(0.5, 0.5)
 
 [node name="beetle" parent="." unique_id=878632873 instance=ExtResource("1_014kd")]
-position = Vector2(1129, 76)
+position = Vector2(1160, 69)
 
 [node name="rocks" parent="." unique_id=1385581139 instance=ExtResource("2_bswci")]
-position = Vector2(311, 282)
+position = Vector2(237, 220)
 
 [node name="rocks2" parent="." unique_id=1521068965 instance=ExtResource("2_bswci")]
-position = Vector2(1990, 282)
+position = Vector2(2066, 220)
 
 [node name="rocks3" parent="." unique_id=477295588 instance=ExtResource("2_bswci")]
-position = Vector2(311, 1124)
+position = Vector2(236, 1130)
 
 [node name="rocks4" parent="." unique_id=1351111779 instance=ExtResource("2_bswci")]
-position = Vector2(1990, 1124)
+position = Vector2(2066, 1130)
 
 [node name="rocks5" parent="." unique_id=17242910 instance=ExtResource("2_bswci")]
-position = Vector2(1147, 642)
+position = Vector2(1147, 616)
 
 [node name="rocks6" parent="." unique_id=1044489272 instance=ExtResource("2_bswci")]
-position = Vector2(1148, 1262)
+position = Vector2(1147, 1203)
 
 [node name="walls" parent="." unique_id=1733785245 instance=ExtResource("3_rus8k")]
-position = Vector2(1195, -30)
+position = Vector2(682, -38)
+
+[node name="rocks7" parent="." unique_id=1027781795 instance=ExtResource("2_bswci")]
+position = Vector2(679, 900)
+
+[node name="rocks8" parent="." unique_id=1972369439 instance=ExtResource("2_bswci")]
+position = Vector2(1622, 900)
+
+[node name="rocks9" parent="." unique_id=219048619 instance=ExtResource("2_bswci")]
+position = Vector2(679, 423)
+
+[node name="rocks10" parent="." unique_id=326786196 instance=ExtResource("2_bswci")]
+position = Vector2(1624, 423)

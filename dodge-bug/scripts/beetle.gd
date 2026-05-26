@@ -3,8 +3,8 @@ extends CharacterBody2D
 
 
 
-const SPEED = 500.0
-const JUMP_VELOCITY = -1000.0
+const SPEED = 450.0
+const JUMP_VELOCITY = -800.0
 var start_position = Vector2(1159, 76)
 
 
