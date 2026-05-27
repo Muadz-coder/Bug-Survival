@@ -1,21 +1,19 @@
 [gd_scene format=3 uid="uid://dtjomentacplv"]
 
 [ext_resource type="Texture2D" uid="uid://gftq7snuyi2v" path="res://icon.svg" id="1_yqeox"]
+[ext_resource type="Texture2D" uid="uid://coek603fdl1tl" path="res://sprites/New Piskel (1).png" id="2_vjb58"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vjb58"]
 texture = ExtResource("1_yqeox")
 modulate_color = Color(0.62967473, 0.62967473, 0.6296747, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4h3mk"]
-bg_color = Color(0.57215935, 0.63567287, 0.352477, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-corner_detail = 16
-shadow_color = Color(0, 0, 0, 1)
-shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
+[sub_resource type="AtlasTexture" id="AtlasTexture_con2f"]
+atlas = ExtResource("2_vjb58")
+region = Rect2(-0.0118255615, -0.07570553, 128.32133, 128.22075)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjb58"]
+atlas = ExtResource("1_yqeox")
+region = Rect2(12.95018, 14.232994, 105.556656, 102.73428)
 
 [node name="main_menu" type="Control" unique_id=1765270092]
 layout_mode = 3
@@ -30,36 +28,176 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 2.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_vjb58")
 
-[node name="Button" type="Button" parent="." unique_id=212879603]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1409191574]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -119.875
-offset_top = 158.0
-offset_right = 119.875
-offset_bottom = 254.0
+offset_left = -262.0
+offset_top = -64.0
+offset_right = 262.0
+offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.05044494, 0.07307043, 0.033809844, 1)
-theme_override_font_sizes/font_size = 70
-theme_override_styles/normal = SubResource("StyleBoxFlat_4h3mk")
-text = "start"
+
+[node name="Control" type="Control" parent="HBoxContainer" unique_id=725929659]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="ButtonBug" type="TextureButton" parent="HBoxContainer/Control" unique_id=1350175434]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_con2f")
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Control/ButtonBug" unique_id=1194733131]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.5
+offset_top = -57.5
+offset_right = 58.5
+offset_bottom = 57.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_vjb58")
+
+[node name="Control2" type="Control" parent="HBoxContainer" unique_id=577881780]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="ButtonSpider" type="TextureButton" parent="HBoxContainer/Control2" unique_id=942842697]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_con2f")
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer/Control2/ButtonSpider" unique_id=2024573922]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.5
+offset_top = -57.5
+offset_right = 58.5
+offset_bottom = 57.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_vjb58")
+
+[node name="Control3" type="Control" parent="HBoxContainer" unique_id=1327193072]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="ButtonBeetle" type="TextureButton" parent="HBoxContainer/Control3" unique_id=1478148025]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_con2f")
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer/Control3/ButtonBeetle" unique_id=2127758497]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.5
+offset_top = -57.5
+offset_right = 58.5
+offset_bottom = 57.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_vjb58")
+
+[node name="Control4" type="Control" parent="HBoxContainer" unique_id=466100879]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="ButtonPill" type="TextureButton" parent="HBoxContainer/Control4" unique_id=1825416941]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_con2f")
+
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer/Control4/ButtonPill" unique_id=1382261655]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.5
+offset_top = -57.5
+offset_right = 58.5
+offset_bottom = 57.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_vjb58")
 
 [node name="Label" type="Label" parent="." unique_id=12959172]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -150.5
+offset_left = -142.5
 offset_top = 16.0
-offset_right = 146.5
+offset_right = 154.5
 offset_bottom = 143.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 60
