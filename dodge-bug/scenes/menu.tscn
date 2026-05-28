@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://dtjomentacplv"]
 
+[ext_resource type="Script" uid="uid://bb2m6f314pqvr" path="res://scripts/menu.gd" id="1_mhnvy"]
 [ext_resource type="Texture2D" uid="uid://gftq7snuyi2v" path="res://icon.svg" id="1_yqeox"]
 [ext_resource type="Texture2D" uid="uid://coek603fdl1tl" path="res://sprites/New Piskel (1).png" id="2_vjb58"]
+[ext_resource type="Script" uid="uid://dgncyw0c3i6bd" path="res://scripts/buttons_move.gd" id="3_con2f"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vjb58"]
 texture = ExtResource("1_yqeox")
@@ -22,6 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_mhnvy")
 
 [node name="Panel" type="Panel" parent="." unique_id=1360259724]
 layout_mode = 1
@@ -43,12 +46,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -262.0
+offset_left = -283.0
 offset_top = -64.0
-offset_right = 262.0
+offset_right = 283.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 18
 
 [node name="Control" type="Control" parent="HBoxContainer" unique_id=725929659]
 custom_minimum_size = Vector2(128, 128)
@@ -69,6 +73,7 @@ offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = SubResource("AtlasTexture_con2f")
+script = ExtResource("3_con2f")
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/Control/ButtonBug" unique_id=1194733131]
 layout_mode = 1
@@ -104,6 +109,7 @@ offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = SubResource("AtlasTexture_con2f")
+script = ExtResource("3_con2f")
 
 [node name="TextureRect2" type="TextureRect" parent="HBoxContainer/Control2/ButtonSpider" unique_id=2024573922]
 layout_mode = 1
@@ -139,6 +145,7 @@ offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = SubResource("AtlasTexture_con2f")
+script = ExtResource("3_con2f")
 
 [node name="TextureRect3" type="TextureRect" parent="HBoxContainer/Control3/ButtonBeetle" unique_id=2127758497]
 layout_mode = 1
@@ -174,6 +181,7 @@ offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = SubResource("AtlasTexture_con2f")
+script = ExtResource("3_con2f")
 
 [node name="TextureRect4" type="TextureRect" parent="HBoxContainer/Control4/ButtonPill" unique_id=1382261655]
 layout_mode = 1
@@ -204,3 +212,8 @@ theme_override_font_sizes/font_size = 60
 text = "DodgeBug"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="HBoxContainer/Control/ButtonBug" to="." method="_on_button_bug_pressed"]
+[connection signal="pressed" from="HBoxContainer/Control2/ButtonSpider" to="." method="_on_button_spider_pressed"]
+[connection signal="pressed" from="HBoxContainer/Control3/ButtonBeetle" to="." method="_on_button_beetle_pressed"]
+[connection signal="pressed" from="HBoxContainer/Control4/ButtonPill" to="." method="_on_button_pill_pressed"]
