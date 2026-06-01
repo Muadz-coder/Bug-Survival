@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://b754py6ljge21"]
 
-[ext_resource type="Script" uid="uid://dpv76ugpq2y81" path="res://scripts/beetle.gd" id="1_trb4m"]
+[ext_resource type="Script" uid="uid://cbxtlqibsbvt6" path="res://scripts/bug.gd" id="1_trb4m"]
 [ext_resource type="Texture2D" uid="uid://gftq7snuyi2v" path="res://icon.svg" id="2_jrdtq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27kw1"]
 size = Vector2(130, 128)
 
-[node name="beetle" type="CharacterBody2D" unique_id=878632873]
+[node name="bug" type="CharacterBody2D" unique_id=878632873]
 script = ExtResource("1_trb4m")
 metadata/_edit_group_ = true
 
