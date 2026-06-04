@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://2vi5701wmmtv"]
 
 [ext_resource type="PackedScene" uid="uid://bvkm1vu04jt6m" path="res://prefabs/rocks.tscn" id="2_bswci"]
+[ext_resource type="Script" uid="uid://c04yv1k4qd62w" path="res://scripts/spawn_point.gd" id="3_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://ccncxhesaptmk" path="res://prefabs/walls.tscn" id="3_rus8k"]
 
 [node name="level 1" type="Node2D" unique_id=519151207]
+script = ExtResource("3_5xbjy")
+
+[node name="SpawnPoint" type="Marker2D" parent="." unique_id=1414365261]
+position = Vector2(1150, 1127)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=604065292]
 position = Vector2(1147, 642)

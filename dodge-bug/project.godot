@@ -15,6 +15,10 @@ run/main_scene="uid://2vi5701wmmtv"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PlayerSelect="*uid://dgsyer41h8qyg"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
