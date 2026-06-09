@@ -6,6 +6,7 @@ const SPEED = 400
 const JUMP_VELOCITY = -1000
 var start_position = Vector2(1149, 1091)
 
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
