@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dfhwo36le7fg5"]
+
+[ext_resource type="Texture2D" uid="uid://gftq7snuyi2v" path="res://icon.svg" id="1_ba3ke"]
+[ext_resource type="Script" uid="uid://dte5epabwcbgh" path="res://scripts/spikes.gd" id="1_hpe17"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hpe17"]
+size = Vector2(127, 126.5)
+
+[node name="Spikes" type="Area2D" unique_id=415653108]
+script = ExtResource("1_hpe17")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1315769093]
+texture = ExtResource("1_ba3ke")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2028668250]
+position = Vector2(0.5, 0.75)
+shape = SubResource("RectangleShape2D_hpe17")
+
+[node name="LifeTimer" type="Timer" parent="." unique_id=981514847]
+wait_time = 2.0
+one_shot = true
+autostart = true

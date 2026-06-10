@@ -2,10 +2,15 @@ extends CharacterBody2D
 
 @onready var animation : AnimatedSprite2D = $AnimatedSprite2D
 
+
 const SPEED = 400
 const JUMP_VELOCITY = -1000
 var start_position = Vector2(1149, 1091)
 
+
+
+func _on_life_timer_timeout():
+	queue_free()
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
