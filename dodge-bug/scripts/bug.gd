@@ -7,6 +7,10 @@ const JUMP_VELOCITY = -1000
 var start_position = Vector2(1149, 1091)
 
 
+func _ready() -> void:
+	# This automatically saves the exact coordinates where Level 1 spawned the bug!
+	start_position = global_position
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
