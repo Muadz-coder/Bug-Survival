@@ -2,12 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://dfhwo36le7fg5" path="res://prefabs/spikes.tscn" id="2_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://bvkm1vu04jt6m" path="res://prefabs/rocks.tscn" id="2_bswci"]
+[ext_resource type="PackedScene" uid="uid://d2d8dwv5j34t6" path="res://prefabs/warning.tscn" id="3_4nkto"]
 [ext_resource type="Script" uid="uid://c04yv1k4qd62w" path="res://scripts/spawn_point.gd" id="3_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://ccncxhesaptmk" path="res://prefabs/walls.tscn" id="3_rus8k"]
 
 [node name="level 1" type="Node2D" unique_id=519151207]
 script = ExtResource("3_5xbjy")
-pill_scene = ExtResource("2_5xbjy")
+spike_scene = ExtResource("2_5xbjy")
+warning_scene = ExtResource("3_4nkto")
 
 [node name="SpawnPoint" type="Marker2D" parent="." unique_id=1414365261]
 position = Vector2(1147, 1127)
@@ -42,8 +44,14 @@ position = Vector2(924, -65)
 [node name="SpawnPoint10" type="Marker2D" parent="SpawnPoints" unique_id=11708323]
 position = Vector2(922, -984)
 
+[node name="SpawnPoint11" type="Marker2D" parent="SpawnPoints" unique_id=704576155]
+
 [node name="SpawnTimer" type="Timer" parent="." unique_id=465210053]
 wait_time = 5.0
+autostart = true
+
+[node name="SpawnTimerW" type="Timer" parent="." unique_id=1536064510]
+wait_time = 3.5
 autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=604065292]
@@ -84,3 +92,4 @@ position = Vector2(679, 423)
 position = Vector2(1624, 423)
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="SpawnTimerW" to="." method="_on_spawn_timer_w_timeout"]

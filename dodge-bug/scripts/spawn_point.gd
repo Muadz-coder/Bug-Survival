@@ -1,13 +1,17 @@
 extends Node2D
 
-@export var pill_scene: PackedScene   
+@export var spike_scene: PackedScene
+@export var warning_scene: PackedScene
+
 @onready var spawn_points = $SpawnPoints.get_children()
 @onready var spawn_point = $SpawnPoint
-@onready var spawn_timer = $SpawnTimer
+@onready var spike_timer = $SpawnTimer
+@onready var warning_timer = $SpawnTimerW
 
+var pending_spike_positions: Array = []
 
 func _ready():
-	# Spawn the selected player
+	# Spawn selected player
 	var player_scene_path = "res://prefabs/%s.tscn" % PlayerSelect.selected_player
 	var player_scene = load(player_scene_path)
 	var player = player_scene.instantiate()
@@ -19,11 +23,20 @@ func get_random_spawn_point():
 	return spawn_points[randi() % spawn_points.size()]
 
 
+func _on_spawn_timer_w_timeout() -> void:
+	pending_spike_positions.clear()
 
-
-func _on_spawn_timer_timeout() -> void:
 	for i in range(3):
-		var pill = pill_scene.instantiate()
 		var sp = get_random_spawn_point()
-		pill.global_position = sp.global_position
-		add_child(pill)
+		pending_spike_positions.append(sp.global_position)
+
+		var warning = warning_scene.instantiate()
+		warning.global_position = sp.global_position
+		add_child(warning)
+
+	await get_tree().create_timer(1.0).timeout
+
+	for pos in pending_spike_positions:
+		var spike = spike_scene.instantiate()
+		spike.global_position = pos
+		add_child(spike)
