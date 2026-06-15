@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var animation : AnimatedSprite2D = $AnimatedSprite2D
 
 const SPEED = 400
-const JUMP_VELOCITY = -1000
+const JUMP_VELOCITY = -725
 var start_position = Vector2(1149, 1091)
 var jump_count = 0
 var max_jumps = 2

@@ -26,7 +26,7 @@ func get_random_spawn_point():
 func _on_spawn_timer_w_timeout() -> void:
 	pending_spike_positions.clear()
 
-	for i in range(3):
+	for i in range(5):
 		var sp = get_random_spawn_point()
 		pending_spike_positions.append(sp.global_position)
 

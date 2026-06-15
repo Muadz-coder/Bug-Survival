@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://bvkm1vu04jt6m" path="res://prefabs/rocks.tscn" id="2_bswci"]
 [ext_resource type="PackedScene" uid="uid://d2d8dwv5j34t6" path="res://prefabs/warning.tscn" id="3_4nkto"]
 [ext_resource type="Script" uid="uid://c04yv1k4qd62w" path="res://scripts/spawn_point.gd" id="3_5xbjy"]
-[ext_resource type="PackedScene" uid="uid://ccncxhesaptmk" path="res://prefabs/walls.tscn" id="3_rus8k"]
 
 [node name="level 1" type="Node2D" unique_id=519151207]
 script = ExtResource("3_5xbjy")
@@ -15,36 +14,37 @@ warning_scene = ExtResource("3_4nkto")
 position = Vector2(1147, 1127)
 
 [node name="SpawnPoints" type="Marker2D" parent="." unique_id=255139254]
-position = Vector2(1147, 1127)
+position = Vector2(1149, 1127)
 
 [node name="SpawnPoint2" type="Marker2D" parent="SpawnPoints" unique_id=2085420130]
-position = Vector2(474, -317)
+position = Vector2(470, -316)
 
 [node name="SpawnPoint3" type="Marker2D" parent="SpawnPoints" unique_id=2067161062]
-position = Vector2(-465, -317)
+position = Vector2(-470, -316)
 
 [node name="SpawnPoint4" type="Marker2D" parent="SpawnPoints" unique_id=1947609872]
-position = Vector2(-913, -77)
+position = Vector2(-916, -86)
 
 [node name="SpawnPoint5" type="Marker2D" parent="SpawnPoints" unique_id=30529753]
-position = Vector2(-471, -796)
+position = Vector2(-470, -791)
 
 [node name="SpawnPoint6" type="Marker2D" parent="SpawnPoints" unique_id=162523183]
-position = Vector2(478, -776)
+position = Vector2(475, -790)
 
 [node name="SpawnPoint7" type="Marker2D" parent="SpawnPoints" unique_id=1607066349]
-position = Vector2(-912, -984)
+position = Vector2(-914, -992)
 
 [node name="SpawnPoint8" type="Marker2D" parent="SpawnPoints" unique_id=2038709682]
-position = Vector2(0, -577)
+position = Vector2(-4, -596)
 
 [node name="SpawnPoint9" type="Marker2D" parent="SpawnPoints" unique_id=1450160634]
-position = Vector2(924, -65)
+position = Vector2(915, -83)
 
 [node name="SpawnPoint10" type="Marker2D" parent="SpawnPoints" unique_id=11708323]
-position = Vector2(922, -984)
+position = Vector2(922, -993)
 
 [node name="SpawnPoint11" type="Marker2D" parent="SpawnPoints" unique_id=704576155]
+position = Vector2(-3, -10)
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=465210053]
 wait_time = 5.0
@@ -75,9 +75,6 @@ position = Vector2(1147, 616)
 
 [node name="rocks6" parent="." unique_id=1044489272 instance=ExtResource("2_bswci")]
 position = Vector2(1147, 1203)
-
-[node name="walls" parent="." unique_id=1733785245 instance=ExtResource("3_rus8k")]
-position = Vector2(682, -38)
 
 [node name="rocks7" parent="." unique_id=1027781795 instance=ExtResource("2_bswci")]
 position = Vector2(679, 900)
