@@ -9,9 +9,10 @@ extends Node2D
 @onready var spawn_point = $SpawnPoint
 @onready var spike_timer = $SpawnTimer
 @onready var warning_timer = $SpawnTimerW
-
+@onready var fruit_timer = $SpawnTimerF
 
 var pending_spike_positions: Array = []
+var available_fruit_spawns: Array = []
 
 func _ready():
 	# Spawn selected player
@@ -21,12 +22,10 @@ func _ready():
 	add_child(player)
 	player.position = spawn_point.position
 
+	available_fruit_spawns = spawn_points2.duplicate()
 
 func get_random_spawn_point():
 	return spawn_points[randi() % spawn_points.size()]
-
-func get_random_spawn_points2():
-	return spawn_points2[randi() % spawn_points2.size()]
 
 func _on_spawn_timer_w_timeout() -> void:
 	pending_spike_positions.clear()
@@ -46,34 +45,22 @@ func _on_spawn_timer_w_timeout() -> void:
 		spike.global_position = pos
 		add_child(spike)
 
-
-
-var occupied_points := {}
-
 func _on_spawn_timer_f_timeout() -> void:
-	var available := []
-
-	# Collect all spawn points that are NOT occupied
-	for sp in spawn_points2:
-		if not occupied_points.has(sp):
-			available.append(sp)
-
-	# If no free points, stop
-	if available.is_empty():
+	if available_fruit_spawns.is_empty():
+		fruit_timer.stop()
+		print("All fruit spawn points have been used.")
 		return
 
-	# Spawn up to 3 fruits on free points
-	for i in range(min(3, available.size())):
-		var sp = available.pick_random()
-		available.erase(sp)
+	var index = randi() % available_fruit_spawns.size()
+	var sp = available_fruit_spawns[index]
 
-		var fruit = fruit_scene.instantiate()
-		fruit.global_position = sp.global_position
-		add_child(fruit)
+	# Remove this spawn point so it can't be used again
+	available_fruit_spawns.remove_at(index)
 
-		# Mark spawn point as occupied
-		occupied_points[sp] = fruit
+	var fruit = fruit_scene.instantiate()
+	fruit.global_position = sp.global_position
+	add_child(fruit)
 
-		# Free the point when fruit disappears
-		fruit.tree_exited.connect(func():
-			occupied_points.erase(sp))
+	if available_fruit_spawns.is_empty():
+		fruit_timer.stop()
+		print("All fruit spawn points have been used.")
