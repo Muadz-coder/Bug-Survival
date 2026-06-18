@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://h3mmd7j65nqs"]
+
+[ext_resource type="Texture2D" uid="uid://gftq7snuyi2v" path="res://icon.svg" id="1_6ccc1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lwjts"]
+size = Vector2(55, 86)
+
+[node name="Fruits" type="Area2D" unique_id=1706718555]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1197940145]
+position = Vector2(-0.4999981, 9.536743e-07)
+scale = Vector2(0.42968753, 0.671875)
+texture = ExtResource("1_6ccc1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2056764393]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_lwjts")
