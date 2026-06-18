@@ -4,11 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://bvkm1vu04jt6m" path="res://prefabs/rocks.tscn" id="2_bswci"]
 [ext_resource type="PackedScene" uid="uid://d2d8dwv5j34t6" path="res://prefabs/warning.tscn" id="3_4nkto"]
 [ext_resource type="Script" uid="uid://c04yv1k4qd62w" path="res://scripts/spawn_point.gd" id="3_5xbjy"]
+[ext_resource type="PackedScene" uid="uid://h3mmd7j65nqs" path="res://prefabs/fruits.tscn" id="4_4nkto"]
 
 [node name="level 1" type="Node2D" unique_id=519151207]
 script = ExtResource("3_5xbjy")
 spike_scene = ExtResource("2_5xbjy")
 warning_scene = ExtResource("3_4nkto")
+fruit_scene = ExtResource("4_4nkto")
 
 [node name="SpawnPoint" type="Marker2D" parent="." unique_id=1414365261]
 position = Vector2(1147, 1127)
@@ -46,12 +48,49 @@ position = Vector2(922, -993)
 [node name="SpawnPoint11" type="Marker2D" parent="SpawnPoints" unique_id=704576155]
 position = Vector2(-3, -10)
 
+[node name="SpawnPoints2" type="Marker2D" parent="." unique_id=539567292]
+position = Vector2(1149, 1127)
+
+[node name="SpawnPoint2" type="Marker2D" parent="SpawnPoints2" unique_id=241817344]
+position = Vector2(470, -316)
+
+[node name="SpawnPoint3" type="Marker2D" parent="SpawnPoints2" unique_id=459279291]
+position = Vector2(-470, -316)
+
+[node name="SpawnPoint4" type="Marker2D" parent="SpawnPoints2" unique_id=1722968430]
+position = Vector2(-916, -86)
+
+[node name="SpawnPoint5" type="Marker2D" parent="SpawnPoints2" unique_id=1706705170]
+position = Vector2(-470, -791)
+
+[node name="SpawnPoint6" type="Marker2D" parent="SpawnPoints2" unique_id=1504019073]
+position = Vector2(475, -790)
+
+[node name="SpawnPoint7" type="Marker2D" parent="SpawnPoints2" unique_id=1671981295]
+position = Vector2(-914, -992)
+
+[node name="SpawnPoint8" type="Marker2D" parent="SpawnPoints2" unique_id=1807766531]
+position = Vector2(-4, -596)
+
+[node name="SpawnPoint9" type="Marker2D" parent="SpawnPoints2" unique_id=2114220032]
+position = Vector2(915, -83)
+
+[node name="SpawnPoint10" type="Marker2D" parent="SpawnPoints2" unique_id=660933938]
+position = Vector2(922, -993)
+
+[node name="SpawnPoint11" type="Marker2D" parent="SpawnPoints2" unique_id=132584965]
+position = Vector2(-1, -10)
+
 [node name="SpawnTimer" type="Timer" parent="." unique_id=465210053]
 wait_time = 5.0
 autostart = true
 
 [node name="SpawnTimerW" type="Timer" parent="." unique_id=1536064510]
 wait_time = 3.5
+autostart = true
+
+[node name="SpawnTimerF" type="Timer" parent="." unique_id=1972521438]
+wait_time = 10.0
 autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=604065292]
@@ -90,3 +129,4 @@ position = Vector2(1624, 423)
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SpawnTimerW" to="." method="_on_spawn_timer_w_timeout"]
+[connection signal="timeout" from="SpawnTimerF" to="." method="_on_spawn_timer_f_timeout"]
