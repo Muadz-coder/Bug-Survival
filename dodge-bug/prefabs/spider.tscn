@@ -6,9 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27kw1"]
 size = Vector2(130, 128)
 
-[node name="spider" type="CharacterBody2D" unique_id=878632873]
+[node name="spider" type="CharacterBody2D" unique_id=878632873 groups=["player"]]
 script = ExtResource("1_two24")
-metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=607462905]
 position = Vector2(-0.99999523, -0.4999957)
@@ -18,3 +17,6 @@ texture = ExtResource("2_x4bdn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=739742680]
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_27kw1")
+
+[node name="WebLine" type="Line2D" parent="." unique_id=668866168]
+width = 3.0
