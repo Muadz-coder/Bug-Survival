@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
-@onready var animation : AnimatedSprite2D = $AnimatedSprite2D
+
 
 const SPEED = 550
 const JUMP_VELOCITY = -800
-var start_position = Vector2(1149, 1091)
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -26,8 +26,10 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 	#RespawnVoid
-	if position.y > 1400:
+	if position.y > 1600:
 		respawn()
 
 func respawn():
-	position = start_position
+	Global.timer_running = false
+	velocity = Vector2.ZERO
+	get_tree().change_scene_to_file("res://scenes/died.tscn")

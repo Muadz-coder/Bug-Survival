@@ -21,8 +21,13 @@ func _ready():
 	var player = player_scene.instantiate()
 	add_child(player)
 	player.position = spawn_point.position
-
+	Global.time_alive = 0
+	Global.timer_running = true
 	available_fruit_spawns = spawn_points2.duplicate()
+
+func _process(delta):
+	if Global.timer_running:
+		Global.time_alive += delta
 
 func get_random_spawn_point():
 	return spawn_points[randi() % spawn_points.size()]
