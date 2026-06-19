@@ -7,7 +7,8 @@ const STOP_DISTANCE = 25
 @onready var web_line: Line2D = $WebLine
 var grappling := false
 var grapple_point := Vector2.ZERO
-
+func _ready():
+	add_to_group("player")
 # 🕸️ NEW: air web limit
 var web_air_count := 0
 const MAX_AIR_WEBS := 2

@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27kw1"]
 size = Vector2(130, 128)
 
-[node name="beetle" type="CharacterBody2D" unique_id=878632873]
+[node name="beetle" type="CharacterBody2D" unique_id=878632873 groups=["player"]]
 script = ExtResource("1_kxsg3")
 metadata/_edit_group_ = true
 

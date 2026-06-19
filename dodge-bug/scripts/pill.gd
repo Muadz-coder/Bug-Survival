@@ -6,6 +6,8 @@ const JUMP_VELOCITY = -800
 var is_invincible = false
 var invincible_on_cooldown = false
 
+func _ready():
+	add_to_group("player")
 func _physics_process(delta: float) -> void:
 	# Activate invincibility with R
 	if Input.is_action_just_pressed("invincible") \

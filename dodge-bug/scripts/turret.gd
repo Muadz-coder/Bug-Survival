@@ -4,34 +4,30 @@ extends Node2D
 @export var shoot_interval := 15.0
 @export var projectile_speed := 600
 
-var player: Node2D = null
 var timer := 0.0
 
 
 func _process(delta):
-	# find player if not ready yet
+	var player = get_tree().get_first_node_in_group("player")
+
 	if player == null:
-		player = get_tree().get_first_node_in_group("player")
 		return
 
-	# 🎯 rotate turret to face player
-	look_at(player.global_position)
+	# 🎯 aim at player
+	var dir = player.global_position - global_position
+	rotation = dir.angle()
 
 	timer += delta
 
 	if timer >= shoot_interval:
 		timer = 0
-		shoot()
+		shoot(dir.normalized())
 
 
-func shoot():
+func shoot(dir: Vector2):
 	var bullet = projectile_scene.instantiate()
 	get_tree().current_scene.add_child(bullet)
 
 	bullet.global_position = global_position
-
-	# 🔥 shoot in turret's facing direction
-	var dir = Vector2.RIGHT.rotated(rotation)
-
 	bullet.direction = dir
 	bullet.speed = projectile_speed

@@ -20,6 +20,13 @@ config/icon="res://icon.svg"
 PlayerSelect="*uid://dgsyer41h8qyg"
 Global="*uid://dcs7ewnyjwaf2"
 
+[display]
+
+window/size/viewport_width=1
+window/size/viewport_height=1
+window/size/mode=3
+window/stretch/scale=1.65
+
 [input]
 
 ui_left={

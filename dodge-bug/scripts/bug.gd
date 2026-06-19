@@ -3,6 +3,8 @@ extends CharacterBody2D
 const SPEED = 400
 const JUMP_VELOCITY = -800
 
+func _ready():
+	add_to_group("player")
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():

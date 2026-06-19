@@ -7,6 +7,8 @@ const JUMP_VELOCITY = -725
 var jump_count = 0
 var max_jumps = 2
 
+func _ready():
+	add_to_group("player")
 func _physics_process(delta: float) -> void:
 	# Gravity
 	if not is_on_floor():
