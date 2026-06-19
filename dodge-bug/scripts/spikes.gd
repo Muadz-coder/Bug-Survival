@@ -8,8 +8,10 @@ func _ready():
 
 func _on_life_timer_timeout():
 	queue_free()
-	
+
 func _on_body_entered(body: Node2D) -> void:
-	# If whatever touched the spike has a respawn function, trigger it!
 	if body.has_method("respawn"):
+		if body.get("is_invincible"):
+			return
+
 		body.respawn()

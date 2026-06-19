@@ -1,27 +1,27 @@
 extends CharacterBody2D
 
-
-
-
 const SPEED = 250
 const JUMP_VELOCITY = -800
 
+var is_invincible = false
+var invincible_on_cooldown = false
 
-
-
-func _on_life_timer_timeout():
-	queue_free()
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+	# Activate invincibility with R
+	if Input.is_action_just_pressed("invincible") \
+	and not is_invincible \
+	and not invincible_on_cooldown:
+		start_invincibility()
+
+	# Gravity
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# Handle jump.
+	# Jump
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+	# Movement
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
@@ -30,9 +30,25 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-	#RespawnVoid
+	# Respawn if player falls
 	if position.y > 1600:
 		respawn()
+
+func start_invincibility():
+	is_invincible = true
+	invincible_on_cooldown = true
+
+	print("Invincible!")
+
+	await get_tree().create_timer(3.0).timeout
+
+	is_invincible = false
+	print("Invincibility ended")
+
+	await get_tree().create_timer(5.0).timeout
+
+	invincible_on_cooldown = false
+	print("Ability ready!")
 
 func respawn():
 	Global.timer_running = false
