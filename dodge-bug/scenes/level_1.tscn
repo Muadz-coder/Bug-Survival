@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://c04yv1k4qd62w" path="res://scripts/spawn_point.gd" id="3_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://h3mmd7j65nqs" path="res://prefabs/fruits.tscn" id="4_4nkto"]
 [ext_resource type="PackedScene" uid="uid://y1puif73vmhp" path="res://prefabs/turret.tscn" id="6_fcfvj"]
+[ext_resource type="PackedScene" uid="uid://ccncxhesaptmk" path="res://prefabs/walls.tscn" id="7_pa8r4"]
 
 [node name="level 1" type="Node2D" unique_id=519151207]
 script = ExtResource("3_5xbjy")
@@ -35,7 +36,7 @@ position = Vector2(-470, -791)
 position = Vector2(475, -790)
 
 [node name="SpawnPoint7" type="Marker2D" parent="SpawnPoints" unique_id=1607066349]
-position = Vector2(-914, -992)
+position = Vector2(-934, -992)
 
 [node name="SpawnPoint8" type="Marker2D" parent="SpawnPoints" unique_id=2038709682]
 position = Vector2(-4, -596)
@@ -44,7 +45,7 @@ position = Vector2(-4, -596)
 position = Vector2(915, -83)
 
 [node name="SpawnPoint10" type="Marker2D" parent="SpawnPoints" unique_id=11708323]
-position = Vector2(922, -993)
+position = Vector2(942, -993)
 
 [node name="SpawnPoint11" type="Marker2D" parent="SpawnPoints" unique_id=704576155]
 position = Vector2(-3, -10)
@@ -68,7 +69,7 @@ position = Vector2(-470, -791)
 position = Vector2(475, -790)
 
 [node name="SpawnPoint7" type="Marker2D" parent="SpawnPoints2" unique_id=1671981295]
-position = Vector2(-914, -992)
+position = Vector2(-934, -992)
 
 [node name="SpawnPoint8" type="Marker2D" parent="SpawnPoints2" unique_id=1807766531]
 position = Vector2(-4, -596)
@@ -77,7 +78,7 @@ position = Vector2(-4, -596)
 position = Vector2(915, -83)
 
 [node name="SpawnPoint10" type="Marker2D" parent="SpawnPoints2" unique_id=660933938]
-position = Vector2(922, -993)
+position = Vector2(942, -993)
 
 [node name="SpawnPoint11" type="Marker2D" parent="SpawnPoints2" unique_id=132584965]
 position = Vector2(-1, -10)
@@ -99,10 +100,10 @@ position = Vector2(1147, 642)
 zoom = Vector2(0.5, 0.5)
 
 [node name="rocks" parent="." unique_id=1385581139 instance=ExtResource("2_bswci")]
-position = Vector2(237, 220)
+position = Vector2(217, 220)
 
 [node name="rocks2" parent="." unique_id=1521068965 instance=ExtResource("2_bswci")]
-position = Vector2(2066, 220)
+position = Vector2(2086, 220)
 
 [node name="rocks3" parent="." unique_id=477295588 instance=ExtResource("2_bswci")]
 position = Vector2(236, 1130)
@@ -132,7 +133,10 @@ position = Vector2(1624, 423)
 position = Vector2(1147, 8)
 
 [node name="Turret" parent="." unique_id=1365269987 instance=ExtResource("6_fcfvj")]
-position = Vector2(1149, 57)
+position = Vector2(1148, 47)
+
+[node name="walls" parent="." unique_id=1733785245 instance=ExtResource("7_pa8r4")]
+position = Vector2(1156, -69)
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SpawnTimerW" to="." method="_on_spawn_timer_w_timeout"]

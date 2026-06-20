@@ -13,7 +13,7 @@ func _process(delta):
 	if player == null:
 		return
 
-	# 🎯 aim at player
+	# Aim at player
 	var dir = player.global_position - global_position
 	rotation = dir.angle()
 

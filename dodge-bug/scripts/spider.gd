@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 500
-const JUMP_VELOCITY = -700
+const JUMP_VELOCITY = -750
 const ZIPLINE_SPEED = 750
 const STOP_DISTANCE = 25
 @onready var web_line: Line2D = $WebLine

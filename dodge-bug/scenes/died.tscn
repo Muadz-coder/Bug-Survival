@@ -2,6 +2,32 @@
 
 [ext_resource type="Script" uid="uid://cd47yaav6c0hf" path="res://scripts/died.gd" id="1_1lit6"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1lit6"]
+bg_color = Color(0.50980395, 0.64705884, 0.40784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ifeun"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v2spi"]
+bg_color = Color(0.50980395, 0.64705884, 0.40784314, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="Theme" id="Theme_1lit6"]
+
+[sub_resource type="FontVariation" id="FontVariation_1lit6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4luv"]
+bg_color = Color(0.50980395, 0.64705884, 0.40784314, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
 [node name="Died" type="Control" unique_id=1146834657]
 layout_mode = 3
 anchors_preset = 15
@@ -13,8 +39,69 @@ script = ExtResource("1_1lit6")
 
 [node name="Panel" type="Panel" parent="." unique_id=1263766995]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 2059.0
+offset_bottom = 1280.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1lit6")
+
+[node name="Panel2" type="Panel" parent="." unique_id=977704256]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -551.0
+offset_top = -312.0
+offset_right = 562.0
+offset_bottom = 314.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ifeun")
+
+[node name="Panel3" type="Panel" parent="." unique_id=504249013]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -265.0
+offset_top = -292.0
+offset_right = 263.0
+offset_bottom = -202.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_v2spi")
+
+[node name="Lost" type="Label" parent="." unique_id=6870972]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -255.5
+offset_top = 31.0
+offset_right = 254.5
+offset_bottom = 197.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.7882353, 0.85490197, 0.56078434, 1)
+theme_override_font_sizes/font_size = 60
+text = "You have DIED!"
+horizontal_alignment = 1
+
+[node name="Panel4" type="Panel" parent="." unique_id=342868948]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -266.0
+offset_top = -181.0
+offset_right = 264.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_v2spi")
 
 [node name="Label" type="Label" parent="." unique_id=545273355]
 layout_mode = 1
@@ -23,14 +110,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -313.0
-offset_top = -223.0
-offset_right = 119.0
-offset_bottom = -73.5
+offset_left = -221.0
+offset_top = -166.75
+offset_right = 211.0
+offset_bottom = -17.25
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.7882353, 0.85490197, 0.56078434, 1)
 theme_override_font_sizes/font_size = 46
-text = "Score: "
 horizontal_alignment = 1
 
 [node name="TimeLabel" type="Label" parent="." unique_id=1023088253]
@@ -40,14 +127,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -285.0
-offset_top = -138.0
-offset_right = 147.0
-offset_bottom = 11.5
+offset_left = -220.0
+offset_top = -42.75
+offset_right = 212.0
+offset_bottom = 106.75
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.7882353, 0.85490197, 0.56078434, 1)
 theme_override_font_sizes/font_size = 46
-text = "Time: "
 horizontal_alignment = 1
 
 [node name="RestartButton" type="Button" parent="." unique_id=1320376780]
@@ -58,12 +145,21 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -186.75
-offset_top = -264.0
+offset_top = -198.0
 offset_right = 186.75
-offset_bottom = -89.0
+offset_bottom = -23.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = SubResource("Theme_1lit6")
+theme_override_colors/font_color = Color(0.7882353, 0.85490197, 0.56078434, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0.7882353, 0.85490197, 0.56078434, 1)
+theme_override_fonts/font = SubResource("FontVariation_1lit6")
 theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_d4luv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_d4luv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d4luv")
 text = "RESTART"
 
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]

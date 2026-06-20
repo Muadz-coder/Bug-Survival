@@ -3,17 +3,17 @@
 [ext_resource type="Script" uid="uid://b4l75gxbxgkqg" path="res://scripts/projectile.gd" id="1_how8d"]
 [ext_resource type="Texture2D" uid="uid://gftq7snuyi2v" path="res://icon.svg" id="2_xjgtm"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1x3kl"]
-size = Vector2(29, 35)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ifeun"]
+size = Vector2(21, 22)
 
-[node name="Projectile" type="Area2D" unique_id=1204524040]
+[node name="projectile" type="Area2D" unique_id=529760312]
 script = ExtResource("1_how8d")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2009986905]
-position = Vector2(0.50000095, -0.5)
-scale = Vector2(0.22656251, 0.27343747)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1998469660]
+position = Vector2(-0.5000005, 0)
+scale = Vector2(0.1640625, 0.16406249)
 texture = ExtResource("2_xjgtm")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=322870936]
-position = Vector2(0.5, -0.5)
-shape = SubResource("RectangleShape2D_1x3kl")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1318129730]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_ifeun")
