@@ -18,3 +18,11 @@ texture = ExtResource("2_jrdtq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=739742680]
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_27kw1")
+
+[node name="dash_timer" type="Timer" parent="." unique_id=1422361827]
+wait_time = 0.2
+
+[node name="dash_again_timer" type="Timer" parent="." unique_id=1006616191]
+
+[connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="dash_again_timer" to="." method="_on_dash_again_timer_timeout"]

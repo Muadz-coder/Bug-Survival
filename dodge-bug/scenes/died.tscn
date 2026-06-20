@@ -7,6 +7,10 @@ bg_color = Color(0.50980395, 0.64705884, 0.40784314, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ifeun"]
 bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v2spi"]
 bg_color = Color(0.50980395, 0.64705884, 0.40784314, 1)
@@ -53,7 +57,7 @@ anchor_bottom = 0.5
 offset_left = -551.0
 offset_top = -312.0
 offset_right = 562.0
-offset_bottom = 314.0
+offset_bottom = 320.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ifeun")
@@ -79,9 +83,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -255.5
-offset_top = 31.0
+offset_top = 34.0
 offset_right = 254.5
-offset_bottom = 197.0
+offset_bottom = 200.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.7882353, 0.85490197, 0.56078434, 1)
 theme_override_font_sizes/font_size = 60
