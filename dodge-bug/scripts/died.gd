@@ -5,7 +5,9 @@ extends Control
 
 func _ready():
 	label.text = "Fruits collected:\n " + str(Global.points)
-	time_label.text = "Time survived(s):\n " + (str(round(Global.time_alive))) + "s"
+
+	var rounded_time: float = round(Global.time_alive * 10.0) / 10.0
+	time_label.text = "Time survived(s):\n " + str(rounded_time) + "s"
 
 func _on_restart_button_pressed():
 	Global.points = 0

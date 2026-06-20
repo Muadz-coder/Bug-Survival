@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://d3dkjd5rnupqt"]
 
 [ext_resource type="Script" uid="uid://cd47yaav6c0hf" path="res://scripts/died.gd" id="1_1lit6"]
+[ext_resource type="FontFile" uid="uid://dwjw0ct4j3b1f" path="res://Fonts/Aldrich,Archivo_Black,Bahianita/Archivo_Black/ArchivoBlack-Regular.ttf" id="2_mubft"]
+[ext_resource type="Script" uid="uid://bk52ix4hnk1m6" path="res://scripts/panel.gd" id="2_ppem4"]
+[ext_resource type="Script" uid="uid://dv5a6kn81cnr" path="res://scripts/button.gd" id="2_v2spi"]
+[ext_resource type="FontFile" uid="uid://cpdkchc702qox" path="res://Fonts/Oxanium/static/Oxanium-Medium.ttf" id="4_mr4x7"]
+[ext_resource type="FontFile" uid="uid://dtqv330uqiu57" path="res://Fonts/Aldrich,Archivo_Black,Bahianita/Aldrich/Aldrich-Regular.ttf" id="5_p88vf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1lit6"]
 bg_color = Color(0.50980395, 0.64705884, 0.40784314, 1)
@@ -19,9 +24,12 @@ corner_radius_top_right = 32
 corner_radius_bottom_right = 32
 corner_radius_bottom_left = 32
 
-[sub_resource type="Theme" id="Theme_1lit6"]
+[sub_resource type="LabelSettings" id="LabelSettings_i6lef"]
+font = ExtResource("2_mubft")
+font_size = 55
+font_color = Color(0.7882353, 0.85490197, 0.56078434, 1)
 
-[sub_resource type="FontVariation" id="FontVariation_1lit6"]
+[sub_resource type="Theme" id="Theme_1lit6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4luv"]
 bg_color = Color(0.50980395, 0.64705884, 0.40784314, 1)
@@ -69,9 +77,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -265.0
+offset_left = -267.0
 offset_top = -292.0
-offset_right = 263.0
+offset_right = 261.0
 offset_bottom = -202.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -82,14 +90,15 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -255.5
-offset_top = 34.0
-offset_right = 254.5
-offset_bottom = 200.0
+offset_left = -258.5
+offset_top = 45.0
+offset_right = 251.5
+offset_bottom = 211.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.7882353, 0.85490197, 0.56078434, 1)
 theme_override_font_sizes/font_size = 60
 text = "You have DIED!"
+label_settings = SubResource("LabelSettings_i6lef")
 horizontal_alignment = 1
 
 [node name="Panel4" type="Panel" parent="." unique_id=342868948]
@@ -99,13 +108,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -266.0
+offset_left = -264.0
 offset_top = -181.0
-offset_right = 264.0
+offset_right = 266.0
 offset_bottom = 112.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_v2spi")
+script = ExtResource("2_ppem4")
 
 [node name="Label" type="Label" parent="." unique_id=545273355]
 layout_mode = 1
@@ -114,13 +124,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -221.0
-offset_top = -166.75
-offset_right = 211.0
-offset_bottom = -17.25
+offset_left = -223.0
+offset_top = -164.75
+offset_right = 209.0
+offset_bottom = -15.25
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.7882353, 0.85490197, 0.56078434, 1)
+theme_override_fonts/font = ExtResource("4_mr4x7")
 theme_override_font_sizes/font_size = 46
 horizontal_alignment = 1
 
@@ -131,13 +142,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -220.0
-offset_top = -42.75
-offset_right = 212.0
-offset_bottom = 106.75
+offset_left = -222.0
+offset_top = -24.75
+offset_right = 210.0
+offset_bottom = 124.75
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.7882353, 0.85490197, 0.56078434, 1)
+theme_override_fonts/font = ExtResource("4_mr4x7")
 theme_override_font_sizes/font_size = 46
 horizontal_alignment = 1
 
@@ -148,9 +160,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -186.75
+offset_left = -184.75
 offset_top = -198.0
-offset_right = 186.75
+offset_right = 188.75
 offset_bottom = -23.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -159,11 +171,12 @@ theme_override_colors/font_color = Color(0.7882353, 0.85490197, 0.56078434, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_pressed_color = Color(0.7882353, 0.85490197, 0.56078434, 1)
-theme_override_fonts/font = SubResource("FontVariation_1lit6")
+theme_override_fonts/font = ExtResource("5_p88vf")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_d4luv")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_d4luv")
 theme_override_styles/hover = SubResource("StyleBoxFlat_d4luv")
 text = "RESTART"
+script = ExtResource("2_v2spi")
 
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]

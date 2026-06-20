@@ -25,3 +25,10 @@ func _on_button_pill_pressed() -> void:
 		PlayerSelect.selected_player = "pill"
 		transitioning = true
 		get_tree().change_scene_to_file("res://scenes/level_1.tscn")
+
+
+func _on_button_pressed() -> void:
+	if not transitioning:
+		transitioning = true
+		get_tree().change_scene_to_file("res://scenes/basic_tutorial.tscn")
+		

@@ -4,6 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://gftq7snuyi2v" path="res://icon.svg" id="1_yqeox"]
 [ext_resource type="Texture2D" uid="uid://coek603fdl1tl" path="res://sprites/New Piskel (1).png" id="2_vjb58"]
 [ext_resource type="Script" uid="uid://dgncyw0c3i6bd" path="res://scripts/buttons_move.gd" id="3_con2f"]
+[ext_resource type="Script" uid="uid://1seg60iaw4ci" path="res://scripts/h_box_container.gd" id="3_g3eks"]
+[ext_resource type="Script" uid="uid://dv5a6kn81cnr" path="res://scripts/button.gd" id="5_4ytvr"]
+[ext_resource type="FontFile" uid="uid://dtqv330uqiu57" path="res://Fonts/Aldrich,Archivo_Black,Bahianita/Aldrich/Aldrich-Regular.ttf" id="6_v86rl"]
+[ext_resource type="FontFile" uid="uid://dwjw0ct4j3b1f" path="res://Fonts/Aldrich,Archivo_Black,Bahianita/Archivo_Black/ArchivoBlack-Regular.ttf" id="7_13sgg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vjb58"]
 texture = ExtResource("1_yqeox")
@@ -16,6 +20,19 @@ region = Rect2(-0.0118255615, -0.07570553, 128.32133, 128.22075)
 [sub_resource type="AtlasTexture" id="AtlasTexture_vjb58"]
 atlas = ExtResource("1_yqeox")
 region = Rect2(12.95018, 14.232994, 105.556656, 102.73428)
+
+[sub_resource type="LabelSettings" id="LabelSettings_v86rl"]
+font = ExtResource("6_v86rl")
+font_size = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ifeun"]
+bg_color = Color(0.39115322, 0.48653406, 0.310517, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.6)
 
 [node name="main_menu" type="Control" unique_id=1765270092]
 layout_mode = 3
@@ -53,6 +70,7 @@ offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 18
+script = ExtResource("3_g3eks")
 
 [node name="Control" type="Control" parent="HBoxContainer" unique_id=725929659]
 custom_minimum_size = Vector2(128, 128)
@@ -203,17 +221,41 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -142.5
-offset_top = 16.0
-offset_right = 154.5
-offset_bottom = 143.0
+offset_left = -232.0
+offset_top = 55.0
+offset_right = 232.0
+offset_bottom = 182.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 60
 text = "DodgeBug"
+label_settings = SubResource("LabelSettings_v86rl")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1236095913]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -138.5
+offset_top = -202.0
+offset_right = 138.5
+offset_bottom = -111.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.14096877, 0.16146159, 0.2230531, 1)
+theme_override_fonts/font = ExtResource("7_13sgg")
+theme_override_font_sizes/font_size = 58
+theme_override_styles/normal = SubResource("StyleBoxFlat_ifeun")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ifeun")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ifeun")
+text = "Info"
+script = ExtResource("5_4ytvr")
 
 [connection signal="pressed" from="HBoxContainer/Control/ButtonBug" to="." method="_on_button_bug_pressed"]
 [connection signal="pressed" from="HBoxContainer/Control2/ButtonSpider" to="." method="_on_button_spider_pressed"]
 [connection signal="pressed" from="HBoxContainer/Control3/ButtonBeetle" to="." method="_on_button_beetle_pressed"]
 [connection signal="pressed" from="HBoxContainer/Control4/ButtonPill" to="." method="_on_button_pill_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
