@@ -22,8 +22,10 @@ Global="*uid://dcs7ewnyjwaf2"
 
 [display]
 
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/size/mode=3
-window/stretch/scale=1.4
+window/stretch/mode="canvas_items"
 
 [input]
 

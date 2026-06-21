@@ -18,20 +18,28 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 123.0
-offset_right = 123.0
+offset_left = 27.0
+offset_right = 27.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ocow8")
 
 [node name="Panel" type="Panel" parent="." unique_id=1341067666]
-layout_mode = 0
-offset_left = -25.0
-offset_right = 1143.0
-offset_bottom = 648.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -611.0
+offset_top = -324.0
+offset_right = 557.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Bug" type="StaticBody2D" parent="." unique_id=533856270]
-position = Vector2(86, 107)
+position = Vector2(142, 215)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Bug" unique_id=1081666684]
@@ -42,7 +50,7 @@ position = Vector2(-25, 0)
 shape = SubResource("RectangleShape2D_ifeun")
 
 [node name="Spider" type="StaticBody2D" parent="." unique_id=1308442469]
-position = Vector2(417, 107)
+position = Vector2(473, 215)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Spider" unique_id=1131050740]
@@ -53,7 +61,7 @@ position = Vector2(-25, 0)
 shape = SubResource("RectangleShape2D_ifeun")
 
 [node name="Beetle" type="StaticBody2D" parent="." unique_id=987627607]
-position = Vector2(739, 107)
+position = Vector2(795, 215)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Beetle" unique_id=204849222]
@@ -64,7 +72,7 @@ position = Vector2(-25, 0)
 shape = SubResource("RectangleShape2D_ifeun")
 
 [node name="PillBug" type="StaticBody2D" parent="." unique_id=1588173157]
-position = Vector2(1003, 107)
+position = Vector2(1059, 215)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="PillBug" unique_id=2063209607]
@@ -76,10 +84,10 @@ shape = SubResource("RectangleShape2D_ifeun")
 
 [node name="Label" type="Label" parent="." unique_id=207543683]
 layout_mode = 0
-offset_left = 28.0
-offset_top = 183.0
-offset_right = 146.0
-offset_bottom = 231.0
+offset_left = 84.0
+offset_top = 291.0
+offset_right = 202.0
+offset_bottom = 339.0
 theme_override_fonts/font = ExtResource("3_pglyj")
 theme_override_font_sizes/font_size = 35
 text = "Bug"
@@ -87,10 +95,10 @@ horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="." unique_id=1617970169]
 layout_mode = 0
-offset_left = 679.0
-offset_top = 183.0
-offset_right = 797.0
-offset_bottom = 231.0
+offset_left = 735.0
+offset_top = 291.0
+offset_right = 853.0
+offset_bottom = 339.0
 theme_override_fonts/font = ExtResource("3_pglyj")
 theme_override_font_sizes/font_size = 35
 text = "Beetle"
@@ -98,10 +106,10 @@ horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="." unique_id=865575814]
 layout_mode = 0
-offset_left = 354.0
-offset_top = 183.0
-offset_right = 472.0
-offset_bottom = 231.0
+offset_left = 410.0
+offset_top = 291.0
+offset_right = 528.0
+offset_bottom = 339.0
 theme_override_fonts/font = ExtResource("3_pglyj")
 theme_override_font_sizes/font_size = 35
 text = "Spider"
@@ -109,10 +117,10 @@ horizontal_alignment = 1
 
 [node name="Label4" type="Label" parent="." unique_id=2121408738]
 layout_mode = 0
-offset_left = 927.0
-offset_top = 183.0
-offset_right = 1075.0
-offset_bottom = 231.0
+offset_left = 983.0
+offset_top = 291.0
+offset_right = 1131.0
+offset_bottom = 339.0
 theme_override_fonts/font = ExtResource("3_pglyj")
 theme_override_font_sizes/font_size = 35
 text = "Roly	poly"
@@ -120,10 +128,10 @@ horizontal_alignment = 1
 
 [node name="Ability" type="Label" parent="." unique_id=712060342]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 248.0
-offset_right = 199.0
-offset_bottom = 403.0
+offset_left = 74.0
+offset_top = 356.0
+offset_right = 255.0
+offset_bottom = 511.0
 theme_override_fonts/font = ExtResource("4_v7viy")
 theme_override_font_sizes/font_size = 25
 text = "Press 'Q' and 
@@ -134,24 +142,24 @@ a dash."
 
 [node name="Ability2" type="Label" parent="." unique_id=1224803503]
 layout_mode = 0
-offset_left = 926.0
-offset_top = 248.0
-offset_right = 1107.0
-offset_bottom = 403.0
+offset_left = 982.0
+offset_top = 356.0
+offset_right = 1163.0
+offset_bottom = 511.0
 theme_override_fonts/font = ExtResource("4_v7viy")
 theme_override_font_sizes/font_size = 25
 text = "Press 'R' to be 
 invincible for
 3 seconds with
-an 5 second
+a 5 second
 cooldown."
 
 [node name="Ability3" type="Label" parent="." unique_id=338202695]
 layout_mode = 0
-offset_left = 665.0
-offset_top = 248.0
-offset_right = 846.0
-offset_bottom = 403.0
+offset_left = 721.0
+offset_top = 356.0
+offset_right = 902.0
+offset_bottom = 511.0
 theme_override_fonts/font = ExtResource("4_v7viy")
 theme_override_font_sizes/font_size = 25
 text = "Press 'space'
@@ -160,10 +168,10 @@ double jump."
 
 [node name="Ability4" type="Label" parent="." unique_id=342166554]
 layout_mode = 0
-offset_left = 337.0
-offset_top = 248.0
-offset_right = 518.0
-offset_bottom = 403.0
+offset_left = 393.0
+offset_top = 356.0
+offset_right = 584.0
+offset_bottom = 511.0
 theme_override_fonts/font = ExtResource("4_v7viy")
 theme_override_font_sizes/font_size = 25
 text = "Press 'R' and 
@@ -179,9 +187,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -264.0
+offset_left = -195.0
 offset_top = -71.0
-offset_right = 80.0
+offset_right = 149.0
 offset_bottom = 66.0
 grow_horizontal = 2
 grow_vertical = 0

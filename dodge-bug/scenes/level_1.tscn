@@ -16,6 +16,10 @@ spike_scene = ExtResource("2_5xbjy")
 warning_scene = ExtResource("3_4nkto")
 fruit_scene = ExtResource("4_4nkto")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=604065292]
+position = Vector2(1148, 706)
+zoom = Vector2(0.5, 0.5)
+
 [node name="SpawnPoint" type="Marker2D" parent="." unique_id=1414365261]
 position = Vector2(1147, 1127)
 
@@ -96,10 +100,6 @@ autostart = true
 [node name="SpawnTimerF" type="Timer" parent="." unique_id=1972521438]
 wait_time = 6.0
 autostart = true
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=604065292]
-position = Vector2(1147, 642)
-zoom = Vector2(0.5, 0.5)
 
 [node name="rocks" parent="." unique_id=1385581139 instance=ExtResource("2_bswci")]
 position = Vector2(217, 220)

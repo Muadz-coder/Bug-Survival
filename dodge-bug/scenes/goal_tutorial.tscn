@@ -23,13 +23,21 @@ grow_vertical = 2
 script = ExtResource("1_0ce8w")
 
 [node name="Panel" type="Panel" parent="." unique_id=454791340]
-visible = false
-layout_mode = 0
-offset_right = 1863.0
-offset_bottom = 964.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -705.0
+offset_top = -343.0
+offset_right = 463.0
+offset_bottom = 305.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Turret" type="StaticBody2D" parent="." unique_id=83025386]
-position = Vector2(475, 84)
+position = Vector2(463, 95)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Turret" unique_id=1850369566]
@@ -40,7 +48,7 @@ position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_ifeun")
 
 [node name="Spike" type="StaticBody2D" parent="." unique_id=209315588]
-position = Vector2(129, 462)
+position = Vector2(117, 473)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Spike" unique_id=1720158645]
@@ -51,7 +59,7 @@ position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_ifeun")
 
 [node name="Fruit" type="StaticBody2D" parent="." unique_id=781296147]
-position = Vector2(977, 246)
+position = Vector2(965, 257)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Fruit" unique_id=231258629]
@@ -62,7 +70,7 @@ position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_ifeun")
 
 [node name="Warning" type="StaticBody2D" parent="." unique_id=1614469385]
-position = Vector2(676, 363)
+position = Vector2(664, 374)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Warning" unique_id=733147736]
@@ -76,20 +84,20 @@ shape = SubResource("RectangleShape2D_ifeun")
 
 [node name="WarningL" type="Label" parent="." unique_id=735997650]
 layout_mode = 0
-offset_left = 39.0
-offset_top = 145.0
-offset_right = 285.0
-offset_bottom = 220.0
+offset_left = 27.0
+offset_top = 156.0
+offset_right = 273.0
+offset_bottom = 231.0
 text = "These tiny things are warning 
 that tells you where the spike 
 is going to spawn."
 
 [node name="WarningL3" type="Label" parent="." unique_id=792762845]
 layout_mode = 0
-offset_left = 551.0
-offset_top = 33.0
-offset_right = 805.0
-offset_bottom = 134.0
+offset_left = 539.0
+offset_top = 44.0
+offset_right = 793.0
+offset_bottom = 145.0
 text = "The turret targets you as soon
 as you load to the game. It fires
 reasonably fast bullet at you and
@@ -97,10 +105,10 @@ upon contacting you die."
 
 [node name="WarningL4" type="Label" parent="." unique_id=406156300]
 layout_mode = 0
-offset_left = 647.0
-offset_top = 195.0
-offset_right = 903.0
-offset_bottom = 296.0
+offset_left = 635.0
+offset_top = 206.0
+offset_right = 891.0
+offset_bottom = 307.0
 text = "The main goal of the game is to
 collect as many fruits as you can
 while trying avoid the things that
@@ -113,9 +121,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -248.0
+offset_left = -254.0
 offset_top = -92.0
-offset_right = 58.0
+offset_right = 52.0
 offset_bottom = 485.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -127,10 +135,10 @@ label_settings = SubResource("LabelSettings_0ce8w")
 
 [node name="WarningL2" type="Label" parent="." unique_id=1370872875]
 layout_mode = 0
-offset_left = 67.0
-offset_top = 302.0
-offset_right = 199.0
-offset_bottom = 377.0
+offset_left = 55.0
+offset_top = 313.0
+offset_right = 187.0
+offset_bottom = 388.0
 text = "Upon contacting 
 with the spikes
 you instantly die"

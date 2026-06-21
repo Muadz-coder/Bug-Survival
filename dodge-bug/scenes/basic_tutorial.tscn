@@ -25,11 +25,25 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ydmnt")
 
+[node name="Panel" type="Panel" parent="." unique_id=634487038]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -705.0
+offset_top = -326.0
+offset_right = 463.0
+offset_bottom = 322.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="AButton" type="Button" parent="." unique_id=248573607]
 layout_mode = 0
-offset_left = 91.0
+offset_left = 9.0
 offset_top = 133.0
-offset_right = 201.0
+offset_right = 119.0
 offset_bottom = 241.0
 theme_override_font_sizes/font_size = 46
 theme_override_styles/normal = SubResource("StyleBoxFlat_1x3kl")
@@ -38,9 +52,9 @@ text = "A"
 
 [node name="Spacebar" type="Button" parent="." unique_id=1476084690]
 layout_mode = 0
-offset_left = 648.0
+offset_left = 566.0
 offset_top = 116.0
-offset_right = 1078.0
+offset_right = 996.0
 offset_bottom = 224.0
 theme_override_font_sizes/font_size = 46
 theme_override_styles/normal = SubResource("StyleBoxFlat_1x3kl")
@@ -49,9 +63,9 @@ text = "Spacebar"
 
 [node name="DButton" type="Button" parent="." unique_id=583849633]
 layout_mode = 0
-offset_left = 91.0
+offset_left = 9.0
 offset_top = 286.0
-offset_right = 201.0
+offset_right = 119.0
 offset_bottom = 394.0
 theme_override_font_sizes/font_size = 46
 theme_override_styles/normal = SubResource("StyleBoxFlat_1x3kl")
@@ -60,9 +74,9 @@ text = "D"
 
 [node name="QButton" type="Button" parent="." unique_id=1961053866]
 layout_mode = 0
-offset_left = 938.0
+offset_left = 856.0
 offset_top = 313.0
-offset_right = 1048.0
+offset_right = 966.0
 offset_bottom = 421.0
 theme_override_font_sizes/font_size = 46
 theme_override_styles/normal = SubResource("StyleBoxFlat_1x3kl")
@@ -71,9 +85,9 @@ text = "Q"
 
 [node name="RButton" type="Button" parent="." unique_id=2074838179]
 layout_mode = 0
-offset_left = 671.0
+offset_left = 589.0
 offset_top = 316.0
-offset_right = 781.0
+offset_right = 699.0
 offset_bottom = 424.0
 theme_override_font_sizes/font_size = 46
 theme_override_styles/normal = SubResource("StyleBoxFlat_1x3kl")
@@ -82,9 +96,9 @@ text = "R"
 
 [node name="Label" type="Label" parent="." unique_id=1986315927]
 layout_mode = 0
-offset_left = 228.0
+offset_left = 146.0
 offset_top = 66.0
-offset_right = 572.0
+offset_right = 490.0
 offset_bottom = 371.0
 text = "
 Basic movement in the game
@@ -101,9 +115,9 @@ label_settings = SubResource("LabelSettings_ifeun")
 
 [node name="Label2" type="Label" parent="." unique_id=1577495282]
 layout_mode = 0
-offset_left = 701.0
+offset_left = 619.0
 offset_top = 68.0
-offset_right = 1045.0
+offset_right = 963.0
 offset_bottom = 205.0
 text = "Press spacebar to jump :o
 
@@ -119,9 +133,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -249.0
+offset_left = -261.0
 offset_top = -75.00006
-offset_right = 95.0
+offset_right = 83.0
 offset_bottom = 61.99994
 grow_horizontal = 2
 grow_vertical = 0
@@ -134,9 +148,9 @@ label_settings = SubResource("LabelSettings_ifeun")
 
 [node name="Label3" type="Label" parent="." unique_id=785041249]
 layout_mode = 0
-offset_left = 633.0
+offset_left = 551.0
 offset_top = 261.0
-offset_right = 1098.0
+offset_right = 1016.0
 offset_bottom = 398.0
 text = "Some abilities require you to press these
 
@@ -146,9 +160,9 @@ label_settings = SubResource("LabelSettings_ifeun")
 
 [node name="Label4" type="Label" parent="." unique_id=382694035]
 layout_mode = 0
-offset_left = 848.0
+offset_left = 766.0
 offset_top = 357.0
-offset_right = 1313.0
+offset_right = 1231.0
 offset_bottom = 494.0
 text = "Or
 
