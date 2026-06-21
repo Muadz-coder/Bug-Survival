@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 250
+const SPEED = 350
 const JUMP_VELOCITY = -800
 
 var is_invincible = false
@@ -40,17 +40,17 @@ func start_invincibility():
 	is_invincible = true
 	invincible_on_cooldown = true
 
-	print("Invincible!")
+	
 
 	await get_tree().create_timer(3.0).timeout
 
 	is_invincible = false
-	print("Invincibility ended")
+	
 
 	await get_tree().create_timer(5.0).timeout
 
 	invincible_on_cooldown = false
-	print("Ability ready!")
+	
 
 func respawn():
 	Global.timer_running = false

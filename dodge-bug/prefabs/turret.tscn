@@ -7,7 +7,8 @@
 [node name="Turret" type="Node2D" unique_id=1365269987]
 script = ExtResource("1_2pe4l")
 projectile_scene = ExtResource("2_o5o88")
-projectile_speed = 1000
+shoot_interval = 10.0
+projectile_speed = 650
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1666188874]
 position = Vector2(-0.50000095, 0)

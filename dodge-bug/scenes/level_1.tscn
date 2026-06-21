@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://h3mmd7j65nqs" path="res://prefabs/fruits.tscn" id="4_4nkto"]
 [ext_resource type="PackedScene" uid="uid://y1puif73vmhp" path="res://prefabs/turret.tscn" id="6_fcfvj"]
 [ext_resource type="PackedScene" uid="uid://ccncxhesaptmk" path="res://prefabs/walls.tscn" id="7_pa8r4"]
+[ext_resource type="PackedScene" uid="uid://cu0rujiguvstn" path="res://prefabs/leftturret.tscn" id="8_e3sih"]
+[ext_resource type="PackedScene" uid="uid://c4jsfi54tvlmp" path="res://prefabs/rightturret.tscn" id="9_2y5yt"]
 
 [node name="level 1" type="Node2D" unique_id=519151207]
 script = ExtResource("3_5xbjy")
@@ -92,7 +94,7 @@ wait_time = 3.5
 autostart = true
 
 [node name="SpawnTimerF" type="Timer" parent="." unique_id=1972521438]
-wait_time = 10.0
+wait_time = 6.0
 autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=604065292]
@@ -132,11 +134,20 @@ position = Vector2(1624, 423)
 [node name="rocks11" parent="." unique_id=772178638 instance=ExtResource("2_bswci")]
 position = Vector2(1147, 8)
 
-[node name="Turret" parent="." unique_id=1365269987 instance=ExtResource("6_fcfvj")]
-position = Vector2(1148, 47)
-
 [node name="walls" parent="." unique_id=1733785245 instance=ExtResource("7_pa8r4")]
 position = Vector2(1156, -69)
+
+[node name="Turret" parent="." unique_id=1365269987 instance=ExtResource("6_fcfvj")]
+z_index = -1
+position = Vector2(1148, 47)
+
+[node name="right_turret" parent="." unique_id=2021201854 instance=ExtResource("9_2y5yt")]
+z_index = -1
+position = Vector2(2086, 279)
+
+[node name="left_turret" parent="." unique_id=1229253766 instance=ExtResource("8_e3sih")]
+z_index = -1
+position = Vector2(217, 279)
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SpawnTimerW" to="." method="_on_spawn_timer_w_timeout"]
