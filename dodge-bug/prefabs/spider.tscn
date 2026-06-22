@@ -2,12 +2,21 @@
 
 [ext_resource type="Script" uid="uid://4m0pxvq1rpy7" path="res://scripts/spider.gd" id="1_two24"]
 [ext_resource type="Texture2D" uid="uid://gftq7snuyi2v" path="res://icon.svg" id="2_x4bdn"]
+[ext_resource type="AudioStream" uid="uid://og1wfx353hik" path="res://sounds/yodguard-spider-attack-3-482540.mp3" id="3_rmig8"]
+[ext_resource type="AudioStream" uid="uid://c3njwk85o3uk0" path="res://sounds/jump-sound-8-beat-trampoline.mp3" id="3_x4bdn"]
+[ext_resource type="AudioStream" uid="uid://dqiokykcqc8dy" path="res://prefabs/freesound_community-game-over-arcade-6435.mp3" id="5_pfl05"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27kw1"]
 size = Vector2(130, 128)
 
 [node name="spider" type="CharacterBody2D" unique_id=878632873 groups=["player"]]
 script = ExtResource("1_two24")
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=929703329]
+stream = ExtResource("3_x4bdn")
+
+[node name="GrappleSound" type="AudioStreamPlayer2D" parent="." unique_id=1789588111]
+stream = ExtResource("3_rmig8")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=607462905]
 position = Vector2(-0.99999523, -0.4999957)
@@ -20,3 +29,6 @@ shape = SubResource("RectangleShape2D_27kw1")
 
 [node name="WebLine" type="Line2D" parent="." unique_id=668866168]
 width = 3.0
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="." unique_id=1406044594]
+stream = ExtResource("5_pfl05")

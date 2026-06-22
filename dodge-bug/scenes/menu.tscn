@@ -2,12 +2,13 @@
 
 [ext_resource type="Script" uid="uid://bb2m6f314pqvr" path="res://scripts/menu.gd" id="1_mhnvy"]
 [ext_resource type="Texture2D" uid="uid://gftq7snuyi2v" path="res://icon.svg" id="1_yqeox"]
+[ext_resource type="AudioStream" uid="uid://c8prrid53h5qd" path="res://sounds/emilianodleon-select-button-ui-395763.mp3" id="2_i6lef"]
 [ext_resource type="Texture2D" uid="uid://coek603fdl1tl" path="res://sprites/New Piskel (1).png" id="2_vjb58"]
 [ext_resource type="Script" uid="uid://dgncyw0c3i6bd" path="res://scripts/buttons_move.gd" id="3_con2f"]
 [ext_resource type="Script" uid="uid://1seg60iaw4ci" path="res://scripts/h_box_container.gd" id="3_g3eks"]
 [ext_resource type="Script" uid="uid://dv5a6kn81cnr" path="res://scripts/button.gd" id="5_4ytvr"]
-[ext_resource type="FontFile" uid="uid://dtqv330uqiu57" path="res://Fonts/Aldrich,Archivo_Black,Bahianita/Aldrich/Aldrich-Regular.ttf" id="6_v86rl"]
-[ext_resource type="FontFile" uid="uid://dwjw0ct4j3b1f" path="res://Fonts/Aldrich,Archivo_Black,Bahianita/Archivo_Black/ArchivoBlack-Regular.ttf" id="7_13sgg"]
+[ext_resource type="FontFile" uid="uid://dtqv330uqiu57" path="res://fonts/Aldrich,Archivo_Black,Bahianita/Aldrich/Aldrich-Regular.ttf" id="6_v86rl"]
+[ext_resource type="FontFile" uid="uid://dwjw0ct4j3b1f" path="res://fonts/Aldrich,Archivo_Black,Bahianita/Archivo_Black/ArchivoBlack-Regular.ttf" id="7_13sgg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vjb58"]
 texture = ExtResource("1_yqeox")
@@ -42,6 +43,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mhnvy")
+
+[node name="ButtonSound" type="AudioStreamPlayer2D" parent="." unique_id=1859770402]
+stream = ExtResource("2_i6lef")
 
 [node name="Panel" type="Panel" parent="." unique_id=1360259724]
 layout_mode = 1

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bjsuvxcowcq4e"
-path="res://.godot/imported/Oxanium-Bold.ttf-7cbc0fcbcc9a2d56063ab8a4bf22ceac.fontdata"
+path="res://.godot/imported/Oxanium-Bold.ttf-b72860bf7690b79fff5ff5248f7991e8.fontdata"
 
 [deps]
 
-source_file="res://Fonts/Oxanium/static/Oxanium-Bold.ttf"
-dest_files=["res://.godot/imported/Oxanium-Bold.ttf-7cbc0fcbcc9a2d56063ab8a4bf22ceac.fontdata"]
+source_file="res://fonts/Oxanium/static/Oxanium-Bold.ttf"
+dest_files=["res://.godot/imported/Oxanium-Bold.ttf-b72860bf7690b79fff5ff5248f7991e8.fontdata"]
 
 [params]
 

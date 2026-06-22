@@ -7,6 +7,8 @@ const STOP_DISTANCE = 25
 const FALL_MULTIPLIER = 2.0
 
 @onready var web_line: Line2D = $WebLine
+@onready var jump_sound: AudioStreamPlayer2D = $JumpSound
+@onready var grapple_sound: AudioStreamPlayer2D = $GrappleSound
 
 var grappling := false
 var grapple_point := Vector2.ZERO
@@ -55,8 +57,12 @@ func _physics_process(delta):
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 
+		# 🦘 JUMP (ONLY ADDED SOUND HERE)
 		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
+
+			if jump_sound:
+				jump_sound.play()
 
 
 	# 🕸️ GRAPPLE MOVEMENT
@@ -85,6 +91,7 @@ func _physics_process(delta):
 		if grappling:
 			grappling = false
 			velocity *= 0.5
+
 		else:
 			# 🟢 START GRAPPLE
 			if not is_on_floor():
@@ -93,7 +100,6 @@ func _physics_process(delta):
 				web_air_count += 1
 
 			shoot_grapple()
-
 
 	move_and_slide()
 
@@ -116,6 +122,10 @@ func shoot_grapple():
 	if result:
 		grappling = true
 		grapple_point = result.position + result.normal * 8
+
+		# 🕸️ SOUND ADDED HERE
+		if grapple_sound:
+			grapple_sound.play()
 
 
 func respawn():

@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://gftq7snuyi2v" path="res://icon.svg" id="1_gmd6r"]
 [ext_resource type="Script" uid="uid://8nes2bxpkdqw" path="res://scripts/bug_tutorial.gd" id="1_ocow8"]
-[ext_resource type="FontFile" uid="uid://dwexrmdgf6gtu" path="res://Fonts/Oxanium/static/Oxanium-ExtraBold.ttf" id="3_pglyj"]
-[ext_resource type="FontFile" uid="uid://bsensik84bhe3" path="res://Fonts/Oxanium/static/Oxanium-SemiBold.ttf" id="4_v7viy"]
-[ext_resource type="FontFile" uid="uid://bjsuvxcowcq4e" path="res://Fonts/Oxanium/static/Oxanium-Bold.ttf" id="5_pglyj"]
+[ext_resource type="FontFile" uid="uid://dwexrmdgf6gtu" path="res://fonts/Oxanium/static/Oxanium-ExtraBold.ttf" id="3_pglyj"]
+[ext_resource type="FontFile" uid="uid://bsensik84bhe3" path="res://fonts/Oxanium/static/Oxanium-SemiBold.ttf" id="4_v7viy"]
+[ext_resource type="FontFile" uid="uid://bjsuvxcowcq4e" path="res://fonts/Oxanium/static/Oxanium-Bold.ttf" id="5_pglyj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ce8w"]
 bg_color = Color(0.50980395, 0.64705884, 0.40784314, 1)

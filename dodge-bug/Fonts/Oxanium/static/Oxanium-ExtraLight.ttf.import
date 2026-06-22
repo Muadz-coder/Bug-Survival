@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cb21webakt4vb"
-path="res://.godot/imported/Oxanium-ExtraLight.ttf-045d726677587554ab2984ddc203789c.fontdata"
+path="res://.godot/imported/Oxanium-ExtraLight.ttf-3513d4b01c2610050f6d470a58f4091c.fontdata"
 
 [deps]
 
-source_file="res://Fonts/Oxanium/static/Oxanium-ExtraLight.ttf"
-dest_files=["res://.godot/imported/Oxanium-ExtraLight.ttf-045d726677587554ab2984ddc203789c.fontdata"]
+source_file="res://fonts/Oxanium/static/Oxanium-ExtraLight.ttf"
+dest_files=["res://.godot/imported/Oxanium-ExtraLight.ttf-3513d4b01c2610050f6d470a58f4091c.fontdata"]
 
 [params]
 

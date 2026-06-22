@@ -4,6 +4,8 @@ extends Node2D
 @export var shoot_interval := 15.0
 @export var projectile_speed := 600
 
+@onready var shoot_sound: AudioStreamPlayer2D = $ShootSound
+
 var timer := 0.0
 
 
@@ -31,3 +33,6 @@ func shoot(dir: Vector2):
 	bullet.global_position = global_position
 	bullet.direction = dir
 	bullet.speed = projectile_speed
+
+	if shoot_sound:
+		shoot_sound.play()

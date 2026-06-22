@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cslxx1irphr4"
-path="res://.godot/imported/Oxanium-VariableFont_wght.ttf-2865d958e61254fd8563d320e7376732.fontdata"
+path="res://.godot/imported/Oxanium-VariableFont_wght.ttf-6cea999d6309ddeece0720842000ae3b.fontdata"
 
 [deps]
 
-source_file="res://Fonts/Oxanium/Oxanium-VariableFont_wght.ttf"
-dest_files=["res://.godot/imported/Oxanium-VariableFont_wght.ttf-2865d958e61254fd8563d320e7376732.fontdata"]
+source_file="res://fonts/Oxanium/Oxanium-VariableFont_wght.ttf"
+dest_files=["res://.godot/imported/Oxanium-VariableFont_wght.ttf-6cea999d6309ddeece0720842000ae3b.fontdata"]
 
 [params]
 

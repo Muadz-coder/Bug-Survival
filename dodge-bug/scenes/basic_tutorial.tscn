@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dtybw4pxppt6b"]
 
-[ext_resource type="FontFile" uid="uid://bjsuvxcowcq4e" path="res://Fonts/Oxanium/static/Oxanium-Bold.ttf" id="1_p7nht"]
+[ext_resource type="FontFile" uid="uid://bjsuvxcowcq4e" path="res://fonts/Oxanium/static/Oxanium-Bold.ttf" id="1_p7nht"]
 [ext_resource type="Script" uid="uid://cm3pgwq3wmovp" path="res://scripts/basic_tutorial.gd" id="1_ydmnt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ifeun"]

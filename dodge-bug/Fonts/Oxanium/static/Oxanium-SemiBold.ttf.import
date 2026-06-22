@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bsensik84bhe3"
-path="res://.godot/imported/Oxanium-SemiBold.ttf-2e72fe7701c7d540134a85684a747ad4.fontdata"
+path="res://.godot/imported/Oxanium-SemiBold.ttf-c1d8d141c95dede2f6700535ca463ce1.fontdata"
 
 [deps]
 
-source_file="res://Fonts/Oxanium/static/Oxanium-SemiBold.ttf"
-dest_files=["res://.godot/imported/Oxanium-SemiBold.ttf-2e72fe7701c7d540134a85684a747ad4.fontdata"]
+source_file="res://fonts/Oxanium/static/Oxanium-SemiBold.ttf"
+dest_files=["res://.godot/imported/Oxanium-SemiBold.ttf-c1d8d141c95dede2f6700535ca463ce1.fontdata"]
 
 [params]
 

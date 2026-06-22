@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bjs60wfty3eeq" path="res://scripts/turret.gd" id="1_apmwa"]
 [ext_resource type="PackedScene" uid="uid://ddb1v1ukequl4" path="res://prefabs/projectile.tscn" id="2_gm1mj"]
 [ext_resource type="Texture2D" uid="uid://gftq7snuyi2v" path="res://icon.svg" id="3_afa8i"]
+[ext_resource type="AudioStream" uid="uid://bytgx53ooqfcb" path="res://sounds/mixkit-short-laser-gun-shot-1670.wav" id="4_gm1mj"]
 
 [node name="left_turret" type="Node2D" unique_id=1365269987]
 script = ExtResource("1_apmwa")
@@ -13,3 +14,6 @@ projectile_speed = 700
 position = Vector2(-0.50000095, 0)
 scale = Vector2(0.7109375, 1)
 texture = ExtResource("3_afa8i")
+
+[node name="ShootSound" type="AudioStreamPlayer2D" parent="." unique_id=1620026354]
+stream = ExtResource("4_gm1mj")

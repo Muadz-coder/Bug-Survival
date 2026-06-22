@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://d3dkjd5rnupqt"]
 
 [ext_resource type="Script" uid="uid://cd47yaav6c0hf" path="res://scripts/died.gd" id="1_1lit6"]
-[ext_resource type="FontFile" uid="uid://dwjw0ct4j3b1f" path="res://Fonts/Aldrich,Archivo_Black,Bahianita/Archivo_Black/ArchivoBlack-Regular.ttf" id="2_mubft"]
+[ext_resource type="AudioStream" uid="uid://dqiokykcqc8dy" path="res://prefabs/freesound_community-game-over-arcade-6435.mp3" id="2_mr4x7"]
+[ext_resource type="FontFile" uid="uid://dwjw0ct4j3b1f" path="res://fonts/Aldrich,Archivo_Black,Bahianita/Archivo_Black/ArchivoBlack-Regular.ttf" id="2_mubft"]
 [ext_resource type="Script" uid="uid://bk52ix4hnk1m6" path="res://scripts/panel.gd" id="2_ppem4"]
 [ext_resource type="Script" uid="uid://dv5a6kn81cnr" path="res://scripts/button.gd" id="2_v2spi"]
-[ext_resource type="FontFile" uid="uid://cpdkchc702qox" path="res://Fonts/Oxanium/static/Oxanium-Medium.ttf" id="4_mr4x7"]
-[ext_resource type="FontFile" uid="uid://dtqv330uqiu57" path="res://Fonts/Aldrich,Archivo_Black,Bahianita/Aldrich/Aldrich-Regular.ttf" id="5_p88vf"]
+[ext_resource type="AudioStream" uid="uid://c8prrid53h5qd" path="res://sounds/emilianodleon-select-button-ui-395763.mp3" id="3_p88vf"]
+[ext_resource type="FontFile" uid="uid://cpdkchc702qox" path="res://fonts/Oxanium/static/Oxanium-Medium.ttf" id="4_mr4x7"]
+[ext_resource type="FontFile" uid="uid://dtqv330uqiu57" path="res://fonts/Aldrich,Archivo_Black,Bahianita/Aldrich/Aldrich-Regular.ttf" id="5_p88vf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1lit6"]
 bg_color = Color(0.50980395, 0.64705884, 0.40784314, 1)
@@ -48,6 +50,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1lit6")
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="." unique_id=1414287647]
+stream = ExtResource("2_mr4x7")
+autoplay = true
+
+[node name="ButtonSound" type="AudioStreamPlayer2D" parent="." unique_id=447429500]
+stream = ExtResource("3_p88vf")
 
 [node name="Panel" type="Panel" parent="." unique_id=1263766995]
 layout_mode = 0

@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://gftq7snuyi2v" path="res://icon.svg" id="1_6ccc1"]
 [ext_resource type="Script" uid="uid://ca33jynsffhis" path="res://scripts/fruits.gd" id="1_lwjts"]
+[ext_resource type="AudioStream" uid="uid://cs2knt2tmtqox" path="res://sounds/mixkit-winning-a-coin-video-game-2069.wav" id="3_4aahv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lwjts"]
 size = Vector2(55, 86)
@@ -17,3 +18,6 @@ texture = ExtResource("1_6ccc1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2056764393]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_lwjts")
+
+[node name="CollectSound" type="AudioStreamPlayer2D" parent="." unique_id=1910826709]
+stream = ExtResource("3_4aahv")

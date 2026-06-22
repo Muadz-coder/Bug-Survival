@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://f6hhc1obaf54"
-path="res://.godot/imported/Bahianita-Regular.ttf-b9dd44f893cf79866f0f82c3f8c0b784.fontdata"
+path="res://.godot/imported/Bahianita-Regular.ttf-a9bf774a2376406869822f190ef55c4e.fontdata"
 
 [deps]
 
-source_file="res://Fonts/Aldrich,Archivo_Black,Bahianita/Bahianita/Bahianita-Regular.ttf"
-dest_files=["res://.godot/imported/Bahianita-Regular.ttf-b9dd44f893cf79866f0f82c3f8c0b784.fontdata"]
+source_file="res://fonts/Aldrich,Archivo_Black,Bahianita/Bahianita/Bahianita-Regular.ttf"
+dest_files=["res://.godot/imported/Bahianita-Regular.ttf-a9bf774a2376406869822f190ef55c4e.fontdata"]
 
 [params]
 

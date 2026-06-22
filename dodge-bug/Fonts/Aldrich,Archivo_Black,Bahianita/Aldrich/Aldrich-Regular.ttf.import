@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dtqv330uqiu57"
-path="res://.godot/imported/Aldrich-Regular.ttf-15820e6daa1ea2d58d412a5e274ce0d6.fontdata"
+path="res://.godot/imported/Aldrich-Regular.ttf-8c397b8f5a671ae98e66465e356f3149.fontdata"
 
 [deps]
 
-source_file="res://Fonts/Aldrich,Archivo_Black,Bahianita/Aldrich/Aldrich-Regular.ttf"
-dest_files=["res://.godot/imported/Aldrich-Regular.ttf-15820e6daa1ea2d58d412a5e274ce0d6.fontdata"]
+source_file="res://fonts/Aldrich,Archivo_Black,Bahianita/Aldrich/Aldrich-Regular.ttf"
+dest_files=["res://.godot/imported/Aldrich-Regular.ttf-8c397b8f5a671ae98e66465e356f3149.fontdata"]
 
 [params]
 
