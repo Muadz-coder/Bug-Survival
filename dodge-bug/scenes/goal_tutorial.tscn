@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://gftq7snuyi2v" path="res://icon.svg" id="1_efddt"]
 [ext_resource type="FontFile" uid="uid://bjsuvxcowcq4e" path="res://Fonts/Oxanium/static/Oxanium-Bold.ttf" id="2_xonpw"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ce8w"]
+bg_color = Color(0.50980395, 0.64705884, 0.40784314, 1)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ifeun"]
 size = Vector2(29, 32)
 
@@ -21,6 +24,14 @@ offset_right = 123.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0ce8w")
+
+[node name="Panel2" type="Panel" parent="." unique_id=2083908977]
+layout_mode = 0
+offset_left = -182.0
+offset_top = -27.0
+offset_right = 1251.0
+offset_bottom = 745.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0ce8w")
 
 [node name="Panel" type="Panel" parent="." unique_id=454791340]
 layout_mode = 1

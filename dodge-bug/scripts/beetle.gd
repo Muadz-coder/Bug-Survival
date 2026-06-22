@@ -12,9 +12,16 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	# Gravity
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		if velocity.y < 0:
+			# Going up
+			velocity += get_gravity() * delta
+		else:
+			# Falling
+			velocity += get_gravity() * 2.0 * delta
 	else:
 		jump_count = 0
+
+
 
 	# Jump
 	if Input.is_action_just_pressed("ui_accept") and jump_count < max_jumps:

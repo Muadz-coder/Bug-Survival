@@ -3,6 +3,9 @@
 [ext_resource type="FontFile" uid="uid://bjsuvxcowcq4e" path="res://Fonts/Oxanium/static/Oxanium-Bold.ttf" id="1_p7nht"]
 [ext_resource type="Script" uid="uid://cm3pgwq3wmovp" path="res://scripts/basic_tutorial.gd" id="1_ydmnt"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ifeun"]
+bg_color = Color(0.50980395, 0.64705884, 0.40784314, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1x3kl"]
 bg_color = Color(0.09036284, 0.019067086, 0, 1)
 corner_radius_top_left = 8
@@ -25,6 +28,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ydmnt")
 
+[node name="Panel2" type="Panel" parent="." unique_id=317263692]
+layout_mode = 0
+offset_left = -181.0
+offset_top = -31.0
+offset_right = 1252.0
+offset_bottom = 741.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ifeun")
+
 [node name="Panel" type="Panel" parent="." unique_id=634487038]
 layout_mode = 1
 anchors_preset = 8
@@ -41,9 +52,9 @@ grow_vertical = 2
 
 [node name="AButton" type="Button" parent="." unique_id=248573607]
 layout_mode = 0
-offset_left = 9.0
+offset_left = -16.0
 offset_top = 133.0
-offset_right = 119.0
+offset_right = 94.0
 offset_bottom = 241.0
 theme_override_font_sizes/font_size = 46
 theme_override_styles/normal = SubResource("StyleBoxFlat_1x3kl")
@@ -52,10 +63,10 @@ text = "A"
 
 [node name="Spacebar" type="Button" parent="." unique_id=1476084690]
 layout_mode = 0
-offset_left = 566.0
-offset_top = 116.0
-offset_right = 996.0
-offset_bottom = 224.0
+offset_left = 494.0
+offset_top = 110.0
+offset_right = 924.0
+offset_bottom = 218.0
 theme_override_font_sizes/font_size = 46
 theme_override_styles/normal = SubResource("StyleBoxFlat_1x3kl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1x3kl")
@@ -63,9 +74,9 @@ text = "Spacebar"
 
 [node name="DButton" type="Button" parent="." unique_id=583849633]
 layout_mode = 0
-offset_left = 9.0
+offset_left = -16.0
 offset_top = 286.0
-offset_right = 119.0
+offset_right = 94.0
 offset_bottom = 394.0
 theme_override_font_sizes/font_size = 46
 theme_override_styles/normal = SubResource("StyleBoxFlat_1x3kl")
@@ -94,14 +105,24 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_1x3kl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1x3kl")
 text = "R"
 
+[node name="RButton2" type="Button" parent="." unique_id=2058176053]
+layout_mode = 0
+offset_left = 951.0
+offset_top = 110.0
+offset_right = 1061.0
+offset_bottom = 218.0
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_1x3kl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1x3kl")
+text = "W"
+
 [node name="Label" type="Label" parent="." unique_id=1986315927]
 layout_mode = 0
-offset_left = 146.0
-offset_top = 66.0
-offset_right = 490.0
-offset_bottom = 371.0
+offset_left = 121.0
+offset_top = 83.0
+offset_right = 465.0
+offset_bottom = 388.0
 text = "
-Basic movement in the game
 
 
 'A' - Move Left
@@ -115,12 +136,24 @@ label_settings = SubResource("LabelSettings_ifeun")
 
 [node name="Label2" type="Label" parent="." unique_id=1577495282]
 layout_mode = 0
-offset_left = 619.0
-offset_top = 68.0
-offset_right = 963.0
-offset_bottom = 205.0
-text = "Press spacebar to jump :o
+offset_left = 609.0
+offset_top = 65.0
+offset_right = 960.0
+offset_bottom = 202.0
+text = "Press spacebar or W to jump :o
 
+
+
+"
+label_settings = SubResource("LabelSettings_ifeun")
+
+[node name="Label6" type="Label" parent="." unique_id=1848084677]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 65.0
+offset_right = 341.0
+offset_bottom = 202.0
+text = "Basic movement in the game:
 
 
 "

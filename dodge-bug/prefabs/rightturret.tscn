@@ -7,7 +7,7 @@
 [node name="right_turret" type="Node2D" unique_id=1365269987]
 script = ExtResource("1_g1nbm")
 projectile_scene = ExtResource("2_5uycd")
-projectile_speed = 650
+projectile_speed = 700
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1666188874]
 position = Vector2(-0.50000095, 0)

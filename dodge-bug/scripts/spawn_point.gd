@@ -19,10 +19,14 @@ func _ready():
 	var player_scene_path = "res://prefabs/%s.tscn" % PlayerSelect.selected_player
 	var player_scene = load(player_scene_path)
 	var player = player_scene.instantiate()
+
 	add_child(player)
 	player.position = spawn_point.position
+
 	Global.time_alive = 0
 	Global.timer_running = true
+
+	# All fruit spawn points start available
 	available_fruit_spawns = spawn_points2.duplicate()
 
 func _process(delta):
@@ -51,21 +55,27 @@ func _on_spawn_timer_w_timeout() -> void:
 		add_child(spike)
 
 func _on_spawn_timer_f_timeout() -> void:
+	# No free spots left
 	if available_fruit_spawns.is_empty():
-		fruit_timer.stop()
-		print("All fruit spawn points have been used.")
 		return
 
 	var index = randi() % available_fruit_spawns.size()
 	var sp = available_fruit_spawns[index]
 
-	# Remove this spawn point so it can't be used again
+	# Mark this spot as occupied
 	available_fruit_spawns.remove_at(index)
 
 	var fruit = fruit_scene.instantiate()
 	fruit.global_position = sp.global_position
+
+	# Store the spawn point in the fruit
+	fruit.spawn_point = sp
+
+	# Listen for collection
+	fruit.collected.connect(_on_fruit_collected)
+
 	add_child(fruit)
 
-	if available_fruit_spawns.is_empty():
-		fruit_timer.stop()
-		print("All fruit spawn points have been used.")
+func _on_fruit_collected(spawn_point):
+	if not available_fruit_spawns.has(spawn_point):
+		available_fruit_spawns.append(spawn_point)

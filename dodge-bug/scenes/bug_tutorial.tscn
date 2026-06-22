@@ -6,6 +6,9 @@
 [ext_resource type="FontFile" uid="uid://bsensik84bhe3" path="res://Fonts/Oxanium/static/Oxanium-SemiBold.ttf" id="4_v7viy"]
 [ext_resource type="FontFile" uid="uid://bjsuvxcowcq4e" path="res://Fonts/Oxanium/static/Oxanium-Bold.ttf" id="5_pglyj"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ce8w"]
+bg_color = Color(0.50980395, 0.64705884, 0.40784314, 1)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ifeun"]
 size = Vector2(70, 20)
 
@@ -23,6 +26,14 @@ offset_right = 27.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ocow8")
+
+[node name="Panel2" type="Panel" parent="." unique_id=1732058080]
+layout_mode = 0
+offset_left = -80.0
+offset_top = -13.0
+offset_right = 1353.0
+offset_bottom = 759.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0ce8w")
 
 [node name="Panel" type="Panel" parent="." unique_id=1341067666]
 layout_mode = 1
@@ -156,15 +167,16 @@ cooldown."
 
 [node name="Ability3" type="Label" parent="." unique_id=338202695]
 layout_mode = 0
-offset_left = 721.0
+offset_left = 725.0
 offset_top = 356.0
-offset_right = 902.0
+offset_right = 906.0
 offset_bottom = 511.0
 theme_override_fonts/font = ExtResource("4_v7viy")
 theme_override_font_sizes/font_size = 25
-text = "Press 'space'
-twice to do a
-double jump."
+text = "Press 'space' 
+or 'W' twice to 
+do a double 
+jump."
 
 [node name="Ability4" type="Label" parent="." unique_id=342166554]
 layout_mode = 0

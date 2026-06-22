@@ -8,7 +8,7 @@
 script = ExtResource("1_2pe4l")
 projectile_scene = ExtResource("2_o5o88")
 shoot_interval = 10.0
-projectile_speed = 650
+projectile_speed = 750
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1666188874]
 position = Vector2(-0.50000095, 0)

@@ -2,12 +2,14 @@ extends CharacterBody2D
 
 const SPEED = 350
 const JUMP_VELOCITY = -800
+const FALL_MULTIPLIER = 2.0
 
 var is_invincible = false
 var invincible_on_cooldown = false
 
 func _ready():
 	add_to_group("player")
+
 func _physics_process(delta: float) -> void:
 	# Activate invincibility with R
 	if Input.is_action_just_pressed("invincible") \
@@ -15,9 +17,14 @@ func _physics_process(delta: float) -> void:
 	and not invincible_on_cooldown:
 		start_invincibility()
 
-	# Gravity
+	# Gravity (better platformer feel)
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		if velocity.y < 0:
+			# going up
+			velocity += get_gravity() * delta
+		else:
+			# falling faster
+			velocity += get_gravity() * FALL_MULTIPLIER * delta
 
 	# Jump
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -25,6 +32,7 @@ func _physics_process(delta: float) -> void:
 
 	# Movement
 	var direction := Input.get_axis("ui_left", "ui_right")
+
 	if direction:
 		velocity.x = direction * SPEED
 	else:
@@ -40,17 +48,13 @@ func start_invincibility():
 	is_invincible = true
 	invincible_on_cooldown = true
 
-	
-
 	await get_tree().create_timer(3.0).timeout
 
 	is_invincible = false
-	
 
 	await get_tree().create_timer(5.0).timeout
 
 	invincible_on_cooldown = false
-	
 
 func respawn():
 	Global.timer_running = false
