@@ -12,16 +12,13 @@ func _ready():
 func _on_body_entered(body):
 	if body.has_method("respawn"):
 		Global.points += 1
-		
 
-		# play sound effect
+		# Play sound effect
 		collect_sound.play()
 
 		# Tell the spawner this spot is free again
 		collected.emit(spawn_point)
 
-		# wait a tiny bit so sound can play before deleting
+		# Wait a tiny bit so the sound can play before deleting
 		await get_tree().create_timer(0.1).timeout
 		queue_free()
-
-		

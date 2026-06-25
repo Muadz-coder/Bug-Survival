@@ -163,7 +163,10 @@ text = "Press 'R' to be
 invincible for
 3 seconds with
 a 5 second
-cooldown."
+cooldown. A pop
+sound would
+occur when 
+ability is ready."
 
 [node name="Ability3" type="Label" parent="." unique_id=338202695]
 layout_mode = 0
@@ -190,7 +193,9 @@ text = "Press 'R' and
 aim cursor to a
 rock to grapple
 yourself to it.
-(Must be midair)"
+(Must be midair)
+Can press 'R'
+again to cancel."
 
 [node name="Label5" type="Label" parent="." unique_id=809688371]
 layout_mode = 1

@@ -5,9 +5,98 @@
 [ext_resource type="AudioStream" uid="uid://og1wfx353hik" path="res://sounds/yodguard-spider-attack-3-482540.mp3" id="3_rmig8"]
 [ext_resource type="AudioStream" uid="uid://c3njwk85o3uk0" path="res://sounds/jump-sound-8-beat-trampoline.mp3" id="3_x4bdn"]
 [ext_resource type="AudioStream" uid="uid://dqiokykcqc8dy" path="res://prefabs/freesound_community-game-over-arcade-6435.mp3" id="5_pfl05"]
+[ext_resource type="Texture2D" uid="uid://eqbiiupvxj2t" path="res://animation/Spider Sprite Sheet.png" id="6_5dwkk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27kw1"]
-size = Vector2(130, 128)
+size = Vector2(92, 107)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dwkk"]
+atlas = ExtResource("6_5dwkk")
+region = Rect2(0, 416, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7kcwl"]
+atlas = ExtResource("6_5dwkk")
+region = Rect2(32, 416, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c82kk"]
+atlas = ExtResource("6_5dwkk")
+region = Rect2(64, 416, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epnb3"]
+atlas = ExtResource("6_5dwkk")
+region = Rect2(0, 352, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bf7uh"]
+atlas = ExtResource("6_5dwkk")
+region = Rect2(0, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7r30"]
+atlas = ExtResource("6_5dwkk")
+region = Rect2(32, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05puq"]
+atlas = ExtResource("6_5dwkk")
+region = Rect2(64, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2ek4"]
+atlas = ExtResource("6_5dwkk")
+region = Rect2(96, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opdyo"]
+atlas = ExtResource("6_5dwkk")
+region = Rect2(128, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50arb"]
+atlas = ExtResource("6_5dwkk")
+region = Rect2(160, 288, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ifeun"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dwkk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7kcwl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c82kk")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epnb3")
+}],
+"loop": 1,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bf7uh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7r30")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05puq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2ek4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opdyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50arb")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [node name="spider" type="CharacterBody2D" unique_id=878632873 groups=["player"]]
 script = ExtResource("1_two24")
@@ -19,12 +108,13 @@ stream = ExtResource("3_x4bdn")
 stream = ExtResource("3_rmig8")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=607462905]
+visible = false
 position = Vector2(-0.99999523, -0.4999957)
 scale = Vector2(1, 1.008)
 texture = ExtResource("2_x4bdn")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=739742680]
-position = Vector2(-1, 0)
+[node name="CollisionWalking" type="CollisionShape2D" parent="." unique_id=739742680]
+position = Vector2(9, -9)
 shape = SubResource("RectangleShape2D_27kw1")
 
 [node name="WebLine" type="Line2D" parent="." unique_id=668866168]
@@ -32,3 +122,17 @@ width = 3.0
 
 [node name="DeathSound" type="AudioStreamPlayer2D" parent="." unique_id=1406044594]
 stream = ExtResource("5_pfl05")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=638441958]
+texture_filter = 1
+position = Vector2(1.8189894e-12, -155.00002)
+scale = Vector2(9.03125, 13.1875)
+sprite_frames = SubResource("SpriteFrames_ifeun")
+animation = &"jump"
+frame_progress = 0.18036166
+
+[node name="ShootCollision" type="Marker2D" parent="." unique_id=2007207247]
+position = Vector2(1, -73)
+
+[node name="DownCollision" type="Marker2D" parent="." unique_id=521830460]
+position = Vector2(3, 53)

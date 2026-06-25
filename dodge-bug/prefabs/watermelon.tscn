@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ds76vxdbhun4a"]
+
+[ext_resource type="Script" uid="uid://ca33jynsffhis" path="res://scripts/fruits.gd" id="1_g15u7"]
+[ext_resource type="Texture2D" uid="uid://bfphi3t6ar8ex" path="res://sprites/divexfre-watermelon-9741352.png" id="2_g15u7"]
+[ext_resource type="AudioStream" uid="uid://cs2knt2tmtqox" path="res://sounds/mixkit-winning-a-coin-video-game-2069.wav" id="3_5gfsn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lwjts"]
+size = Vector2(118, 86)
+
+[node name="watermelon" type="Area2D" unique_id=1706718555]
+script = ExtResource("1_g15u7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1197940145]
+position = Vector2(1.0312557, -0.1875031)
+scale = Vector2(0.0375824, 0.03311157)
+texture = ExtResource("2_g15u7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2056764393]
+shape = SubResource("RectangleShape2D_lwjts")
+
+[node name="CollectSound" type="AudioStreamPlayer2D" parent="." unique_id=1910826709]
+stream = ExtResource("3_5gfsn")

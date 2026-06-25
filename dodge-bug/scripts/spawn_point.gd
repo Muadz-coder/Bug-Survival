@@ -2,7 +2,7 @@ extends Node2D
 
 @export var spike_scene: PackedScene
 @export var warning_scene: PackedScene
-@export var fruit_scene: PackedScene
+@export var fruit_scenes: Array[PackedScene]
 
 @onready var spawn_points = $SpawnPoints.get_children()
 @onready var spawn_points2 = $SpawnPoints2.get_children()
@@ -59,16 +59,18 @@ func _on_spawn_timer_f_timeout() -> void:
 	if available_fruit_spawns.is_empty():
 		return
 
+	# Pick a free spawn point
 	var index = randi() % available_fruit_spawns.size()
 	var sp = available_fruit_spawns[index]
 
 	# Mark this spot as occupied
 	available_fruit_spawns.remove_at(index)
 
-	var fruit = fruit_scene.instantiate()
-	fruit.global_position = sp.global_position
+	# Pick a random fruit scene
+	var random_fruit_scene = fruit_scenes[randi() % fruit_scenes.size()]
+	var fruit = random_fruit_scene.instantiate()
 
-	# Store the spawn point in the fruit
+	fruit.global_position = sp.global_position
 	fruit.spawn_point = sp
 
 	# Listen for collection
