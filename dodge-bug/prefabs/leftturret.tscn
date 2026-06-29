@@ -17,3 +17,6 @@ texture = ExtResource("3_gm1mj")
 
 [node name="ShootSound" type="AudioStreamPlayer2D" parent="." unique_id=1620026354]
 stream = ExtResource("4_gm1mj")
+
+[node name="Nuzzle" type="Marker2D" parent="." unique_id=640875436]
+position = Vector2(78, 0)

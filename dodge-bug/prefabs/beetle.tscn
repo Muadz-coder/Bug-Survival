@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://gftq7snuyi2v" path="res://icon.svg" id="1_8t6d8"]
 [ext_resource type="Script" uid="uid://dpv76ugpq2y81" path="res://scripts/beetle.gd" id="1_kxsg3"]
 [ext_resource type="AudioStream" uid="uid://c3njwk85o3uk0" path="res://sounds/jump-sound-8-beat-trampoline.mp3" id="3_27kw1"]
-[ext_resource type="AudioStream" uid="uid://dqiokykcqc8dy" path="res://prefabs/freesound_community-game-over-arcade-6435.mp3" id="4_gh4bm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27kw1"]
 size = Vector2(130, 128)
@@ -23,6 +22,3 @@ shape = SubResource("RectangleShape2D_27kw1")
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=556483726]
 stream = ExtResource("3_27kw1")
-
-[node name="DeathSound" type="AudioStreamPlayer2D" parent="." unique_id=922183932]
-stream = ExtResource("4_gh4bm")

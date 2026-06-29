@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://ddb1v1ukequl4"]
 
 [ext_resource type="Script" uid="uid://b4l75gxbxgkqg" path="res://scripts/projectile.gd" id="1_how8d"]
-[ext_resource type="Texture2D" uid="uid://gftq7snuyi2v" path="res://icon.svg" id="2_xjgtm"]
+[ext_resource type="Texture2D" uid="uid://bk4driu1gr0ky" path="res://sprites/laser (1).png" id="2_how8d"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ifeun"]
-size = Vector2(21, 22)
+[sub_resource type="CircleShape2D" id="CircleShape2D_5uycd"]
+radius = 11.045361
 
 [node name="projectile" type="Area2D" unique_id=529760312]
 script = ExtResource("1_how8d")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1998469660]
-position = Vector2(-0.5000005, 0)
-scale = Vector2(0.1640625, 0.16406249)
-texture = ExtResource("2_xjgtm")
+texture_filter = 1
+position = Vector2(-0.2500013, 0.24999905)
+scale = Vector2(0.984375, 1.046875)
+texture = ExtResource("2_how8d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1318129730]
-position = Vector2(-0.5, 0)
-shape = SubResource("RectangleShape2D_ifeun")
+shape = SubResource("CircleShape2D_5uycd")

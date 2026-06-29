@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-PlayerSelect="*uid://dgsyer41h8qyg"
+PlayerSelect="*uid://d4he0c4feenyo"
 Global="*uid://dcs7ewnyjwaf2"
 
 [display]

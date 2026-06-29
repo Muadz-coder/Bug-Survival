@@ -1,22 +1,63 @@
 [gd_scene format=3 uid="uid://dfhwo36le7fg5"]
 
-[ext_resource type="Texture2D" uid="uid://gftq7snuyi2v" path="res://icon.svg" id="1_ba3ke"]
 [ext_resource type="Script" uid="uid://dte5epabwcbgh" path="res://scripts/spikes.gd" id="1_hpe17"]
+[ext_resource type="Texture2D" uid="uid://dws54fu2lih1o" path="res://sprites/SPIKE.png" id="2_v758b"]
+[ext_resource type="Texture2D" uid="uid://bw2tjhu5ukyl0" path="res://animation/fireee.png" id="3_v758b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hl3ny"]
+atlas = ExtResource("3_v758b")
+region = Rect2(0, 0, 133, 267)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k778q"]
+atlas = ExtResource("3_v758b")
+region = Rect2(133, 0, 133, 267)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ifeun"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hl3ny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k778q")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hpe17"]
-size = Vector2(127, 126.5)
+size = Vector2(122, 67)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ifeun"]
+size = Vector2(78, 69)
 
 [node name="Spikes" type="Area2D" unique_id=415653108]
 script = ExtResource("1_hpe17")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1315769093]
-texture = ExtResource("1_ba3ke")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2028668250]
-position = Vector2(0.5, 0.75)
-shape = SubResource("RectangleShape2D_hpe17")
+texture_filter = 1
+position = Vector2(1.9999995, 5.500001)
+scale = Vector2(2.40625, 2.328125)
+texture = ExtResource("2_v758b")
 
 [node name="LifeTimer" type="Timer" parent="." unique_id=981514847]
 wait_time = 2.0
 one_shot = true
 autostart = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1023118919]
+visible = false
+position = Vector2(-22, -97)
+scale = Vector2(1.6763116, 1.6367042)
+sprite_frames = SubResource("SpriteFrames_ifeun")
+animation = &"idle"
+frame_progress = 0.40488592
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2028668250]
+position = Vector2(1, 32.5)
+shape = SubResource("RectangleShape2D_hpe17")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1543738561]
+position = Vector2(3, -24.5)
+shape = SubResource("RectangleShape2D_ifeun")
