@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cu0rujiguvstn" path="res://prefabs/leftturret.tscn" id="8_e3sih"]
 [ext_resource type="PackedScene" uid="uid://d22feae4npx6q" path="res://prefabs/cran.tscn" id="9_1s4pk"]
 [ext_resource type="PackedScene" uid="uid://c4jsfi54tvlmp" path="res://prefabs/rightturret.tscn" id="9_2y5yt"]
-[ext_resource type="Texture2D" uid="uid://dbbq1hd7a6l32" path="res://sprites/backgro.png" id="10_6dial"]
+[ext_resource type="Texture2D" uid="uid://dgkbug4037skn" path="res://sprites/Copilot_20260629_083303.png" id="10_6dial"]
 
 [node name="level 1" type="Node2D" unique_id=519151207]
 script = ExtResource("3_5xbjy")
@@ -29,8 +29,8 @@ zoom = Vector2(0.5, 0.5)
 [node name="Background" type="Sprite2D" parent="." unique_id=2006054582]
 z_index = -1
 texture_filter = 1
-position = Vector2(1147.5001, 653.00006)
-scale = Vector2(20.64844, 23.3125)
+position = Vector2(1149, 596.96893)
+scale = Vector2(2.6504314, 3.4042358)
 texture = ExtResource("10_6dial")
 
 [node name="SpawnPoint" type="Marker2D" parent="." unique_id=1414365261]
@@ -157,11 +157,11 @@ shoot_interval = 12.0
 
 [node name="right_turret" parent="." unique_id=2021201854 instance=ExtResource("9_2y5yt")]
 z_index = -1
-position = Vector2(2086, 279)
+position = Vector2(2086, 280)
 
 [node name="left_turret" parent="." unique_id=1229253766 instance=ExtResource("8_e3sih")]
 z_index = -1
-position = Vector2(217, 279)
+position = Vector2(217, 280)
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SpawnTimerW" to="." method="_on_spawn_timer_w_timeout"]
