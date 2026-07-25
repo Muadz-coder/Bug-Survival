@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bjs60wfty3eeq" path="res://scripts/turret.gd" id="1_g1nbm"]
 [ext_resource type="PackedScene" uid="uid://ddb1v1ukequl4" path="res://prefabs/projectile.tscn" id="2_5uycd"]
-[ext_resource type="Texture2D" uid="uid://chvqpqyukxy2d" path="res://sprites/YellowTurret1.png" id="3_5uycd"]
+[ext_resource type="Texture2D" uid="uid://cecflkgadvh2h" path="res://sprites/YellowTurretNO.png" id="3_5uycd"]
 [ext_resource type="AudioStream" uid="uid://bytgx53ooqfcb" path="res://sounds/mixkit-short-laser-gun-shot-1670.wav" id="4_5uycd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5uycd"]

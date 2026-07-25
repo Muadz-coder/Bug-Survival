@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d2d8dwv5j34t6"]
 
 [ext_resource type="Script" uid="uid://7cxrk0xsnn27" path="res://scripts/warning.gd" id="1_e65lg"]
-[ext_resource type="Texture2D" uid="uid://ytham5pq6gta" path="res://sprites/redwarning.png" id="2_e65lg"]
+[ext_resource type="Texture2D" uid="uid://bqfqrcs5fup7j" path="res://sprites/warninggrey.png" id="2_e65lg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e65lg"]
 size = Vector2(22, 40)

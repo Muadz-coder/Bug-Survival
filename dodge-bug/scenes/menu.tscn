@@ -1,35 +1,56 @@
 [gd_scene format=3 uid="uid://dtjomentacplv"]
 
 [ext_resource type="Script" uid="uid://bb2m6f314pqvr" path="res://scripts/menu.gd" id="1_mhnvy"]
-[ext_resource type="Texture2D" uid="uid://gftq7snuyi2v" path="res://icon.svg" id="1_yqeox"]
 [ext_resource type="AudioStream" uid="uid://c8prrid53h5qd" path="res://sounds/emilianodleon-select-button-ui-395763.mp3" id="2_i6lef"]
-[ext_resource type="Texture2D" uid="uid://coek603fdl1tl" path="res://sprites/New Piskel (1).png" id="2_vjb58"]
-[ext_resource type="Texture2D" uid="uid://dsivf5ait13e8" path="res://sprites/Free DEMO Pixel Skies Background pack by Digital Moons/Parallax Pixel Skies 240x135px/Demo 02 Parallax Pixel Sky/demo02_PixelSky_layer01.png" id="3_70i5f"]
+[ext_resource type="Texture2D" uid="uid://c33uyd7w3tmiw" path="res://sprites/Free DEMO Pixel Skies Background pack by Digital Moons/Parallax Pixel Skies 240x135px/Demo 01 Parallax Pixel Sky/demo01_PixelSky_layer01.png" id="3_6cdou"]
 [ext_resource type="Script" uid="uid://dgncyw0c3i6bd" path="res://scripts/buttons_move.gd" id="3_con2f"]
 [ext_resource type="Script" uid="uid://1seg60iaw4ci" path="res://scripts/h_box_container.gd" id="3_g3eks"]
 [ext_resource type="Script" uid="uid://dv5a6kn81cnr" path="res://scripts/button.gd" id="5_4ytvr"]
-[ext_resource type="FontFile" uid="uid://dtqv330uqiu57" path="res://fonts/Aldrich,Archivo_Black,Bahianita/Aldrich/Aldrich-Regular.ttf" id="6_v86rl"]
+[ext_resource type="Texture2D" uid="uid://x4ehi0ol30tm" path="res://sprites/blue.png" id="5_6cdou"]
 [ext_resource type="FontFile" uid="uid://dwjw0ct4j3b1f" path="res://fonts/Aldrich,Archivo_Black,Bahianita/Archivo_Black/ArchivoBlack-Regular.ttf" id="7_13sgg"]
+[ext_resource type="Texture2D" uid="uid://cne83hyftdtg2" path="res://animation/Fox.png" id="7_mj5lg"]
+[ext_resource type="Texture2D" uid="uid://ccqnj05g3nn4x" path="res://animation/Cat.png" id="8_ufwb2"]
+[ext_resource type="Texture2D" uid="uid://v7fw8mub3il0" path="res://animation/Squirrel Sprite Sheetreal.png" id="9_6cdou"]
+[ext_resource type="Texture2D" uid="uid://c6y26vevqom5x" path="res://animation/Armadillo.png" id="10_i42df"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vjb58"]
-texture = ExtResource("3_70i5f")
+texture = ExtResource("3_6cdou")
 modulate_color = Color(0.62967473, 0.62967473, 0.6296747, 1)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_con2f"]
-atlas = ExtResource("2_vjb58")
-region = Rect2(-0.0118255615, -0.07570553, 128.32133, 128.22075)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1x3kl"]
+bg_color = Color(0.25490198, 0.62352943, 0.8392157, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 15
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vjb58"]
-atlas = ExtResource("1_yqeox")
-region = Rect2(12.95018, 14.232994, 105.556656, 102.73428)
+[sub_resource type="AtlasTexture" id="AtlasTexture_6bb0x"]
+atlas = ExtResource("7_mj5lg")
+region = Rect2(0, 8.776054, 36.000015, 32.82395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufwb2"]
+atlas = ExtResource("8_ufwb2")
+region = Rect2(0.53630066, 8.543739, 33.8685, 32.965332)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i42df"]
+atlas = ExtResource("9_6cdou")
+region = Rect2(0, 75.2, 36, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cdou"]
+atlas = SubResource("AtlasTexture_i42df")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jp70"]
+atlas = ExtResource("10_i42df")
+region = Rect2(0, 11.199463, 34.399963, 35.200073)
 
 [sub_resource type="LabelSettings" id="LabelSettings_v86rl"]
-font = ExtResource("6_v86rl")
-font_size = 90
-font_color = Color(0.39607844, 0.49019608, 0.58431375, 1)
+font = ExtResource("7_13sgg")
+font_size = 85
+font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ifeun"]
-bg_color = Color(0.14509805, 0.18431373, 0.22352941, 1)
+bg_color = Color(0.25490198, 0.62352943, 0.8392157, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -63,6 +84,14 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_vjb58")
 
+[node name="Panel2" type="Panel" parent="." unique_id=1916351690]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 68.0
+offset_right = 917.0
+offset_bottom = 169.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1x3kl")
+
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1409191574]
 layout_mode = 1
 anchors_preset = 8
@@ -70,9 +99,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -283.0
+offset_left = -261.0
 offset_top = -64.0
-offset_right = 283.0
+offset_right = 305.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -97,7 +126,7 @@ offset_right = 64.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = SubResource("AtlasTexture_con2f")
+texture_normal = ExtResource("5_6cdou")
 script = ExtResource("3_con2f")
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/Control/ButtonBug" unique_id=1194733131]
@@ -113,7 +142,7 @@ offset_right = 58.5
 offset_bottom = 57.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("AtlasTexture_vjb58")
+texture = SubResource("AtlasTexture_6bb0x")
 
 [node name="Control2" type="Control" parent="HBoxContainer" unique_id=577881780]
 custom_minimum_size = Vector2(128, 128)
@@ -133,7 +162,7 @@ offset_right = 64.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = SubResource("AtlasTexture_con2f")
+texture_normal = ExtResource("5_6cdou")
 script = ExtResource("3_con2f")
 
 [node name="TextureRect2" type="TextureRect" parent="HBoxContainer/Control2/ButtonSpider" unique_id=2024573922]
@@ -143,13 +172,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -58.5
-offset_top = -57.5
-offset_right = 58.5
-offset_bottom = 57.5
+offset_left = -54.5
+offset_top = -58.5
+offset_right = 62.5
+offset_bottom = 56.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("AtlasTexture_vjb58")
+texture = SubResource("AtlasTexture_ufwb2")
 
 [node name="Control3" type="Control" parent="HBoxContainer" unique_id=1327193072]
 custom_minimum_size = Vector2(128, 128)
@@ -169,7 +198,7 @@ offset_right = 64.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = SubResource("AtlasTexture_con2f")
+texture_normal = ExtResource("5_6cdou")
 script = ExtResource("3_con2f")
 
 [node name="TextureRect3" type="TextureRect" parent="HBoxContainer/Control3/ButtonBeetle" unique_id=2127758497]
@@ -179,13 +208,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -58.5
-offset_top = -57.5
-offset_right = 58.5
-offset_bottom = 57.5
+offset_left = -51.5
+offset_top = -49.5
+offset_right = 65.5
+offset_bottom = 65.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("AtlasTexture_vjb58")
+texture = SubResource("AtlasTexture_6cdou")
 
 [node name="Control4" type="Control" parent="HBoxContainer" unique_id=466100879]
 custom_minimum_size = Vector2(128, 128)
@@ -205,7 +234,7 @@ offset_right = 64.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = SubResource("AtlasTexture_con2f")
+texture_normal = ExtResource("5_6cdou")
 script = ExtResource("3_con2f")
 
 [node name="TextureRect4" type="TextureRect" parent="HBoxContainer/Control4/ButtonPill" unique_id=1382261655]
@@ -215,24 +244,26 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -58.5
-offset_top = -57.5
-offset_right = 58.5
-offset_bottom = 57.5
+offset_left = -55.5
+offset_top = -48.5
+offset_right = 61.5
+offset_bottom = 66.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("AtlasTexture_vjb58")
+texture = SubResource("AtlasTexture_7jp70")
 
 [node name="Label" type="Label" parent="." unique_id=12959172]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -232.0
-offset_top = 55.0
-offset_right = 232.0
-offset_bottom = 182.0
+offset_left = -218.0
+offset_top = 49.0
+offset_right = 254.0
+offset_bottom = 176.0
 grow_horizontal = 2
+theme_override_colors/font_color = Color(0.03529412, 0.13333334, 0.19215687, 1)
+theme_override_colors/font_outline_color = Color(0.03529412, 0.13333334, 0.19215687, 1)
 theme_override_font_sizes/font_size = 60
 text = "DodgeBug"
 label_settings = SubResource("LabelSettings_v86rl")
@@ -246,13 +277,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -138.5
+offset_left = -114.5
 offset_top = -202.0
-offset_right = 138.5
+offset_right = 162.5
 offset_bottom = -111.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_colors/font_color = Color(0.36078432, 0.45490196, 0.54901963, 1)
+theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
 theme_override_fonts/font = ExtResource("7_13sgg")
 theme_override_font_sizes/font_size = 58
 theme_override_styles/normal = SubResource("StyleBoxFlat_ifeun")

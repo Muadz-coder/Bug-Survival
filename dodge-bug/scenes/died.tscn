@@ -10,7 +10,7 @@
 [ext_resource type="FontFile" uid="uid://dtqv330uqiu57" path="res://fonts/Aldrich,Archivo_Black,Bahianita/Aldrich/Aldrich-Regular.ttf" id="5_p88vf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1lit6"]
-bg_color = Color(0.14509805, 0.18431373, 0.22352941, 1)
+bg_color = Color(0.1764706, 0.42352942, 0.5568628, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ifeun"]
 bg_color = Color(0, 0, 0, 1)
@@ -20,7 +20,7 @@ corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v2spi"]
-bg_color = Color(0.14509805, 0.18431373, 0.22352941, 1)
+bg_color = Color(0.25490198, 0.62352943, 0.8392157, 1)
 corner_radius_top_left = 32
 corner_radius_top_right = 32
 corner_radius_bottom_right = 32
@@ -29,12 +29,12 @@ corner_radius_bottom_left = 32
 [sub_resource type="LabelSettings" id="LabelSettings_i6lef"]
 font = ExtResource("2_mubft")
 font_size = 55
-font_color = Color(0.36078432, 0.45490196, 0.54901963, 1)
+font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
 
 [sub_resource type="Theme" id="Theme_1lit6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4luv"]
-bg_color = Color(0.14509805, 0.18431373, 0.22352941, 1)
+bg_color = Color(0.25490198, 0.62352943, 0.8392157, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -141,7 +141,7 @@ offset_right = 209.0
 offset_bottom = -15.25
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.36078432, 0.45490196, 0.54901963, 1)
+theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
 theme_override_fonts/font = ExtResource("4_mr4x7")
 theme_override_font_sizes/font_size = 46
 horizontal_alignment = 1
@@ -159,7 +159,7 @@ offset_right = 210.0
 offset_bottom = 124.75
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.36078432, 0.45490196, 0.54901963, 1)
+theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
 theme_override_fonts/font = ExtResource("4_mr4x7")
 theme_override_font_sizes/font_size = 46
 horizontal_alignment = 1
@@ -178,10 +178,10 @@ offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = SubResource("Theme_1lit6")
-theme_override_colors/font_color = Color(0.36078432, 0.45490196, 0.54901963, 1)
+theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_pressed_color = Color(0.36078432, 0.45490196, 0.54901963, 1)
+theme_override_colors/icon_pressed_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
 theme_override_fonts/font = ExtResource("5_p88vf")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_d4luv")

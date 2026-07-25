@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf7i5npcoq4ck"
-path="res://.godot/imported/SPRITE_PORTRAIT.png-c4203fd473bf1f3c23371f825be39796.ctex"
+uid="uid://238thrqj77yk"
+path="res://.godot/imported/blue.png-695252b40b42e442b1d0ce314c0aefe9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SATYR_sprite_sheet/SPRITE_PORTRAIT.png"
-dest_files=["res://.godot/imported/SPRITE_PORTRAIT.png-c4203fd473bf1f3c23371f825be39796.ctex"]
+source_file="res://sprites/Free DEMO Pixel Skies Background pack by Digital Moons/Parallax Pixel Skies 240x135px/Demo 01 Parallax Pixel Sky/blue.png"
+dest_files=["res://.godot/imported/blue.png-695252b40b42e442b1d0ce314c0aefe9.ctex"]
 
 [params]
 

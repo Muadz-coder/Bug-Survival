@@ -4,10 +4,14 @@
 [ext_resource type="Script" uid="uid://cm3pgwq3wmovp" path="res://scripts/basic_tutorial.gd" id="1_ydmnt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ifeun"]
-bg_color = Color(0.14509805, 0.18431373, 0.22352941, 1)
+bg_color = Color(0.1764706, 0.42352942, 0.5568628, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pglyj"]
-bg_color = Color(0.14117648, 0.16470589, 0.19215687, 1)
+bg_color = Color(0.25490198, 0.62352943, 0.8392157, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1x3kl"]
 bg_color = Color(0.09036284, 0.019067086, 0, 1)

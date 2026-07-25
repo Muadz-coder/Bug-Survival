@@ -29,15 +29,15 @@ region = Rect2(128, 0, 32, 32)
 atlas = ExtResource("3_gh4bm")
 region = Rect2(160, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8l042"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gh4bm"]
 atlas = ExtResource("3_gh4bm")
 region = Rect2(32, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f87tk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8l042"]
 atlas = ExtResource("3_gh4bm")
 region = Rect2(64, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_esmft"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_f87tk"]
 atlas = ExtResource("3_gh4bm")
 region = Rect2(96, 64, 32, 32)
 
@@ -96,13 +96,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_gh4bm")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_8l042")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_f87tk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_esmft")
 }],
 "loop": 1,
 "name": &"jump",
@@ -141,7 +141,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v4bnd"]
-size = Vector2(1.1154538, 1.8898039)
+size = Vector2(1.1154538, 1.0732223)
 
 [node name="beetle" type="CharacterBody2D" unique_id=878632873 groups=["player"]]
 script = ExtResource("1_kxsg3")
@@ -156,10 +156,10 @@ position = Vector2(0, -102.00001)
 scale = Vector2(6.5468755, 8.468749)
 sprite_frames = SubResource("SpriteFrames_3cl3w")
 animation = &"idle"
-frame_progress = 0.6580416
+frame_progress = 0.9841327
 
 [node name="RollCollision" type="CollisionShape2D" parent="." unique_id=1083326349]
-position = Vector2(3.5000298, -6.999987)
+position = Vector2(3.000001, -6.999987)
 rotation = -1.5707964
 scale = Vector2(71.71971, 42.86158)
 shape = SubResource("RectangleShape2D_v4bnd")

@@ -7,10 +7,14 @@
 [ext_resource type="FontFile" uid="uid://bjsuvxcowcq4e" path="res://fonts/Oxanium/static/Oxanium-Bold.ttf" id="5_pglyj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ce8w"]
-bg_color = Color(0.14509805, 0.18431373, 0.22352941, 1)
+bg_color = Color(0.1764706, 0.42352942, 0.5568628, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47dss"]
-bg_color = Color(0.14117648, 0.16470589, 0.19215687, 1)
+bg_color = Color(0.25490198, 0.62352943, 0.8392157, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ifeun"]
 size = Vector2(70, 20)
@@ -105,18 +109,18 @@ offset_right = 202.0
 offset_bottom = 339.0
 theme_override_fonts/font = ExtResource("3_pglyj")
 theme_override_font_sizes/font_size = 35
-text = "Bug"
+text = "Fox"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="." unique_id=1617970169]
 layout_mode = 0
-offset_left = 735.0
+offset_left = 733.0
 offset_top = 291.0
-offset_right = 853.0
+offset_right = 868.0
 offset_bottom = 339.0
 theme_override_fonts/font = ExtResource("3_pglyj")
 theme_override_font_sizes/font_size = 35
-text = "Beetle"
+text = "Squirrel"
 horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="." unique_id=865575814]
@@ -127,7 +131,7 @@ offset_right = 528.0
 offset_bottom = 339.0
 theme_override_fonts/font = ExtResource("3_pglyj")
 theme_override_font_sizes/font_size = 35
-text = "Spider"
+text = "Cat"
 horizontal_alignment = 1
 
 [node name="Label4" type="Label" parent="." unique_id=2121408738]
@@ -138,7 +142,7 @@ offset_right = 1131.0
 offset_bottom = 339.0
 theme_override_fonts/font = ExtResource("3_pglyj")
 theme_override_font_sizes/font_size = 35
-text = "Roly	poly"
+text = "Armadillo"
 horizontal_alignment = 1
 
 [node name="Ability" type="Label" parent="." unique_id=712060342]
@@ -193,13 +197,10 @@ offset_right = 584.0
 offset_bottom = 511.0
 theme_override_fonts/font = ExtResource("4_v7viy")
 theme_override_font_sizes/font_size = 25
-text = "Press 'R' and 
-aim cursor to a
-rock to grapple
-yourself to it.
-(Must be midair)
-Can press 'R'
-again to cancel."
+text = "By holding the 
+jump button,
+you jump higher
+than usual."
 
 [node name="Label5" type="Label" parent="." unique_id=809688371]
 layout_mode = 1
