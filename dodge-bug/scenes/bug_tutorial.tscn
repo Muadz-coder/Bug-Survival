@@ -7,7 +7,10 @@
 [ext_resource type="FontFile" uid="uid://bjsuvxcowcq4e" path="res://fonts/Oxanium/static/Oxanium-Bold.ttf" id="5_pglyj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ce8w"]
-bg_color = Color(0.50980395, 0.64705884, 0.40784314, 1)
+bg_color = Color(0.14509805, 0.18431373, 0.22352941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47dss"]
+bg_color = Color(0.14117648, 0.16470589, 0.19215687, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ifeun"]
 size = Vector2(70, 20)
@@ -48,6 +51,7 @@ offset_right = 557.0
 offset_bottom = 324.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_47dss")
 
 [node name="Bug" type="StaticBody2D" parent="." unique_id=533856270]
 position = Vector2(142, 215)

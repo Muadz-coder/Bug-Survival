@@ -1,9 +1,10 @@
 extends CharacterBody2D
 
 const SPEED = 400
-const JUMP_VELOCITY = -725
+const JUMP_VELOCITY = -800
 
 @onready var jump_sound: AudioStreamPlayer2D = $JumpSound
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var jump_count = 0
 var max_jumps = 2
@@ -34,10 +35,19 @@ func _physics_process(delta: float) -> void:
 
 	if direction:
 		velocity.x = direction * SPEED
+		sprite.flip_h = direction < 0
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+	# Animations
+	if not is_on_floor():
+		sprite.play("jump")
+	elif direction != 0:
+		sprite.play("walk")
+	else:
+		sprite.play("idle")
 
 	# Fall death
 	if position.y > 1600:

@@ -1,24 +1,24 @@
 [gd_scene format=3 uid="uid://d2d8dwv5j34t6"]
 
 [ext_resource type="Script" uid="uid://7cxrk0xsnn27" path="res://scripts/warning.gd" id="1_e65lg"]
-[ext_resource type="Texture2D" uid="uid://d2y5q1hol4i27" path="res://sprites/warning.png" id="2_e65lg"]
+[ext_resource type="Texture2D" uid="uid://ytham5pq6gta" path="res://sprites/redwarning.png" id="2_e65lg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e65lg"]
-size = Vector2(32, 32)
+size = Vector2(22, 40)
 
 [node name="Warning" type="Area2D" unique_id=796246835]
 script = ExtResource("1_e65lg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=939285556]
 texture_filter = 1
-position = Vector2(-0.12500381, 0.18750119)
-scale = Vector2(0.112827726, 0.12055244)
+position = Vector2(-0.4152648, -0.5000024)
+scale = Vector2(0.108690105, 0.12921348)
 texture = ExtResource("2_e65lg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2103821127]
+position = Vector2(-66, 14)
 shape = SubResource("RectangleShape2D_e65lg")
 
 [node name="LifeTimer" type="Timer" parent="." unique_id=399464412]
-wait_time = 2.0
 one_shot = true
 autostart = true

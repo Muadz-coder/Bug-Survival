@@ -4,7 +4,10 @@
 [ext_resource type="Script" uid="uid://cm3pgwq3wmovp" path="res://scripts/basic_tutorial.gd" id="1_ydmnt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ifeun"]
-bg_color = Color(0.50980395, 0.64705884, 0.40784314, 1)
+bg_color = Color(0.14509805, 0.18431373, 0.22352941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pglyj"]
+bg_color = Color(0.14117648, 0.16470589, 0.19215687, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1x3kl"]
 bg_color = Color(0.09036284, 0.019067086, 0, 1)
@@ -49,6 +52,7 @@ offset_right = 463.0
 offset_bottom = 322.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pglyj")
 
 [node name="AButton" type="Button" parent="." unique_id=248573607]
 layout_mode = 0

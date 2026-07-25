@@ -4,34 +4,29 @@
 [ext_resource type="PackedScene" uid="uid://bvkm1vu04jt6m" path="res://prefabs/rocks.tscn" id="2_bswci"]
 [ext_resource type="PackedScene" uid="uid://d2d8dwv5j34t6" path="res://prefabs/warning.tscn" id="3_4nkto"]
 [ext_resource type="Script" uid="uid://c04yv1k4qd62w" path="res://scripts/spawn_point.gd" id="3_5xbjy"]
-[ext_resource type="PackedScene" uid="uid://h3mmd7j65nqs" path="res://prefabs/grape.tscn" id="4_4nkto"]
+[ext_resource type="Texture2D" uid="uid://c33uyd7w3tmiw" path="res://sprites/Free DEMO Pixel Skies Background pack by Digital Moons/Parallax Pixel Skies 240x135px/Demo 01 Parallax Pixel Sky/demo01_PixelSky_layer01.png" id="5_2os1m"]
 [ext_resource type="PackedScene" uid="uid://ds76vxdbhun4a" path="res://prefabs/watermelon.tscn" id="5_2y5yt"]
-[ext_resource type="PackedScene" uid="uid://bgclkbsildkj7" path="res://prefabs/star.tscn" id="6_2aecg"]
 [ext_resource type="PackedScene" uid="uid://y1puif73vmhp" path="res://prefabs/turret.tscn" id="6_fcfvj"]
-[ext_resource type="PackedScene" uid="uid://4e3rrt67qwf6" path="res://prefabs/mango.tscn" id="7_6dial"]
 [ext_resource type="PackedScene" uid="uid://ccncxhesaptmk" path="res://prefabs/walls.tscn" id="7_pa8r4"]
-[ext_resource type="PackedScene" uid="uid://bly8jxbc1ifp3" path="res://prefabs/kiwi.tscn" id="8_7nomh"]
 [ext_resource type="PackedScene" uid="uid://cu0rujiguvstn" path="res://prefabs/leftturret.tscn" id="8_e3sih"]
-[ext_resource type="PackedScene" uid="uid://d22feae4npx6q" path="res://prefabs/cran.tscn" id="9_1s4pk"]
 [ext_resource type="PackedScene" uid="uid://c4jsfi54tvlmp" path="res://prefabs/rightturret.tscn" id="9_2y5yt"]
-[ext_resource type="Texture2D" uid="uid://dgkbug4037skn" path="res://sprites/Copilot_20260629_083303.png" id="10_6dial"]
 
 [node name="level 1" type="Node2D" unique_id=519151207]
 script = ExtResource("3_5xbjy")
 spike_scene = ExtResource("2_5xbjy")
 warning_scene = ExtResource("3_4nkto")
-fruit_scenes = Array[PackedScene]([ExtResource("4_4nkto"), ExtResource("5_2y5yt"), ExtResource("6_2aecg"), ExtResource("7_6dial"), ExtResource("8_7nomh"), ExtResource("9_1s4pk")])
+fruit_scenes = Array[PackedScene]([ExtResource("5_2y5yt")])
+
+[node name="Demo01PixelSky" type="Sprite2D" parent="." unique_id=1662871317]
+z_index = -1
+texture_filter = 1
+position = Vector2(1124.4999, 730.0001)
+scale = Vector2(11.054167, 10.933335)
+texture = ExtResource("5_2os1m")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=604065292]
 position = Vector2(1148, 706)
 zoom = Vector2(0.5, 0.5)
-
-[node name="Background" type="Sprite2D" parent="." unique_id=2006054582]
-z_index = -1
-texture_filter = 1
-position = Vector2(1149, 596.96893)
-scale = Vector2(2.6504314, 3.4042358)
-texture = ExtResource("10_6dial")
 
 [node name="SpawnPoint" type="Marker2D" parent="." unique_id=1414365261]
 position = Vector2(1147, 1127)
@@ -43,13 +38,13 @@ position = Vector2(1149, 1127)
 position = Vector2(470, -312)
 
 [node name="SpawnPoint3" type="Marker2D" parent="SpawnPoints" unique_id=2067161062]
-position = Vector2(-470, -312)
+position = Vector2(-473, -312)
 
 [node name="SpawnPoint4" type="Marker2D" parent="SpawnPoints" unique_id=1947609872]
-position = Vector2(-916, -82)
+position = Vector2(-915, -82)
 
 [node name="SpawnPoint5" type="Marker2D" parent="SpawnPoints" unique_id=30529753]
-position = Vector2(-470, -789)
+position = Vector2(-473, -789)
 
 [node name="SpawnPoint6" type="Marker2D" parent="SpawnPoints" unique_id=162523183]
 position = Vector2(475, -789)
@@ -58,49 +53,49 @@ position = Vector2(475, -789)
 position = Vector2(-934, -992)
 
 [node name="SpawnPoint8" type="Marker2D" parent="SpawnPoints" unique_id=2038709682]
-position = Vector2(-4, -596)
+position = Vector2(-6, -596)
 
 [node name="SpawnPoint9" type="Marker2D" parent="SpawnPoints" unique_id=1450160634]
 position = Vector2(915, -81)
 
 [node name="SpawnPoint10" type="Marker2D" parent="SpawnPoints" unique_id=11708323]
-position = Vector2(942, -992)
+position = Vector2(940, -992)
 
 [node name="SpawnPoint11" type="Marker2D" parent="SpawnPoints" unique_id=704576155]
-position = Vector2(-3, -7)
+position = Vector2(-5, -9)
 
 [node name="SpawnPoints2" type="Marker2D" parent="." unique_id=539567292]
 position = Vector2(1149, 1127)
 
 [node name="SpawnPoint2" type="Marker2D" parent="SpawnPoints2" unique_id=241817344]
-position = Vector2(470, -316)
+position = Vector2(215, -100)
 
 [node name="SpawnPoint3" type="Marker2D" parent="SpawnPoints2" unique_id=459279291]
-position = Vector2(-470, -315)
+position = Vector2(-218, -100)
 
 [node name="SpawnPoint4" type="Marker2D" parent="SpawnPoints2" unique_id=1722968430]
-position = Vector2(-916, -86)
+position = Vector2(-916, -447)
 
 [node name="SpawnPoint5" type="Marker2D" parent="SpawnPoints2" unique_id=1706705170]
-position = Vector2(-470, -791)
+position = Vector2(-209, -843)
 
 [node name="SpawnPoint6" type="Marker2D" parent="SpawnPoints2" unique_id=1504019073]
-position = Vector2(475, -790)
+position = Vector2(215, -843)
 
 [node name="SpawnPoint7" type="Marker2D" parent="SpawnPoints2" unique_id=1671981295]
-position = Vector2(-934, -990)
+position = Vector2(-646, -918)
 
 [node name="SpawnPoint8" type="Marker2D" parent="SpawnPoints2" unique_id=1807766531]
-position = Vector2(-4, -596)
+position = Vector2(-6, -744)
 
 [node name="SpawnPoint9" type="Marker2D" parent="SpawnPoints2" unique_id=2114220032]
-position = Vector2(915, -83)
+position = Vector2(915, -447)
 
 [node name="SpawnPoint10" type="Marker2D" parent="SpawnPoints2" unique_id=660933938]
-position = Vector2(942, -993)
+position = Vector2(712, -918)
 
 [node name="SpawnPoint11" type="Marker2D" parent="SpawnPoints2" unique_id=132584965]
-position = Vector2(-1, -10)
+position = Vector2(-3, -150)
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=465210053]
 wait_time = 5.0
@@ -115,10 +110,10 @@ wait_time = 6.0
 autostart = true
 
 [node name="rocks" parent="." unique_id=1385581139 instance=ExtResource("2_bswci")]
-position = Vector2(217, 220)
+position = Vector2(220, 220)
 
 [node name="rocks2" parent="." unique_id=1521068965 instance=ExtResource("2_bswci")]
-position = Vector2(2086, 220)
+position = Vector2(2092, 220)
 
 [node name="rocks3" parent="." unique_id=477295588 instance=ExtResource("2_bswci")]
 position = Vector2(236, 1130)
@@ -139,29 +134,29 @@ position = Vector2(679, 900)
 position = Vector2(1622, 900)
 
 [node name="rocks9" parent="." unique_id=219048619 instance=ExtResource("2_bswci")]
-position = Vector2(679, 423)
+position = Vector2(678, 423)
 
 [node name="rocks10" parent="." unique_id=326786196 instance=ExtResource("2_bswci")]
 position = Vector2(1624, 423)
-
-[node name="rocks11" parent="." unique_id=772178638 instance=ExtResource("2_bswci")]
-position = Vector2(1147, 2)
 
 [node name="walls" parent="." unique_id=1733785245 instance=ExtResource("7_pa8r4")]
 position = Vector2(1156, -69)
 
 [node name="Turret" parent="." unique_id=1365269987 instance=ExtResource("6_fcfvj")]
 z_index = -1
-position = Vector2(1148, 46)
+position = Vector2(1148, 144)
 shoot_interval = 12.0
 
 [node name="right_turret" parent="." unique_id=2021201854 instance=ExtResource("9_2y5yt")]
 z_index = -1
-position = Vector2(2086, 280)
+position = Vector2(2083, 371)
 
 [node name="left_turret" parent="." unique_id=1229253766 instance=ExtResource("8_e3sih")]
 z_index = -1
-position = Vector2(217, 280)
+position = Vector2(214, 371)
+
+[node name="rocks11" parent="." unique_id=772178638 instance=ExtResource("2_bswci")]
+position = Vector2(1147, 2)
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SpawnTimerW" to="." method="_on_spawn_timer_w_timeout"]

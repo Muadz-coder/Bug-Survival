@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ddb1v1ukequl4"]
 
 [ext_resource type="Script" uid="uid://b4l75gxbxgkqg" path="res://scripts/projectile.gd" id="1_how8d"]
-[ext_resource type="Texture2D" uid="uid://bk4driu1gr0ky" path="res://sprites/laser (1).png" id="2_how8d"]
+[ext_resource type="Texture2D" uid="uid://du1tx3g1puwd2" path="res://sprites/laser2.png" id="2_how8d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5uycd"]
 radius = 11.045361

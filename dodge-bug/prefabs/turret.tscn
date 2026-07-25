@@ -2,10 +2,17 @@
 
 [ext_resource type="Script" uid="uid://bjs60wfty3eeq" path="res://scripts/turret.gd" id="1_2pe4l"]
 [ext_resource type="PackedScene" uid="uid://ddb1v1ukequl4" path="res://prefabs/projectile.tscn" id="2_o5o88"]
-[ext_resource type="Texture2D" uid="uid://go7piyic8ywj" path="res://sprites/Turret2.png" id="3_o5o88"]
+[ext_resource type="Texture2D" uid="uid://chvqpqyukxy2d" path="res://sprites/YellowTurret1.png" id="3_o5o88"]
 [ext_resource type="AudioStream" uid="uid://bytgx53ooqfcb" path="res://sounds/mixkit-short-laser-gun-shot-1670.wav" id="4_o5o88"]
 
-[node name="Turret" type="Node2D" unique_id=1365269987]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1x3kl"]
+size = Vector2(84, 134)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3nmj"]
+size = Vector2(36, 53)
+
+[node name="Turret" type="Area2D" unique_id=1777537393]
+texture_filter = 1
 script = ExtResource("1_2pe4l")
 projectile_scene = ExtResource("2_o5o88")
 shoot_interval = 10.0
@@ -17,7 +24,17 @@ scale = Vector2(2.82, 3.211)
 texture = ExtResource("3_o5o88")
 
 [node name="ShootSound" type="AudioStreamPlayer2D" parent="." unique_id=816461508]
+visible = false
 stream = ExtResource("4_o5o88")
 
 [node name="Nuzzle" type="Marker2D" parent="." unique_id=24842354]
+visible = false
 position = Vector2(79, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=876748472]
+position = Vector2(4, 0)
+shape = SubResource("RectangleShape2D_1x3kl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1658259593]
+position = Vector2(65, 0.5)
+shape = SubResource("RectangleShape2D_r3nmj")

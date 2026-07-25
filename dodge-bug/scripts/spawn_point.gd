@@ -39,8 +39,13 @@ func get_random_spawn_point():
 func _on_spawn_timer_w_timeout() -> void:
 	pending_spike_positions.clear()
 
-	for i in range(5):
+	for i in range(4):
 		var sp = get_random_spawn_point()
+
+		# Skip if this position has already been selected
+		if pending_spike_positions.has(sp.global_position):
+			continue
+
 		pending_spike_positions.append(sp.global_position)
 
 		var warning = warning_scene.instantiate()

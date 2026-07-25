@@ -2,10 +2,16 @@
 
 [ext_resource type="Script" uid="uid://cb7s0gljnba72" path="res://scripts/goal_tutorial.gd" id="1_0ce8w"]
 [ext_resource type="Texture2D" uid="uid://gftq7snuyi2v" path="res://icon.svg" id="1_efddt"]
+[ext_resource type="Texture2D" uid="uid://bp2a5i15hv7i2" path="res://sprites/MainTurret.png" id="2_3rcm4"]
 [ext_resource type="FontFile" uid="uid://bjsuvxcowcq4e" path="res://fonts/Oxanium/static/Oxanium-Bold.ttf" id="2_xonpw"]
+[ext_resource type="Texture2D" uid="uid://dy0ih0fmqxmya" path="res://sprites/blackspikes.png" id="3_eh6jv"]
+[ext_resource type="Texture2D" uid="uid://ytham5pq6gta" path="res://sprites/redwarning.png" id="5_nc8ix"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ce8w"]
-bg_color = Color(0.50980395, 0.64705884, 0.40784314, 1)
+bg_color = Color(0.14509805, 0.18431373, 0.22352941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bism1"]
+bg_color = Color(0.14117648, 0.16470589, 0.19215687, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ifeun"]
 size = Vector2(29, 32)
@@ -46,24 +52,32 @@ offset_right = 463.0
 offset_bottom = 305.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bism1")
 
 [node name="Turret" type="StaticBody2D" parent="." unique_id=83025386]
 position = Vector2(463, 95)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Turret" unique_id=1850369566]
-texture = ExtResource("1_efddt")
+texture_filter = 1
+position = Vector2(-8.490601, -2.0134277)
+rotation = 1.5776144
+scale = Vector2(2.1169794, 2.2417252)
+texture = ExtResource("2_3rcm4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Turret" unique_id=298836223]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_ifeun")
 
 [node name="Spike" type="StaticBody2D" parent="." unique_id=209315588]
-position = Vector2(117, 473)
+texture_filter = 1
+position = Vector2(-134, 356)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Spike" unique_id=1720158645]
-texture = ExtResource("1_efddt")
+position = Vector2(254.5, 137.5)
+scale = Vector2(0.36533666, 0.48501873)
+texture = ExtResource("3_eh6jv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spike" unique_id=897944139]
 position = Vector2(-0.5, 0)
@@ -85,9 +99,10 @@ position = Vector2(664, 374)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Warning" unique_id=733147736]
+texture_filter = 1
 position = Vector2(-551, -276)
 scale = Vector2(0.2734375, 0.296875)
-texture = ExtResource("1_efddt")
+texture = ExtResource("5_nc8ix")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Warning" unique_id=1490673951]
 position = Vector2(-547, -267)
@@ -113,6 +128,17 @@ text = "The turret targets you as soon
 as you load to the game. It fires
 reasonably fast bullet at you and
 upon contacting you die."
+
+[node name="WarningL5" type="Label" parent="." unique_id=372659664]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 186.0
+offset_right = 621.0
+offset_bottom = 287.0
+text = "By colliding with the turret, you
+reset the turret's shooting 
+cooldown, making your chances
+of surviving easier."
 
 [node name="WarningL4" type="Label" parent="." unique_id=406156300]
 layout_mode = 0

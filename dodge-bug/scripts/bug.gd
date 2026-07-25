@@ -8,23 +8,25 @@ const FALL_MULTIPLIER = 2.0
 var dashing = false
 var can_dash = true
 
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var jump_sound: AudioStreamPlayer2D = $JumpSound
 @onready var dash_sound: AudioStreamPlayer2D = $DashSound
+
 
 func _ready():
 	add_to_group("player")
 
+
 func _physics_process(delta: float) -> void:
-	# Gravity (better platformer feel)
+
+	# Gravity
 	if not is_on_floor():
 		if velocity.y < 0:
-			# going up
 			velocity += get_gravity() * delta
 		else:
-			# falling faster
 			velocity += get_gravity() * FALL_MULTIPLIER * delta
 	else:
-		# reset dash when on ground
+		# Reset dash when on ground
 		can_dash = true
 
 	# Jump
@@ -53,14 +55,38 @@ func _physics_process(delta: float) -> void:
 			velocity.x = direction * DASH_SPEED
 		else:
 			velocity.x = direction * SPEED
+
+		sprite.flip_h = direction < 0
+
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
 
+	update_animation()
+
 	# Fall death
 	if position.y > 1600:
 		respawn()
+
+
+func update_animation():
+
+	# Jump animation
+	if not is_on_floor():
+		if sprite.animation != "jump":
+			sprite.play("jump")
+		return
+
+	# Walk animation
+	if abs(velocity.x) > 5:
+		if sprite.animation != "walk":
+			sprite.play("walk")
+		return
+
+	# Idle animation
+	if sprite.animation != "idle":
+		sprite.play("idle")
 
 
 func respawn():
