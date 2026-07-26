@@ -2,9 +2,12 @@
 
 [ext_resource type="FontFile" uid="uid://bjsuvxcowcq4e" path="res://fonts/Oxanium/static/Oxanium-Bold.ttf" id="1_p7nht"]
 [ext_resource type="Script" uid="uid://cm3pgwq3wmovp" path="res://scripts/basic_tutorial.gd" id="1_ydmnt"]
+[ext_resource type="Texture2D" uid="uid://c33uyd7w3tmiw" path="res://sprites/Free DEMO Pixel Skies Background pack by Digital Moons/Parallax Pixel Skies 240x135px/Demo 01 Parallax Pixel Sky/demo01_PixelSky_layer01.png" id="2_ydmnt"]
+[ext_resource type="FontFile" uid="uid://dwexrmdgf6gtu" path="res://fonts/Oxanium/static/Oxanium-ExtraBold.ttf" id="4_lt5vt"]
+[ext_resource type="FontFile" uid="uid://c2vtc65tv4pj3" path="res://fonts/Oxanium/static/Oxanium-Regular.ttf" id="5_hudsr"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ifeun"]
-bg_color = Color(0.1764706, 0.42352942, 0.5568628, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m0h7e"]
+texture = ExtResource("2_ydmnt")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pglyj"]
 bg_color = Color(0.25490198, 0.62352943, 0.8392157, 1)
@@ -41,7 +44,7 @@ offset_left = -181.0
 offset_top = -31.0
 offset_right = 1252.0
 offset_bottom = 741.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_ifeun")
+theme_override_styles/panel = SubResource("StyleBoxTexture_m0h7e")
 
 [node name="Panel" type="Panel" parent="." unique_id=634487038]
 layout_mode = 1
@@ -181,6 +184,7 @@ offset_bottom = 61.99994
 grow_horizontal = 2
 grow_vertical = 0
 rotation = 3.6442463e-05
+theme_override_fonts/font = ExtResource("4_lt5vt")
 text = "Press space to continue
 
 
@@ -193,6 +197,7 @@ offset_left = 551.0
 offset_top = 261.0
 offset_right = 1016.0
 offset_bottom = 398.0
+theme_override_fonts/font = ExtResource("5_hudsr")
 text = "Some abilities require you to press these
 
 

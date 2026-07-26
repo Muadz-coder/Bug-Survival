@@ -163,7 +163,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bism1"]
-size = Vector2(1.1154538, 2.1697755)
+size = Vector2(1.1154538, 1.7731497)
 
 [node name="bug" type="CharacterBody2D" unique_id=878632873 groups=["player"]]
 texture_filter = 1
@@ -185,11 +185,10 @@ texture_filter = 1
 position = Vector2(0, -102.00001)
 scale = Vector2(6.5468755, 8.468749)
 sprite_frames = SubResource("SpriteFrames_aj32f")
-animation = &"jump"
-frame_progress = 0.008425955
+animation = &"idle"
 
 [node name="RollCollision2" type="CollisionShape2D" parent="." unique_id=1279979644]
-position = Vector2(6.499999, -6.9999914)
+position = Vector2(7, -6.9999914)
 rotation = -1.5707964
 scale = Vector2(71.71971, 42.86158)
 shape = SubResource("RectangleShape2D_bism1")

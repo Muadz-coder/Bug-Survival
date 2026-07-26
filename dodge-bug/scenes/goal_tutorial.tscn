@@ -1,13 +1,17 @@
 [gd_scene format=3 uid="uid://s7tocabc82en"]
 
 [ext_resource type="Script" uid="uid://cb7s0gljnba72" path="res://scripts/goal_tutorial.gd" id="1_0ce8w"]
-[ext_resource type="Texture2D" uid="uid://gftq7snuyi2v" path="res://icon.svg" id="1_efddt"]
+[ext_resource type="Texture2D" uid="uid://cecflkgadvh2h" path="res://sprites/YellowTurretNO.png" id="2_3rcm4"]
+[ext_resource type="Texture2D" uid="uid://c33uyd7w3tmiw" path="res://sprites/Free DEMO Pixel Skies Background pack by Digital Moons/Parallax Pixel Skies 240x135px/Demo 01 Parallax Pixel Sky/demo01_PixelSky_layer01.png" id="2_eh6jv"]
 [ext_resource type="FontFile" uid="uid://bjsuvxcowcq4e" path="res://fonts/Oxanium/static/Oxanium-Bold.ttf" id="2_xonpw"]
-[ext_resource type="Texture2D" uid="uid://dy0ih0fmqxmya" path="res://sprites/blackspikes.png" id="3_eh6jv"]
+[ext_resource type="Texture2D" uid="uid://c2lrmvh0ik3ew" path="res://animation/Apple1.png" id="4_chmxv"]
 [ext_resource type="Texture2D" uid="uid://bqfqrcs5fup7j" path="res://sprites/warninggrey.png" id="4_gjyxp"]
+[ext_resource type="Texture2D" uid="uid://br8yuqwfksuw2" path="res://animation/Bananas1.png" id="5_535sg"]
+[ext_resource type="Texture2D" uid="uid://cptaiw1wm8s8v" path="res://animation/Melon1.png" id="6_d2b6u"]
+[ext_resource type="Texture2D" uid="uid://b1p5nuf1dppvk" path="res://animation/Strawberry1.png" id="7_44asg"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ce8w"]
-bg_color = Color(0.1764706, 0.42352942, 0.5568628, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nc8ix"]
+texture = ExtResource("2_eh6jv")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bism1"]
 bg_color = Color(0.25490198, 0.62352943, 0.8392157, 1)
@@ -18,6 +22,22 @@ corner_radius_bottom_left = 24
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ifeun"]
 size = Vector2(29, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gny6"]
+atlas = ExtResource("4_chmxv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2aecg"]
+atlas = ExtResource("5_535sg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dial"]
+atlas = ExtResource("6_d2b6u")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nomh"]
+atlas = ExtResource("7_44asg")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="LabelSettings" id="LabelSettings_0ce8w"]
 font = ExtResource("2_xonpw")
@@ -40,7 +60,7 @@ offset_left = -182.0
 offset_top = -27.0
 offset_right = 1251.0
 offset_bottom = 745.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_0ce8w")
+theme_override_styles/panel = SubResource("StyleBoxTexture_nc8ix")
 
 [node name="Panel" type="Panel" parent="." unique_id=454791340]
 layout_mode = 1
@@ -64,8 +84,9 @@ metadata/_edit_group_ = true
 [node name="Sprite2D" type="Sprite2D" parent="Turret" unique_id=1850369566]
 texture_filter = 1
 position = Vector2(-8.490601, -2.0134277)
-rotation = 1.5776144
+rotation = 1.5705134
 scale = Vector2(2.1169794, 2.2417252)
+texture = ExtResource("2_3rcm4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Turret" unique_id=298836223]
 position = Vector2(-0.5, 0)
@@ -79,20 +100,64 @@ metadata/_edit_group_ = true
 [node name="Sprite2D" type="Sprite2D" parent="Spike" unique_id=1720158645]
 position = Vector2(254.5, 137.5)
 scale = Vector2(0.36533666, 0.48501873)
-texture = ExtResource("3_eh6jv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spike" unique_id=897944139]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_ifeun")
 
 [node name="Fruit" type="StaticBody2D" parent="." unique_id=781296147]
-position = Vector2(965, 257)
+texture_filter = 1
+position = Vector2(1100, 425)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Fruit" unique_id=231258629]
-texture = ExtResource("1_efddt")
+position = Vector2(-148.00005, -55.500004)
+scale = Vector2(4.124997, 4.46875)
+texture = SubResource("AtlasTexture_7gny6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fruit" unique_id=1812014408]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_ifeun")
+
+[node name="Fruit2" type="StaticBody2D" parent="." unique_id=2132591885]
+texture_filter = 1
+position = Vector2(1009, 425)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Fruit2" unique_id=150379122]
+position = Vector2(-148.00005, -55.500004)
+scale = Vector2(4.124997, 4.46875)
+texture = SubResource("AtlasTexture_2aecg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fruit2" unique_id=978315857]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_ifeun")
+
+[node name="Fruit3" type="StaticBody2D" parent="." unique_id=1472839473]
+texture_filter = 1
+position = Vector2(1197, 425)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Fruit3" unique_id=1390745158]
+position = Vector2(-148.00005, -55.500004)
+scale = Vector2(4.124997, 4.46875)
+texture = SubResource("AtlasTexture_6dial")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fruit3" unique_id=686511478]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_ifeun")
+
+[node name="Fruit4" type="StaticBody2D" parent="." unique_id=583504397]
+texture_filter = 1
+position = Vector2(911, 425)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Fruit4" unique_id=1206459052]
+position = Vector2(-148.00005, -55.500004)
+scale = Vector2(4.124997, 4.46875)
+texture = SubResource("AtlasTexture_7nomh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fruit4" unique_id=692437372]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_ifeun")
 
@@ -144,10 +209,10 @@ of surviving easier."
 
 [node name="WarningL4" type="Label" parent="." unique_id=406156300]
 layout_mode = 0
-offset_left = 635.0
-offset_top = 206.0
-offset_right = 891.0
-offset_bottom = 307.0
+offset_left = 781.0
+offset_top = 200.0
+offset_right = 1037.0
+offset_bottom = 301.0
 text = "The main goal of the game is to
 collect as many fruits as you can
 while trying avoid the things that

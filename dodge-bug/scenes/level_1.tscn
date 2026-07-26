@@ -6,16 +6,19 @@
 [ext_resource type="Script" uid="uid://c04yv1k4qd62w" path="res://scripts/spawn_point.gd" id="3_5xbjy"]
 [ext_resource type="Texture2D" uid="uid://c33uyd7w3tmiw" path="res://sprites/Free DEMO Pixel Skies Background pack by Digital Moons/Parallax Pixel Skies 240x135px/Demo 01 Parallax Pixel Sky/demo01_PixelSky_layer01.png" id="5_2os1m"]
 [ext_resource type="PackedScene" uid="uid://ds76vxdbhun4a" path="res://prefabs/watermelon.tscn" id="5_2y5yt"]
+[ext_resource type="PackedScene" uid="uid://4e3rrt67qwf6" path="res://prefabs/mango.tscn" id="6_7nomh"]
 [ext_resource type="PackedScene" uid="uid://y1puif73vmhp" path="res://prefabs/turret.tscn" id="6_fcfvj"]
+[ext_resource type="PackedScene" uid="uid://d22feae4npx6q" path="res://prefabs/cran.tscn" id="7_1s4pk"]
 [ext_resource type="PackedScene" uid="uid://ccncxhesaptmk" path="res://prefabs/walls.tscn" id="7_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://cu0rujiguvstn" path="res://prefabs/leftturret.tscn" id="8_e3sih"]
+[ext_resource type="PackedScene" uid="uid://h3mmd7j65nqs" path="res://prefabs/grape.tscn" id="8_x2xxo"]
 [ext_resource type="PackedScene" uid="uid://c4jsfi54tvlmp" path="res://prefabs/rightturret.tscn" id="9_2y5yt"]
 
 [node name="level 1" type="Node2D" unique_id=519151207]
 script = ExtResource("3_5xbjy")
 spike_scene = ExtResource("2_5xbjy")
 warning_scene = ExtResource("3_4nkto")
-fruit_scenes = Array[PackedScene]([ExtResource("5_2y5yt")])
+fruit_scenes = Array[PackedScene]([ExtResource("5_2y5yt"), ExtResource("6_7nomh"), ExtResource("7_1s4pk"), ExtResource("8_x2xxo")])
 
 [node name="Demo01PixelSky" type="Sprite2D" parent="." unique_id=1662871317]
 z_index = -1
