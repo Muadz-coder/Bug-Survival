@@ -79,7 +79,7 @@ stream = ExtResource("3_t26b2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=98172148]
 position = Vector2(-0.9999943, 0.5)
-scale = Vector2(5.8125, 6.09375)
+scale = Vector2(4.411, 4.625)
 sprite_frames = SubResource("SpriteFrames_f278k")
 animation = &"idle"
 

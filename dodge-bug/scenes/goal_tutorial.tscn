@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cecflkgadvh2h" path="res://sprites/YellowTurretNO.png" id="2_3rcm4"]
 [ext_resource type="Texture2D" uid="uid://c33uyd7w3tmiw" path="res://sprites/Free DEMO Pixel Skies Background pack by Digital Moons/Parallax Pixel Skies 240x135px/Demo 01 Parallax Pixel Sky/demo01_PixelSky_layer01.png" id="2_eh6jv"]
 [ext_resource type="FontFile" uid="uid://bjsuvxcowcq4e" path="res://fonts/Oxanium/static/Oxanium-Bold.ttf" id="2_xonpw"]
+[ext_resource type="Texture2D" uid="uid://b5ivthwtjnnlv" path="res://sprites/Off1.png" id="4_535sg"]
 [ext_resource type="Texture2D" uid="uid://c2lrmvh0ik3ew" path="res://animation/Apple1.png" id="4_chmxv"]
 [ext_resource type="Texture2D" uid="uid://bqfqrcs5fup7j" path="res://sprites/warninggrey.png" id="4_gjyxp"]
 [ext_resource type="Texture2D" uid="uid://br8yuqwfksuw2" path="res://animation/Bananas1.png" id="5_535sg"]
@@ -94,12 +95,13 @@ shape = SubResource("RectangleShape2D_ifeun")
 
 [node name="Spike" type="StaticBody2D" parent="." unique_id=209315588]
 texture_filter = 1
-position = Vector2(-134, 356)
+position = Vector2(-206, 426)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Spike" unique_id=1720158645]
-position = Vector2(254.5, 137.5)
-scale = Vector2(0.36533666, 0.48501873)
+position = Vector2(323.2793, 71.35769)
+scale = Vector2(3.9853003, 3.966193)
+texture = ExtResource("4_535sg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spike" unique_id=897944139]
 position = Vector2(-0.5, 0)
@@ -181,8 +183,9 @@ offset_left = 27.0
 offset_top = 156.0
 offset_right = 273.0
 offset_bottom = 231.0
+theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
 text = "These tiny things are warning 
-that tells you where the spike 
+that tells you where the saw 
 is going to spawn."
 
 [node name="WarningL3" type="Label" parent="." unique_id=792762845]
@@ -191,6 +194,7 @@ offset_left = 539.0
 offset_top = 44.0
 offset_right = 793.0
 offset_bottom = 145.0
+theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
 text = "The turret targets you as soon
 as you load to the game. It fires
 reasonably fast bullet at you and
@@ -202,6 +206,7 @@ offset_left = 367.0
 offset_top = 186.0
 offset_right = 621.0
 offset_bottom = 287.0
+theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
 text = "By colliding with the turret, you
 reset the turret's shooting 
 cooldown, making your chances
@@ -213,6 +218,7 @@ offset_left = 781.0
 offset_top = 200.0
 offset_right = 1037.0
 offset_bottom = 301.0
+theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
 text = "The main goal of the game is to
 collect as many fruits as you can
 while trying avoid the things that
@@ -243,6 +249,7 @@ offset_left = 55.0
 offset_top = 313.0
 offset_right = 187.0
 offset_bottom = 388.0
+theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
 text = "Upon contacting 
-with the spikes
+with the saws
 you instantly die"

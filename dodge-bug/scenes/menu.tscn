@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://x4ehi0ol30tm" path="res://sprites/blue.png" id="5_6cdou"]
 [ext_resource type="FontFile" uid="uid://dwjw0ct4j3b1f" path="res://fonts/Aldrich,Archivo_Black,Bahianita/Archivo_Black/ArchivoBlack-Regular.ttf" id="7_13sgg"]
 [ext_resource type="Texture2D" uid="uid://cne83hyftdtg2" path="res://animation/Fox.png" id="7_mj5lg"]
-[ext_resource type="Texture2D" uid="uid://ccqnj05g3nn4x" path="res://animation/Cat.png" id="8_ufwb2"]
+[ext_resource type="Texture2D" uid="uid://lb82eipebbob" path="res://scripts/Hedgehog.png" id="8_6cdou"]
 [ext_resource type="Texture2D" uid="uid://v7fw8mub3il0" path="res://animation/Squirrel Sprite Sheetreal.png" id="9_6cdou"]
 [ext_resource type="Texture2D" uid="uid://c6y26vevqom5x" path="res://animation/Armadillo.png" id="10_i42df"]
 [ext_resource type="FontFile" uid="uid://bonnm6u6scpl8" path="res://fonts/Aldrich,Archivo_Black,Bahianita/NORDIC LIGHT.ttf" id="11_6cdou"]
@@ -31,7 +31,7 @@ atlas = ExtResource("7_mj5lg")
 region = Rect2(0, 8.776054, 36.000015, 32.82395)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ufwb2"]
-atlas = ExtResource("8_ufwb2")
+atlas = ExtResource("8_6cdou")
 region = Rect2(0.53630066, 8.543739, 33.8685, 32.965332)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i42df"]
@@ -101,9 +101,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -283.0
+offset_left = -288.0
 offset_top = -64.0
-offset_right = 283.0
+offset_right = 278.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -259,9 +259,9 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -396.0
+offset_left = -403.0
 offset_top = 62.0
-offset_right = 396.0
+offset_right = 389.0
 offset_bottom = 189.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.03529412, 0.13333334, 0.19215687, 1)
@@ -279,9 +279,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -56.5
+offset_left = -62.5
 offset_top = -198.0
-offset_right = 56.5
+offset_right = 50.5
 offset_bottom = -107.0
 grow_horizontal = 2
 grow_vertical = 0

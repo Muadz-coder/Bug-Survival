@@ -68,7 +68,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m5qif"]
-size = Vector2(70, 74)
+size = Vector2(63, 65)
 
 [node name="grape" type="Area2D" unique_id=1706718555]
 script = ExtResource("1_gqx06")
@@ -79,11 +79,11 @@ stream = ExtResource("3_613gq")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1907646588]
 texture_filter = 1
 position = Vector2(-0.9999943, 0.5)
-scale = Vector2(5.8125, 6.09375)
+scale = Vector2(4.411, 4.625)
 sprite_frames = SubResource("SpriteFrames_71c8g")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=693398823]
 texture_filter = 1
-position = Vector2(-1, -6)
+position = Vector2(-0.5, -4.5)
 shape = SubResource("RectangleShape2D_m5qif")

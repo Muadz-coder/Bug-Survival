@@ -71,10 +71,10 @@ position = Vector2(-5, -9)
 position = Vector2(1149, 1127)
 
 [node name="SpawnPoint2" type="Marker2D" parent="SpawnPoints2" unique_id=241817344]
-position = Vector2(215, -100)
+position = Vector2(212, -100)
 
 [node name="SpawnPoint3" type="Marker2D" parent="SpawnPoints2" unique_id=459279291]
-position = Vector2(-218, -100)
+position = Vector2(-215, -100)
 
 [node name="SpawnPoint4" type="Marker2D" parent="SpawnPoints2" unique_id=1722968430]
 position = Vector2(-916, -447)
@@ -147,7 +147,7 @@ position = Vector2(1156, -69)
 
 [node name="Turret" parent="." unique_id=1365269987 instance=ExtResource("6_fcfvj")]
 z_index = -1
-position = Vector2(1150, 144)
+position = Vector2(1146, 144)
 shoot_interval = 12.0
 
 [node name="right_turret" parent="." unique_id=2021201854 instance=ExtResource("9_2y5yt")]

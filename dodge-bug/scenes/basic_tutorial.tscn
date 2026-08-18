@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dtybw4pxppt6b"]
 
-[ext_resource type="FontFile" uid="uid://bjsuvxcowcq4e" path="res://fonts/Oxanium/static/Oxanium-Bold.ttf" id="1_p7nht"]
 [ext_resource type="Script" uid="uid://cm3pgwq3wmovp" path="res://scripts/basic_tutorial.gd" id="1_ydmnt"]
 [ext_resource type="Texture2D" uid="uid://c33uyd7w3tmiw" path="res://sprites/Free DEMO Pixel Skies Background pack by Digital Moons/Parallax Pixel Skies 240x135px/Demo 01 Parallax Pixel Sky/demo01_PixelSky_layer01.png" id="2_ydmnt"]
-[ext_resource type="FontFile" uid="uid://dwexrmdgf6gtu" path="res://fonts/Oxanium/static/Oxanium-ExtraBold.ttf" id="4_lt5vt"]
+[ext_resource type="FontFile" uid="uid://dwjw0ct4j3b1f" path="res://fonts/Aldrich,Archivo_Black,Bahianita/Archivo_Black/ArchivoBlack-Regular.ttf" id="3_lt5vt"]
 [ext_resource type="FontFile" uid="uid://c2vtc65tv4pj3" path="res://fonts/Oxanium/static/Oxanium-Regular.ttf" id="5_hudsr"]
+[ext_resource type="FontFile" uid="uid://bjsuvxcowcq4e" path="res://fonts/Oxanium/static/Oxanium-Bold.ttf" id="5_lt5vt"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m0h7e"]
 texture = ExtResource("2_ydmnt")
@@ -24,7 +24,12 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="LabelSettings" id="LabelSettings_ifeun"]
-font = ExtResource("1_p7nht")
+font = ExtResource("3_lt5vt")
+font_size = 24
+font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hudsr"]
+font = ExtResource("5_lt5vt")
 font_size = 24
 
 [node name="basic_tutorial" type="Control" unique_id=1368955183]
@@ -96,25 +101,14 @@ text = "D"
 
 [node name="QButton" type="Button" parent="." unique_id=1961053866]
 layout_mode = 0
-offset_left = 856.0
+offset_left = 703.0
 offset_top = 313.0
-offset_right = 966.0
+offset_right = 813.0
 offset_bottom = 421.0
 theme_override_font_sizes/font_size = 46
 theme_override_styles/normal = SubResource("StyleBoxFlat_1x3kl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1x3kl")
 text = "Q"
-
-[node name="RButton" type="Button" parent="." unique_id=2074838179]
-layout_mode = 0
-offset_left = 589.0
-offset_top = 316.0
-offset_right = 699.0
-offset_bottom = 424.0
-theme_override_font_sizes/font_size = 46
-theme_override_styles/normal = SubResource("StyleBoxFlat_1x3kl")
-theme_override_styles/hover = SubResource("StyleBoxFlat_1x3kl")
-text = "R"
 
 [node name="RButton2" type="Button" parent="." unique_id=2058176053]
 layout_mode = 0
@@ -164,28 +158,8 @@ offset_left = -10.0
 offset_top = 65.0
 offset_right = 341.0
 offset_bottom = 202.0
+theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
 text = "Basic movement in the game:
-
-
-"
-label_settings = SubResource("LabelSettings_ifeun")
-
-[node name="Label5" type="Label" parent="." unique_id=1588906962]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -261.0
-offset_top = -75.00006
-offset_right = 83.0
-offset_bottom = 61.99994
-grow_horizontal = 2
-grow_vertical = 0
-rotation = 3.6442463e-05
-theme_override_fonts/font = ExtResource("4_lt5vt")
-text = "Press space to continue
 
 
 "
@@ -198,20 +172,27 @@ offset_top = 261.0
 offset_right = 1016.0
 offset_bottom = 398.0
 theme_override_fonts/font = ExtResource("5_hudsr")
-text = "Some abilities require you to press these
+text = "Some abilities require you to press 
 
 
 "
 label_settings = SubResource("LabelSettings_ifeun")
 
-[node name="Label4" type="Label" parent="." unique_id=382694035]
-layout_mode = 0
-offset_left = 766.0
-offset_top = 357.0
-offset_right = 1231.0
-offset_bottom = 494.0
-text = "Or
+[node name="Label5" type="Label" parent="." unique_id=1885047996]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -254.0
+offset_top = -92.0
+offset_right = 52.0
+offset_bottom = 485.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press space to continue
 
 
 "
-label_settings = SubResource("LabelSettings_ifeun")
+label_settings = SubResource("LabelSettings_hudsr")

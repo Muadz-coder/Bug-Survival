@@ -11,9 +11,9 @@ var start_x := 0.0
 
 func _ready():
 	start_x = position.x
-
+	
 	animated_sprite.play("idle")
-
+	
 	life_timer.timeout.connect(_on_life_timer_timeout)
 	body_entered.connect(_on_body_entered)
 
@@ -24,9 +24,20 @@ func _process(delta):
 func _on_life_timer_timeout():
 	queue_free()
 
+
 func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("respawn"):
-		if body.get("is_invincible"):
+		
+		# Ignore while parrying
+		if body.get("is_parrying"):
 			return
 
+		# Ignore while invincible
+		if body.get("is_invincible"):
+			return
+		
+		# Run the player's death/respawn logic
 		body.respawn()
+		
+		# Wait 1.5 seconds before deleting the player
+		

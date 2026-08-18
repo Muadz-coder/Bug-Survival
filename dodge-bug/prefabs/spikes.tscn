@@ -70,7 +70,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hpe17"]
 size = Vector2(129, 119)
 
-[node name="Spikes" type="Area2D" unique_id=415653108]
+[node name="Spikes" type="Area2D" unique_id=415653108 groups=["parryable"]]
 texture_filter = 1
 script = ExtResource("1_hpe17")
 

@@ -8,11 +8,17 @@ const JUMP_VELOCITY = -800
 
 var jump_count = 0
 var max_jumps = 2
+var dead := false
+
 
 func _ready():
 	add_to_group("player")
 
+
 func _physics_process(delta: float) -> void:
+	if dead:
+		return
+
 	# Gravity
 	if not is_on_floor():
 		if velocity.y < 0:
@@ -53,7 +59,13 @@ func _physics_process(delta: float) -> void:
 	if position.y > 1600:
 		respawn()
 
+
 func respawn():
+	if dead:
+		return
+
+	dead = true
 	Global.timer_running = false
 	velocity = Vector2.ZERO
-	get_tree().change_scene_to_file("res://scenes/died.tscn")
+
+	await Transition.change_scene("res://scenes/died.tscn")

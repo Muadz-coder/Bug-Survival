@@ -1,32 +1,24 @@
 [gd_scene format=3 uid="uid://ccum4yw3eqh5j"]
 
 [ext_resource type="Script" uid="uid://4m0pxvq1rpy7" path="res://scripts/cat.gd" id="1_two24"]
+[ext_resource type="Texture2D" uid="uid://qkgmkgk0vx64" path="res://animation/Hedgehog.png" id="3_pfl05"]
 [ext_resource type="Texture2D" uid="uid://ccqnj05g3nn4x" path="res://animation/Cat.png" id="3_rmig8"]
 [ext_resource type="AudioStream" uid="uid://c3njwk85o3uk0" path="res://sounds/jump-sound-8-beat-trampoline.mp3" id="3_x4bdn"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x4bdn"]
-atlas = ExtResource("3_rmig8")
-region = Rect2(128, 160, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rmig8"]
-atlas = ExtResource("3_rmig8")
-region = Rect2(160, 160, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pfl05"]
-atlas = ExtResource("3_rmig8")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mr4x7"]
+size = Vector2(108, 76)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5dwkk"]
-atlas = ExtResource("3_rmig8")
-region = Rect2(32, 0, 32, 32)
+atlas = ExtResource("3_pfl05")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7kcwl"]
-atlas = ExtResource("3_rmig8")
-region = Rect2(64, 0, 32, 32)
+atlas = ExtResource("3_pfl05")
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c82kk"]
-atlas = ExtResource("3_rmig8")
-region = Rect2(96, 0, 32, 32)
+atlas = ExtResource("3_pfl05")
+region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_epnb3"]
 atlas = ExtResource("3_rmig8")
@@ -41,38 +33,28 @@ atlas = ExtResource("3_rmig8")
 region = Rect2(96, 160, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_orxcb"]
-atlas = ExtResource("3_rmig8")
-region = Rect2(0, 128, 32, 32)
+atlas = ExtResource("3_pfl05")
+region = Rect2(96, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ee0rt"]
-atlas = ExtResource("3_rmig8")
-region = Rect2(32, 128, 32, 32)
+atlas = ExtResource("3_pfl05")
+region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_umlrn"]
-atlas = ExtResource("3_rmig8")
-region = Rect2(128, 128, 32, 32)
+atlas = ExtResource("3_pfl05")
+region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6hkij"]
-atlas = ExtResource("3_rmig8")
-region = Rect2(160, 128, 32, 32)
+atlas = ExtResource("3_pfl05")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6owld"]
+atlas = ExtResource("3_pfl05")
+region = Rect2(96, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ifeun"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x4bdn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rmig8")
-}],
-"loop": 1,
-"name": &"charge",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pfl05")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5dwkk")
 }, {
@@ -84,7 +66,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -103,7 +85,12 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_orxcb")
+}],
+"loop": 1,
+"name": &"parry",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ee0rt")
 }, {
@@ -112,27 +99,25 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6hkij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6owld")
 }],
 "loop": 1,
 "name": &"walk",
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y5rc2"]
-radius = 24.0
-height = 82.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ifeun"]
+size = Vector2(103, 74)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ifeun"]
-radius = 28.0
-height = 84.0
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1x3kl"]
-radius = 24.0
-height = 58.0
-
-[node name="cat" type="CharacterBody2D" unique_id=878632873 groups=["player"]]
+[node name="hedgehog" type="CharacterBody2D" unique_id=878632873 groups=["player"]]
 script = ExtResource("1_two24")
 metadata/_edit_group_ = true
+
+[node name="IdleCollision" type="CollisionShape2D" parent="." unique_id=316678700]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_mr4x7")
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=929703329]
 stream = ExtResource("3_x4bdn")
@@ -142,18 +127,12 @@ texture_filter = 1
 position = Vector2(0, -102.00001)
 scale = Vector2(6.5468755, 8.468749)
 sprite_frames = SubResource("SpriteFrames_ifeun")
-animation = &"charge"
-frame_progress = 0.3432844
+animation = &"idle"
 
-[node name="IdleCollision" type="CollisionShape2D" parent="." unique_id=316678700]
-position = Vector2(5, -6)
-shape = SubResource("CapsuleShape2D_y5rc2")
+[node name="ParryArea" type="Area2D" parent="." unique_id=2092319224]
 
-[node name="WalkingCollision" type="CollisionShape2D" parent="." unique_id=1642183520]
-position = Vector2(4, -7)
-shape = SubResource("CapsuleShape2D_ifeun")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParryArea" unique_id=456644202]
+position = Vector2(-20.5, -38)
+shape = SubResource("RectangleShape2D_ifeun")
 
-[node name="JumpCollision" type="CollisionShape2D" parent="." unique_id=306993964]
-position = Vector2(4, -17)
-rotation = -1.5707964
-shape = SubResource("CapsuleShape2D_1x3kl")
+[connection signal="area_entered" from="ParryArea" to="." method="_on_parry_area_area_entered"]

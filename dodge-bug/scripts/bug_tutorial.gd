@@ -1,8 +1,21 @@
 extends Control
 
-var transitioning: bool = false
+var transitioning := false
 
-func _process(delta):
-	if Input.is_action_just_pressed("space_next") and not transitioning:
+func _input(event):
+	if event.is_action_pressed("space_next") and not transitioning:
 		transitioning = true
-		get_tree().change_scene_to_file("res://scenes/menu.tscn")
+		_start_delay()
+
+
+func _start_delay():
+	var timer := Timer.new()
+	timer.wait_time = 1.5
+	timer.one_shot = true
+	add_child(timer)
+	timer.timeout.connect(_do_transition)
+	timer.start()
+
+
+func _do_transition():
+	Transition.change_scene("res://scenes/menu.tscn")

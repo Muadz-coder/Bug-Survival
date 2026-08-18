@@ -6,8 +6,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_5uycd"]
 radius = 11.045361
 
-[node name="projectile" type="Area2D" unique_id=529760312]
+[node name="projectile" type="Area2D" unique_id=529760312 groups=["parryable"]]
 script = ExtResource("1_how8d")
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1998469660]
 texture_filter = 1

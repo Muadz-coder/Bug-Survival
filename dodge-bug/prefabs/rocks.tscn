@@ -1,12 +1,17 @@
 [gd_scene format=3 uid="uid://bvkm1vu04jt6m"]
 
 [ext_resource type="Texture2D" uid="uid://babn1irv1umnq" path="res://Pixel Adventure 1/Free/Items/Boxes/Box2/Box.png" id="1_2l77g"]
+[ext_resource type="Script" uid="uid://wulpitdv3xyk" path="res://scripts/rocks.gd" id="1_wijcf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4nkto"]
 size = Vector2(145, 123)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ifeun"]
+size = Vector2(144, 20)
+
 [node name="rocks" type="StaticBody2D" unique_id=1385581139]
 texture_filter = 1
+script = ExtResource("1_wijcf")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1081020205]
 texture_filter = 1
@@ -17,3 +22,12 @@ texture = ExtResource("1_2l77g")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1075745759]
 position = Vector2(-1.5, 53.5)
 shape = SubResource("RectangleShape2D_4nkto")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1709374306]
+
+[node name="PlayerCollision2D" type="CollisionShape2D" parent="Area2D" unique_id=487614821]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_ifeun")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

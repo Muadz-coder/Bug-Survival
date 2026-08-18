@@ -99,12 +99,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a1mhm"]
-radius = 4.6051664
-height = 11.60859
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ifeun"]
 size = Vector2(90, 79)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hplm"]
+size = Vector2(11.926201, 10.692123)
 
 [node name="pill" type="CharacterBody2D" unique_id=878632873]
 script = ExtResource("1_vamdj")
@@ -124,15 +123,15 @@ texture_filter = 1
 position = Vector2(0, -102.00001)
 scale = Vector2(6.5468755, 8.468749)
 sprite_frames = SubResource("SpriteFrames_ax7qf")
-animation = &"idle"
-frame_progress = 0.03377082
-
-[node name="RollCollision" type="CollisionShape2D" parent="." unique_id=333690781]
-position = Vector2(-6.999998, -5.999997)
-rotation = -1.5707964
-scale = Vector2(8.468749, 6.5468755)
-shape = SubResource("CapsuleShape2D_a1mhm")
+animation = &"roll"
+frame_progress = 0.72721034
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1280674855]
 position = Vector2(0, -5.5)
 shape = SubResource("RectangleShape2D_ifeun")
+
+[node name="RollCollision" type="CollisionShape2D" parent="." unique_id=333690781]
+position = Vector2(-8.999998, -17.5)
+rotation = -1.5707964
+scale = Vector2(8.468749, 6.5468755)
+shape = SubResource("RectangleShape2D_3hplm")

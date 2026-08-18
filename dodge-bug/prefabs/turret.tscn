@@ -24,11 +24,9 @@ scale = Vector2(2.82, 3.211)
 texture = ExtResource("3_o5o88")
 
 [node name="ShootSound" type="AudioStreamPlayer2D" parent="." unique_id=816461508]
-visible = false
 stream = ExtResource("4_o5o88")
 
 [node name="Nuzzle" type="Marker2D" parent="." unique_id=24842354]
-visible = false
 position = Vector2(79, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=876748472]

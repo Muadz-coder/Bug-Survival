@@ -4,7 +4,6 @@
 [ext_resource type="AudioStream" uid="uid://ck1et4l5vb68n" path="res://sounds/dragon-studio-simple-whoosh-382724.mp3" id="3_bism1"]
 [ext_resource type="AudioStream" uid="uid://c3njwk85o3uk0" path="res://sounds/jump-sound-8-beat-trampoline.mp3" id="3_jrdtq"]
 [ext_resource type="Texture2D" uid="uid://cne83hyftdtg2" path="res://animation/Fox.png" id="4_ifmen"]
-[ext_resource type="Texture2D" uid="uid://cd7m1b6lcceyk" path="res://animation/Armadillo Sprite Sheet1.png" id="5_68dxy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ak6vs"]
 atlas = ExtResource("4_ifmen")
@@ -28,31 +27,35 @@ region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ifmen"]
 atlas = ExtResource("4_ifmen")
-region = Rect2(96, 96, 32, 32)
+region = Rect2(32, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_68dxy"]
 atlas = ExtResource("4_ifmen")
-region = Rect2(128, 96, 32, 32)
+region = Rect2(64, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gd7h8"]
 atlas = ExtResource("4_ifmen")
-region = Rect2(160, 96, 32, 32)
+region = Rect2(96, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iqaoi"]
 atlas = ExtResource("4_ifmen")
-region = Rect2(192, 96, 32, 32)
+region = Rect2(128, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_40p8n"]
-atlas = ExtResource("5_68dxy")
+[sub_resource type="AtlasTexture" id="AtlasTexture_mm825"]
+atlas = ExtResource("4_ifmen")
 region = Rect2(160, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_782d4"]
-atlas = ExtResource("5_68dxy")
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3dna"]
+atlas = ExtResource("4_ifmen")
 region = Rect2(192, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cij72"]
-atlas = ExtResource("5_68dxy")
+[sub_resource type="AtlasTexture" id="AtlasTexture_aj32f"]
+atlas = ExtResource("4_ifmen")
 region = Rect2(224, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bism1"]
+atlas = ExtResource("4_ifmen")
+region = Rect2(64, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wkdh4"]
 atlas = ExtResource("4_ifmen")
@@ -116,20 +119,23 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_iqaoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mm825")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3dna")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aj32f")
 }],
 "loop": 1,
 "name": &"jump",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_40p8n")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_782d4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cij72")
+"texture": SubResource("AtlasTexture_bism1")
 }],
 "loop": 1,
 "name": &"roll",
@@ -171,12 +177,14 @@ script = ExtResource("1_trb4m")
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=801614841]
 stream = ExtResource("3_jrdtq")
+volume_db = -3.611
 
 [node name="DashSound" type="AudioStreamPlayer2D" parent="." unique_id=1011891629]
 stream = ExtResource("3_bism1")
 
 [node name="dash_timer" type="Timer" parent="." unique_id=1422361827]
 wait_time = 0.2
+ignore_time_scale = true
 
 [node name="dash_again_timer" type="Timer" parent="." unique_id=1006616191]
 
@@ -185,7 +193,8 @@ texture_filter = 1
 position = Vector2(0, -102.00001)
 scale = Vector2(6.5468755, 8.468749)
 sprite_frames = SubResource("SpriteFrames_aj32f")
-animation = &"idle"
+animation = &"jump"
+frame_progress = 0.7923032
 
 [node name="RollCollision2" type="CollisionShape2D" parent="." unique_id=1279979644]
 position = Vector2(7, -6.9999914)
