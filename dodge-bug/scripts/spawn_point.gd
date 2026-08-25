@@ -10,9 +10,12 @@ extends Node2D
 @onready var spike_timer = $SpawnTimer
 @onready var warning_timer = $SpawnTimerW
 @onready var fruit_timer = $SpawnTimerF
+@onready var music: AudioStreamPlayer2D = $Music
+@onready var danger_sound : AudioStreamPlayer2D = $DangerSound
 
 var pending_spike_positions: Array = []
 var available_fruit_spawns: Array = []
+
 
 func _ready():
 	# Spawn selected player
@@ -29,20 +32,33 @@ func _ready():
 	# All fruit spawn points start available
 	available_fruit_spawns = spawn_points2.duplicate()
 
+	# Start music
+	music.play()
+
+
 func _process(delta):
 	if Global.timer_running:
 		Global.time_alive += delta
 
+
+func _exit_tree():
+	# Stop music when this scene is changed/removed
+	if music:
+		music.stop()
+
+
 func get_random_spawn_point():
 	return spawn_points[randi() % spawn_points.size()]
+
 
 func _on_spawn_timer_w_timeout() -> void:
 	pending_spike_positions.clear()
 
 	for i in range(5):
-		var sp = get_random_spawn_point()
 
-		# Skip if this position has already been selected
+		var sp = get_random_spawn_point()
+		
+
 		if pending_spike_positions.has(sp.global_position):
 			continue
 
@@ -58,6 +74,7 @@ func _on_spawn_timer_w_timeout() -> void:
 		var spike = spike_scene.instantiate()
 		spike.global_position = pos
 		add_child(spike)
+
 
 func _on_spawn_timer_f_timeout() -> void:
 	# No free spots left
@@ -82,6 +99,7 @@ func _on_spawn_timer_f_timeout() -> void:
 	fruit.collected.connect(_on_fruit_collected)
 
 	add_child(fruit)
+
 
 func _on_fruit_collected(spawn_point):
 	if not available_fruit_spawns.has(spawn_point):

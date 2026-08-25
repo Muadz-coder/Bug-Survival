@@ -6,7 +6,6 @@
 [ext_resource type="AudioStream" uid="uid://c8prrid53h5qd" path="res://sounds/emilianodleon-select-button-ui-395763.mp3" id="3_p88vf"]
 [ext_resource type="Texture2D" uid="uid://c33uyd7w3tmiw" path="res://sprites/Free DEMO Pixel Skies Background pack by Digital Moons/Parallax Pixel Skies 240x135px/Demo 01 Parallax Pixel Sky/demo01_PixelSky_layer01.png" id="4_p1qek"]
 [ext_resource type="FontFile" uid="uid://bonnm6u6scpl8" path="res://fonts/Aldrich,Archivo_Black,Bahianita/NORDIC LIGHT.ttf" id="4_p88vf"]
-[ext_resource type="FontFile" uid="uid://bjsuvxcowcq4e" path="res://fonts/Oxanium/static/Oxanium-Bold.ttf" id="6_mr4x7"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_70bww"]
 texture = ExtResource("4_p1qek")
@@ -22,6 +21,13 @@ corner_radius_bottom_left = 16
 font = ExtResource("4_p88vf")
 font_size = 85
 font_color = Color(0.41994092, 0.12527189, 0.17037436, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1x3kl"]
+bg_color = Color(0.25490198, 0.62352943, 0.8392157, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [sub_resource type="Theme" id="Theme_1lit6"]
 
@@ -92,26 +98,21 @@ text = "You have DIED!"
 label_settings = SubResource("LabelSettings_i6lef")
 horizontal_alignment = 1
 
-[node name="Label" type="RichTextLabel" parent="." unique_id=1172947949]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -531.0
-offset_top = 83.0
-offset_right = -99.0
-offset_bottom = 232.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/default_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
-theme_override_fonts/normal_font = ExtResource("6_mr4x7")
-theme_override_font_sizes/normal_font_size = 55
-bbcode_enabled = true
-fit_content = true
-scroll_active = false
-horizontal_alignment = 1
+[node name="PanelTimeLabel" type="Panel" parent="." unique_id=1344097383]
+layout_mode = 0
+offset_left = 699.0
+offset_top = 410.0
+offset_right = 1152.0
+offset_bottom = 611.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1x3kl")
+
+[node name="PanelLabel" type="Panel" parent="." unique_id=1890715207]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 410.0
+offset_right = 533.0
+offset_bottom = 611.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1x3kl")
 
 [node name="TimeLabel" type="RichTextLabel" parent="." unique_id=1840969166]
 layout_mode = 1
@@ -120,14 +121,35 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 71.0
-offset_top = 83.0
-offset_right = 540.0
-offset_bottom = 232.5
+offset_left = 51.0
+offset_top = 73.0
+offset_right = 520.0
+offset_bottom = 222.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
-theme_override_fonts/normal_font = ExtResource("6_mr4x7")
+theme_override_fonts/normal_font = ExtResource("4_p88vf")
+theme_override_font_sizes/normal_font_size = 55
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="Label" type="RichTextLabel" parent="." unique_id=1172947949]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -535.0
+offset_top = 73.0
+offset_right = -103.0
+offset_bottom = 222.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
+theme_override_fonts/normal_font = ExtResource("4_p88vf")
 theme_override_font_sizes/normal_font_size = 55
 bbcode_enabled = true
 fit_content = true

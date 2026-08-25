@@ -2,6 +2,20 @@ extends Control
 
 var transitioning := false
 
+@onready var music: AudioStreamPlayer2D = $Music
+
+
+func _ready() -> void:
+	# Start tutorial music
+	music.play()
+
+
+func _exit_tree() -> void:
+	# Stop music when leaving this scene
+	if music:
+		music.stop()
+
+
 func _input(event):
 	if event.is_action_pressed("space_next") and not transitioning:
 		transitioning = true

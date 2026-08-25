@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://cu0rujiguvstn" path="res://prefabs/leftturret.tscn" id="8_e3sih"]
 [ext_resource type="PackedScene" uid="uid://h3mmd7j65nqs" path="res://prefabs/grape.tscn" id="8_x2xxo"]
 [ext_resource type="PackedScene" uid="uid://c4jsfi54tvlmp" path="res://prefabs/rightturret.tscn" id="9_2y5yt"]
+[ext_resource type="AudioStream" uid="uid://bmcjpnstlabbw" path="res://sounds/maksymmalko-roblox-minecraft-fortnite-video-game-music-358426.mp3" id="14_2aecg"]
+[ext_resource type="AudioStream" uid="uid://bdtlr04q0gxfm" path="res://sounds/alexis_gaming_cam-radio-338296.mp3" id="15_6dial"]
 
 [node name="level 1" type="Node2D" unique_id=519151207]
 script = ExtResource("3_5xbjy")
@@ -23,8 +25,8 @@ fruit_scenes = Array[PackedScene]([ExtResource("5_2y5yt"), ExtResource("6_7nomh"
 [node name="Demo01PixelSky" type="Sprite2D" parent="." unique_id=1662871317]
 z_index = -1
 texture_filter = 1
-position = Vector2(1124.4999, 730.0001)
-scale = Vector2(11.054167, 10.933335)
+position = Vector2(1124.4999, 708.00006)
+scale = Vector2(11.054167, 11.25926)
 texture = ExtResource("5_2os1m")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=604065292]
@@ -160,6 +162,15 @@ position = Vector2(216, 371)
 
 [node name="rocks11" parent="." unique_id=772178638 instance=ExtResource("2_bswci")]
 position = Vector2(1147, 2)
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=977913197]
+stream = ExtResource("14_2aecg")
+volume_db = 10.0
+autoplay = true
+
+[node name="DangerSound" type="AudioStreamPlayer2D" parent="." unique_id=265349993]
+stream = ExtResource("15_6dial")
+volume_db = 15.0
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SpawnTimerW" to="." method="_on_spawn_timer_w_timeout"]

@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://v7fw8mub3il0" path="res://animation/Squirrel Sprite Sheetreal.png" id="9_6cdou"]
 [ext_resource type="Texture2D" uid="uid://c6y26vevqom5x" path="res://animation/Armadillo.png" id="10_i42df"]
 [ext_resource type="FontFile" uid="uid://bonnm6u6scpl8" path="res://fonts/Aldrich,Archivo_Black,Bahianita/NORDIC LIGHT.ttf" id="11_6cdou"]
+[ext_resource type="AudioStream" uid="uid://c2i4jeg2qy4as" path="res://sounds/monume-retro-arcade-game-music-577980.mp3" id="14_i42df"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vjb58"]
 texture = ExtResource("3_6cdou")
@@ -101,9 +102,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -288.0
+offset_left = -284.0
 offset_top = -64.0
-offset_right = 278.0
+offset_right = 282.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -279,9 +280,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -62.5
+offset_left = -50.5
 offset_top = -198.0
-offset_right = 50.5
+offset_right = 62.5
 offset_bottom = -107.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -293,6 +294,11 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ifeun")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ifeun")
 text = "?"
 script = ExtResource("5_4ytvr")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1547810473]
+stream = ExtResource("14_i42df")
+volume_db = 10.0
+autoplay = true
 
 [connection signal="pressed" from="HBoxContainer/Control/ButtonBug" to="." method="_on_button_bug_pressed"]
 [connection signal="pressed" from="HBoxContainer/Control2/ButtonSpider" to="." method="_on_button_spider_pressed"]

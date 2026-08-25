@@ -14,7 +14,9 @@ extends Area2D
 
 @onready var shoot_sound: AudioStreamPlayer2D = $ShootSound
 @onready var nuzzle: Marker2D = $Nuzzle
-@onready var sprite: Sprite2D = $Sprite2D # Change if your sprite has a different name
+@onready var sprite: Sprite2D = $Sprite2D
+@onready var contact_sound: AudioStreamPlayer2D = $ContactSound
+@onready var danger_sound: AudioStreamPlayer2D = $DangerSound
 
 var timer := 0.0
 var tracking_timer := 0.0
@@ -40,15 +42,20 @@ func _process(delta):
 	if !warning and timer >= shoot_interval - warning_time:
 		warning = true
 
+		# Start danger sound when blinking starts
+		if danger_sound:
+			danger_sound.play()
+
 	# Flash brighter while warning
 	if warning:
 		flash_timer += delta
+
 		if flash_timer >= flash_speed:
 			flash_timer = 0.0
 			flash_on = !flash_on
 
 			if flash_on:
-				sprite.modulate = Color(0.924, 0.0, 0.313, 1.0) # Bright white (Godot 4)
+				sprite.modulate = Color(0.924, 0.0, 0.313, 1.0)
 			else:
 				sprite.modulate = Color.WHITE
 	else:
@@ -80,6 +87,10 @@ func _process(delta):
 		flash_on = false
 		sprite.modulate = Color.WHITE
 
+		# Stop danger sound
+		if danger_sound:
+			danger_sound.stop()
+
 		var dir = (player.global_position - global_position).normalized()
 		shoot(dir)
 
@@ -102,7 +113,14 @@ func shoot(dir: Vector2):
 
 func _on_body_entered(body):
 	if body.is_in_group("player"):
-		# Restart shooting cooldown
+		
+		if contact_sound:
+			contact_sound.play()
+
+		# Stop danger sound
+		if danger_sound:
+			danger_sound.stop()
+
 		timer = 0.0
 
 		# Stop warning

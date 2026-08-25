@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://dwjw0ct4j3b1f" path="res://fonts/Aldrich,Archivo_Black,Bahianita/Archivo_Black/ArchivoBlack-Regular.ttf" id="3_lt5vt"]
 [ext_resource type="FontFile" uid="uid://c2vtc65tv4pj3" path="res://fonts/Oxanium/static/Oxanium-Regular.ttf" id="5_hudsr"]
 [ext_resource type="FontFile" uid="uid://bjsuvxcowcq4e" path="res://fonts/Oxanium/static/Oxanium-Bold.ttf" id="5_lt5vt"]
+[ext_resource type="AudioStream" uid="uid://c2i4jeg2qy4as" path="res://sounds/monume-retro-arcade-game-music-577980.mp3" id="6_hudsr"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m0h7e"]
 texture = ExtResource("2_ydmnt")
@@ -121,6 +122,50 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_1x3kl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1x3kl")
 text = "W"
 
+[node name="RButton3" type="Button" parent="." unique_id=2132059546]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 314.0
+offset_right = 598.0
+offset_bottom = 424.0
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_1x3kl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1x3kl")
+text = "⬆"
+
+[node name="RButton4" type="Button" parent="." unique_id=812621237]
+layout_mode = 0
+offset_left = 354.0
+offset_top = 448.0
+offset_right = 464.0
+offset_bottom = 558.0
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_1x3kl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1x3kl")
+text = "⬅"
+
+[node name="RButton5" type="Button" parent="." unique_id=1728110522]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 448.0
+offset_right = 740.0
+offset_bottom = 558.0
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_1x3kl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1x3kl")
+text = "➞"
+
+[node name="RButton6" type="Button" parent="." unique_id=1386222560]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 448.0
+offset_right = 598.0
+offset_bottom = 558.0
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_1x3kl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1x3kl")
+text = "⬇"
+
 [node name="Label" type="Label" parent="." unique_id=1986315927]
 layout_mode = 0
 offset_left = 121.0
@@ -196,3 +241,8 @@ text = "Press space to continue
 
 "
 label_settings = SubResource("LabelSettings_hudsr")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=938654485]
+stream = ExtResource("6_hudsr")
+volume_db = 10.0
+autoplay = true

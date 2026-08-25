@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://ddb1v1ukequl4" path="res://prefabs/projectile.tscn" id="2_5uycd"]
 [ext_resource type="Texture2D" uid="uid://cecflkgadvh2h" path="res://sprites/YellowTurretNO.png" id="3_5uycd"]
 [ext_resource type="AudioStream" uid="uid://bytgx53ooqfcb" path="res://sounds/mixkit-short-laser-gun-shot-1670.wav" id="4_5uycd"]
+[ext_resource type="AudioStream" uid="uid://dh7t0xlh5qxea" path="res://sounds/u_ml52e3xzf7-metal-impact-247482.mp3" id="5_n7ety"]
+[ext_resource type="AudioStream" uid="uid://bdtlr04q0gxfm" path="res://sounds/alexis_gaming_cam-radio-338296.mp3" id="6_4x405"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5uycd"]
 size = Vector2(36, 53)
@@ -15,9 +17,7 @@ size = Vector2(84, 134)
 texture_filter = 1
 script = ExtResource("1_g1nbm")
 projectile_scene = ExtResource("2_5uycd")
-shoot_interval = null
 projectile_speed = 700
-tracking_pause = null
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2137053381]
 position = Vector2(14.255002, 0.25)
@@ -37,3 +37,11 @@ shape = SubResource("RectangleShape2D_5uycd")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=380577052]
 position = Vector2(2, 0.5)
 shape = SubResource("RectangleShape2D_n7ety")
+
+[node name="ContactSound" type="AudioStreamPlayer2D" parent="." unique_id=932408436]
+stream = ExtResource("5_n7ety")
+volume_db = 15.0
+
+[node name="DangerSound" type="AudioStreamPlayer2D" parent="." unique_id=2095547169]
+stream = ExtResource("6_4x405")
+volume_db = 15.0

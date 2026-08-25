@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://v7fw8mub3il0" path="res://animation/Squirrel Sprite Sheetreal.png" id="4_wnhnm"]
 [ext_resource type="Texture2D" uid="uid://c6y26vevqom5x" path="res://animation/Armadillo.png" id="5_ls4em"]
 [ext_resource type="FontFile" uid="uid://bjsuvxcowcq4e" path="res://fonts/Oxanium/static/Oxanium-Bold.ttf" id="5_pglyj"]
+[ext_resource type="AudioStream" uid="uid://c2i4jeg2qy4as" path="res://sounds/monume-retro-arcade-game-music-577980.mp3" id="10_wnhnm"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yq6gw"]
 texture = ExtResource("2_j0c6v")
@@ -335,3 +336,8 @@ text = "Press space to return to menu
 
 "
 label_settings = SubResource("LabelSettings_v7viy")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1692018132]
+stream = ExtResource("10_wnhnm")
+volume_db = 10.0
+autoplay = true

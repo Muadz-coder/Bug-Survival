@@ -36,8 +36,6 @@ func _on_body_entered(body: Node2D) -> void:
 		if body.get("is_invincible"):
 			return
 		
-		# Run the player's death/respawn logic
 		body.respawn()
 		
-		# Wait 1.5 seconds before deleting the player
 		

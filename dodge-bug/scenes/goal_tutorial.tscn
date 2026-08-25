@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://br8yuqwfksuw2" path="res://animation/Bananas1.png" id="5_535sg"]
 [ext_resource type="Texture2D" uid="uid://cptaiw1wm8s8v" path="res://animation/Melon1.png" id="6_d2b6u"]
 [ext_resource type="Texture2D" uid="uid://b1p5nuf1dppvk" path="res://animation/Strawberry1.png" id="7_44asg"]
+[ext_resource type="AudioStream" uid="uid://c2i4jeg2qy4as" path="res://sounds/monume-retro-arcade-game-music-577980.mp3" id="11_d2b6u"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nc8ix"]
 texture = ExtResource("2_eh6jv")
@@ -253,3 +254,9 @@ theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
 text = "Upon contacting 
 with the saws
 you instantly die"
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=183473857]
+position = Vector2(55, 313)
+stream = ExtResource("11_d2b6u")
+volume_db = 10.0
+autoplay = true

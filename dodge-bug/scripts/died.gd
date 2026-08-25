@@ -1,8 +1,11 @@
-
 extends Control
 
 @onready var label: RichTextLabel = $Label
 @onready var time_label: RichTextLabel = $TimeLabel
+
+@onready var panel_label: Panel = $PanelLabel
+@onready var panel_time_label: Panel = $PanelTimeLabel
+
 @onready var button_sound: AudioStreamPlayer2D = $ButtonSound
 @onready var lost_label: Label = $Lost
 
@@ -13,48 +16,113 @@ var use_red := true
 
 
 func _ready():
-	# Fruits collected
-	label.text = "[color=#419fd6]Fruits collected:[/color]\n\n[color=#AEEBFF]%s[/color]" % str(Global.points)
+	# =========================
+	# FORCE DRAW ORDER
+	# =========================
 
-	# Time survived (1 decimal)
+	# Panels behind text
+	panel_label.z_index = 0
+	panel_time_label.z_index = 0
+
+	# Text above panels
+	label.z_index = 10
+	time_label.z_index = 10
+
+
+	# =========================
+	# SET TEXT
+	# =========================
+
+	label.text = "[color=#211f30]Fruits collected:[/color]\n[color=#AEEBFF]%s[/color]" % str(Global.points)
+
 	var rounded_time: float = round(Global.time_alive * 10.0) / 10.0
-	time_label.text = "[color=#419fd6]Time survived(s):[/color]\n\n[color=#AEEBFF]%.1f s[/color]" % rounded_time
 
-	# Hide labels initially
+	time_label.text = "[color=#211f30]Time survived(s):[/color]\n[color=#AEEBFF]%.1f s[/color]" % rounded_time
+
+
+	# =========================
+	# HIDE PANELS
+	# =========================
+
+	panel_label.hide()
+	panel_time_label.hide()
+
+
+	# =========================
+	# HIDE TEXT
+	# =========================
+
 	label.hide()
 	time_label.hide()
 
-	# Hide buttons initially
+
+	# =========================
+	# HIDE BUTTONS
+	# =========================
+
 	restart_button.hide()
 	menu_button.hide()
 
-	# Flashing LOST label
+
+	# =========================
+	# FLASHING LOST LABEL
+	# =========================
+
 	var flash_timer := Timer.new()
 	flash_timer.wait_time = 0.5
 	flash_timer.autostart = true
+
 	add_child(flash_timer)
 	flash_timer.timeout.connect(_on_flash_timer)
 
-	# Show buttons after delay
+
+	# =========================
+	# SHOW UI AFTER DELAY
+	# =========================
+
 	var show_timer := Timer.new()
 	show_timer.wait_time = 2.5
 	show_timer.one_shot = true
 	show_timer.autostart = true
+
 	add_child(show_timer)
 	show_timer.timeout.connect(_on_show_buttons)
 
 
 func _on_show_buttons():
-	# Hide LOST label
+	# =========================
+	# HIDE LOST
+	# =========================
+
 	lost_label.hide()
 
-	# Show buttons and labels
+
+	# =========================
+	# SHOW BUTTONS
+	# =========================
+
 	restart_button.show()
 	menu_button.show()
+
+
+	# =========================
+	# SHOW PANELS
+	# =========================
+
+	panel_label.show()
+	panel_time_label.show()
+
+
+	# =========================
+	# SHOW TEXT
+	# =========================
+
 	label.show()
 	time_label.show()
 
+
 	var tween := create_tween()
+
 
 	# =========================
 	# START SMALL + TRANSPARENT
@@ -63,14 +131,21 @@ func _on_show_buttons():
 	restart_button.scale = Vector2(0.6, 0.6)
 	menu_button.scale = Vector2(0.6, 0.6)
 
+	panel_label.scale = Vector2(0.6, 0.6)
+	panel_time_label.scale = Vector2(0.6, 0.6)
+
 	label.scale = Vector2(0.6, 0.6)
 	time_label.scale = Vector2(0.6, 0.6)
 
 	restart_button.modulate.a = 0.0
 	menu_button.modulate.a = 0.0
 
+	panel_label.modulate.a = 0.0
+	panel_time_label.modulate.a = 0.0
+
 	label.modulate.a = 0.0
 	time_label.modulate.a = 0.0
+
 
 	# =========================
 	# BUTTONS POP IN FIRST
@@ -79,18 +154,19 @@ func _on_show_buttons():
 	tween.tween_property(
 		restart_button,
 		"scale",
-		Vector2(1, 1),
+		Vector2.ONE,
 		0.28
 	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 
 	tween.tween_property(
 		menu_button,
 		"scale",
-		Vector2(1, 1),
+		Vector2.ONE,
 		0.28
 	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 
-	# Button fade-in
+
+	# Button fade in
 	tween.parallel().tween_property(
 		restart_button,
 		"modulate:a",
@@ -104,6 +180,7 @@ func _on_show_buttons():
 		1.0,
 		0.25
 	)
+
 
 	# Button glow
 	tween.parallel().tween_property(
@@ -120,20 +197,22 @@ func _on_show_buttons():
 		0.18
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 
+
 	# Return buttons to normal
 	tween.parallel().tween_property(
 		restart_button,
 		"modulate",
-		Color(1, 1, 1, 1.0),
+		Color.WHITE,
 		0.22
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
 
 	tween.parallel().tween_property(
 		menu_button,
 		"modulate",
-		Color(1, 1, 1, 1.0),
+		Color.WHITE,
 		0.22
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
+
 
 	# =========================
 	# SMALL PAUSE
@@ -141,25 +220,58 @@ func _on_show_buttons():
 
 	tween.tween_interval(0.15)
 
+
 	# =========================
-	# LABELS POP IN AFTER BUTTONS
+	# PANELS + TEXT POP TOGETHER
 	# =========================
 
 	tween.tween_property(
+		panel_label,
+		"scale",
+		Vector2.ONE,
+		0.28
+	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+
+	tween.parallel().tween_property(
+		panel_time_label,
+		"scale",
+		Vector2.ONE,
+		0.28
+	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+
+	tween.parallel().tween_property(
 		label,
 		"scale",
-		Vector2(1, 1),
+		Vector2.ONE,
 		0.28
 	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 
-	tween.tween_property(
+	tween.parallel().tween_property(
 		time_label,
 		"scale",
-		Vector2(1, 1),
+		Vector2.ONE,
 		0.28
 	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 
-	# Label fade-in
+
+	# =========================
+	# PANELS + TEXT FADE IN
+	# =========================
+
+	tween.parallel().tween_property(
+		panel_label,
+		"modulate:a",
+		1.0,
+		0.25
+	)
+
+	tween.parallel().tween_property(
+		panel_time_label,
+		"modulate:a",
+		1.0,
+		0.25
+	)
+
 	tween.parallel().tween_property(
 		label,
 		"modulate:a",
@@ -174,7 +286,25 @@ func _on_show_buttons():
 		0.25
 	)
 
-	# Label glow
+
+	# =========================
+	# PANEL + TEXT GLOW
+	# =========================
+
+	tween.parallel().tween_property(
+		panel_label,
+		"modulate",
+		Color(1.3, 1.3, 1.3, 1.0),
+		0.18
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+
+	tween.parallel().tween_property(
+		panel_time_label,
+		"modulate",
+		Color(1.3, 1.3, 1.3, 1.0),
+		0.18
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+
 	tween.parallel().tween_property(
 		label,
 		"modulate",
@@ -189,18 +319,36 @@ func _on_show_buttons():
 		0.18
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 
-	# Return labels to normal
+
+	# =========================
+	# RETURN TO NORMAL
+	# =========================
+
+	tween.parallel().tween_property(
+		panel_label,
+		"modulate",
+		Color.WHITE,
+		0.22
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
+
+	tween.parallel().tween_property(
+		panel_time_label,
+		"modulate",
+		Color.WHITE,
+		0.22
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
+
 	tween.parallel().tween_property(
 		label,
 		"modulate",
-		Color(1, 1, 1, 1.0),
+		Color.WHITE,
 		0.22
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
 
 	tween.parallel().tween_property(
 		time_label,
 		"modulate",
-		Color(1, 1, 1, 1.0),
+		Color.WHITE,
 		0.22
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
 
