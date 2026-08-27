@@ -1,5 +1,5 @@
 extends StaticBody2D
-
+@onready var box_sound: AudioStreamPlayer2D = $BoxSound
 var original_position: Vector2
 var pressed_position: Vector2
 var is_pressed := false
@@ -11,6 +11,7 @@ func _ready() -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and not is_pressed:
+		box_sound.play()
 		is_pressed = true
 
 		if tween:

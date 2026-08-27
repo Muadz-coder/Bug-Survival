@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://babn1irv1umnq" path="res://Pixel Adventure 1/Free/Items/Boxes/Box2/Box.png" id="1_2l77g"]
 [ext_resource type="Script" uid="uid://wulpitdv3xyk" path="res://scripts/rocks.gd" id="1_wijcf"]
+[ext_resource type="AudioStream" uid="uid://cfbuknus3r8mu" path="res://sounds/oxidvideos-dropping-cardboard-box-453026.mp3" id="3_tvths"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4nkto"]
 size = Vector2(145, 123)
@@ -28,6 +29,10 @@ shape = SubResource("RectangleShape2D_4nkto")
 [node name="PlayerCollision2D" type="CollisionShape2D" parent="Area2D" unique_id=487614821]
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_ifeun")
+
+[node name="BoxSound" type="AudioStreamPlayer2D" parent="." unique_id=746869040]
+stream = ExtResource("3_tvths")
+volume_db = 5.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

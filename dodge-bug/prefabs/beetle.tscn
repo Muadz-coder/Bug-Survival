@@ -4,6 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://c3njwk85o3uk0" path="res://sounds/jump-sound-8-beat-trampoline.mp3" id="3_27kw1"]
 [ext_resource type="Texture2D" uid="uid://v7fw8mub3il0" path="res://animation/Squirrel Sprite Sheetreal.png" id="3_gh4bm"]
 [ext_resource type="Texture2D" uid="uid://cd7m1b6lcceyk" path="res://animation/Armadillo Sprite Sheet1.png" id="5_ca475"]
+[ext_resource type="AudioStream" uid="uid://c0fisgmrx741q" path="res://sounds/floraphonic-cute-animal-squeak-4-188098.mp3" id="5_iyk4x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iyk4x"]
 atlas = ExtResource("3_gh4bm")
@@ -163,3 +164,7 @@ position = Vector2(3.000001, -6.999987)
 rotation = -1.5707964
 scale = Vector2(71.71971, 42.86158)
 shape = SubResource("RectangleShape2D_v4bnd")
+
+[node name="ScreechSound" type="AudioStreamPlayer2D" parent="." unique_id=1451850893]
+stream = ExtResource("5_iyk4x")
+volume_db = 15.0

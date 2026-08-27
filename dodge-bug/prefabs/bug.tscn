@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cbxtlqibsbvt6" path="res://scripts/bug.gd" id="1_trb4m"]
 [ext_resource type="AudioStream" uid="uid://ck1et4l5vb68n" path="res://sounds/dragon-studio-simple-whoosh-382724.mp3" id="3_bism1"]
 [ext_resource type="AudioStream" uid="uid://c3njwk85o3uk0" path="res://sounds/jump-sound-8-beat-trampoline.mp3" id="3_jrdtq"]
+[ext_resource type="AudioStream" uid="uid://pv8f5duk8efe" path="res://sounds/floraphonic-cute-animal-squeak-2-188095.mp3" id="4_68dxy"]
 [ext_resource type="Texture2D" uid="uid://cne83hyftdtg2" path="res://animation/Fox.png" id="4_ifmen"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ak6vs"]
@@ -181,6 +182,11 @@ volume_db = -3.611
 
 [node name="DashSound" type="AudioStreamPlayer2D" parent="." unique_id=1011891629]
 stream = ExtResource("3_bism1")
+volume_db = 10.0
+
+[node name="ScreechSound" type="AudioStreamPlayer2D" parent="." unique_id=890348977]
+stream = ExtResource("4_68dxy")
+volume_db = 15.0
 
 [node name="dash_timer" type="Timer" parent="." unique_id=1422361827]
 wait_time = 0.2

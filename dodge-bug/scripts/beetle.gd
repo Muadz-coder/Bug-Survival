@@ -5,6 +5,7 @@ const JUMP_VELOCITY = -800
 
 @onready var jump_sound: AudioStreamPlayer2D = $JumpSound
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var screech_sound: AudioStreamPlayer2D = $ScreechSound
 
 var jump_count = 0
 var max_jumps = 2
@@ -63,7 +64,8 @@ func _physics_process(delta: float) -> void:
 func respawn():
 	if dead:
 		return
-
+	
+	screech_sound.play()
 	dead = true
 	Global.timer_running = false
 	velocity = Vector2.ZERO

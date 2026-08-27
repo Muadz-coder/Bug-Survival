@@ -3,26 +3,25 @@
 [ext_resource type="Script" uid="uid://8nes2bxpkdqw" path="res://scripts/bug_tutorial.gd" id="1_ocow8"]
 [ext_resource type="Texture2D" uid="uid://cne83hyftdtg2" path="res://animation/Fox.png" id="2_7h8ne"]
 [ext_resource type="Texture2D" uid="uid://c33uyd7w3tmiw" path="res://sprites/Free DEMO Pixel Skies Background pack by Digital Moons/Parallax Pixel Skies 240x135px/Demo 01 Parallax Pixel Sky/demo01_PixelSky_layer01.png" id="2_j0c6v"]
-[ext_resource type="FontFile" uid="uid://dwexrmdgf6gtu" path="res://fonts/Oxanium/static/Oxanium-ExtraBold.ttf" id="3_pglyj"]
 [ext_resource type="Texture2D" uid="uid://qkgmkgk0vx64" path="res://animation/Hedgehog.png" id="4_j0c6v"]
-[ext_resource type="FontFile" uid="uid://bsensik84bhe3" path="res://fonts/Oxanium/static/Oxanium-SemiBold.ttf" id="4_v7viy"]
 [ext_resource type="Texture2D" uid="uid://v7fw8mub3il0" path="res://animation/Squirrel Sprite Sheetreal.png" id="4_wnhnm"]
 [ext_resource type="Texture2D" uid="uid://c6y26vevqom5x" path="res://animation/Armadillo.png" id="5_ls4em"]
 [ext_resource type="FontFile" uid="uid://bjsuvxcowcq4e" path="res://fonts/Oxanium/static/Oxanium-Bold.ttf" id="5_pglyj"]
-[ext_resource type="AudioStream" uid="uid://c2i4jeg2qy4as" path="res://sounds/monume-retro-arcade-game-music-577980.mp3" id="10_wnhnm"]
+[ext_resource type="FontFile" uid="uid://dn70qiui3gi2r" path="res://fonts/Aldrich,Archivo_Black,Bahianita,Grandstander,Oxanium,etc/Sniglet/Sniglet-ExtraBold.ttf" id="7_wnhnm"]
+[ext_resource type="FontFile" uid="uid://d1q6uh7tmfkva" path="res://fonts/Aldrich,Archivo_Black,Bahianita,Grandstander,Oxanium,etc/Sniglet/Sniglet-Regular.ttf" id="8_ls4em"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yq6gw"]
 texture = ExtResource("2_j0c6v")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47dss"]
-bg_color = Color(0.1764706, 0.42352942, 0.5568628, 1)
+bg_color = Color(0.25490198, 0.62352943, 0.8392157, 1)
 corner_radius_top_left = 24
 corner_radius_top_right = 24
 corner_radius_bottom_right = 24
 corner_radius_bottom_left = 24
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ifeun"]
-bg_color = Color(0.25490198, 0.62352943, 0.8392157, 1)
+bg_color = Color(0.4888463, 0.7559121, 0.9134732, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -122,7 +121,7 @@ layout_mode = 0
 offset_left = 926.0
 offset_top = 323.0
 offset_right = 1130.0
-offset_bottom = 567.0
+offset_bottom = 503.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ifeun")
 
 [node name="Panel8" type="Panel" parent="." unique_id=1168154203]
@@ -130,7 +129,7 @@ layout_mode = 0
 offset_left = 629.0
 offset_top = 323.0
 offset_right = 833.0
-offset_bottom = 450.0
+offset_bottom = 576.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ifeun")
 
 [node name="Panel9" type="Panel" parent="." unique_id=1050996208]
@@ -138,7 +137,7 @@ layout_mode = 0
 offset_left = 333.0
 offset_top = 323.0
 offset_right = 537.0
-offset_bottom = 484.0
+offset_bottom = 507.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ifeun")
 
 [node name="Panel10" type="Panel" parent="." unique_id=1928494372]
@@ -146,7 +145,7 @@ layout_mode = 0
 offset_left = 58.0
 offset_top = 323.0
 offset_right = 262.0
-offset_bottom = 480.0
+offset_bottom = 506.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ifeun")
 
 [node name="Bug" type="StaticBody2D" parent="." unique_id=533856270]
@@ -215,8 +214,8 @@ offset_top = 261.0
 offset_right = 211.0
 offset_bottom = 309.0
 theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
-theme_override_fonts/font = ExtResource("3_pglyj")
-theme_override_font_sizes/font_size = 35
+theme_override_fonts/font = ExtResource("7_wnhnm")
+theme_override_font_sizes/font_size = 30
 text = "Fox"
 horizontal_alignment = 1
 
@@ -227,20 +226,20 @@ offset_top = 261.0
 offset_right = 792.0
 offset_bottom = 309.0
 theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
-theme_override_fonts/font = ExtResource("3_pglyj")
-theme_override_font_sizes/font_size = 35
+theme_override_fonts/font = ExtResource("7_wnhnm")
+theme_override_font_sizes/font_size = 30
 text = "Squirrel"
 horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="." unique_id=865575814]
 layout_mode = 0
-offset_left = 344.0
-offset_top = 261.0
-offset_right = 513.0
-offset_bottom = 309.0
+offset_left = 336.0
+offset_top = 256.0
+offset_right = 524.0
+offset_bottom = 310.0
 theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
-theme_override_fonts/font = ExtResource("3_pglyj")
-theme_override_font_sizes/font_size = 35
+theme_override_fonts/font = ExtResource("7_wnhnm")
+theme_override_font_sizes/font_size = 29
 text = "Hedgehog"
 horizontal_alignment = 1
 
@@ -251,8 +250,8 @@ offset_top = 261.0
 offset_right = 1106.0
 offset_bottom = 309.0
 theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
-theme_override_fonts/font = ExtResource("3_pglyj")
-theme_override_font_sizes/font_size = 35
+theme_override_fonts/font = ExtResource("7_wnhnm")
+theme_override_font_sizes/font_size = 29
 text = "Armadillo"
 horizontal_alignment = 1
 
@@ -263,7 +262,7 @@ offset_top = 331.0
 offset_right = 255.0
 offset_bottom = 486.0
 theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
-theme_override_fonts/font = ExtResource("4_v7viy")
+theme_override_fonts/font = ExtResource("8_ls4em")
 theme_override_font_sizes/font_size = 25
 text = "Press 'Q' and 
 move in the 
@@ -273,35 +272,35 @@ a dash."
 
 [node name="Ability2" type="Label" parent="." unique_id=1224803503]
 layout_mode = 0
-offset_left = 936.0
+offset_left = 947.0
 offset_top = 331.0
-offset_right = 1129.0
-offset_bottom = 560.0
+offset_right = 1140.0
+offset_bottom = 503.0
 theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
-theme_override_fonts/font = ExtResource("4_v7viy")
+theme_override_fonts/font = ExtResource("8_ls4em")
 theme_override_font_sizes/font_size = 25
 text = "Press 'Q' to be 
 invincible for
 3 seconds with
 a 5 second
-cooldown. A pop
-sound would
-occur when 
-ability is ready."
+cooldown."
 
 [node name="Ability3" type="Label" parent="." unique_id=338202695]
 layout_mode = 0
-offset_left = 648.0
+offset_left = 642.0
 offset_top = 331.0
-offset_right = 829.0
-offset_bottom = 486.0
+offset_right = 832.0
+offset_bottom = 573.0
 theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
-theme_override_fonts/font = ExtResource("4_v7viy")
+theme_override_fonts/font = ExtResource("8_ls4em")
 theme_override_font_sizes/font_size = 25
-text = "Press 'space' 
-or 'W' twice to 
+text = "Jump twice to 
 do a double 
-jump."
+jump. If the 
+first jump was
+in mid air, you 
+are able to jump
+again."
 
 [node name="Ability4" type="Label" parent="." unique_id=342166554]
 layout_mode = 0
@@ -310,10 +309,10 @@ offset_top = 331.0
 offset_right = 533.0
 offset_bottom = 486.0
 theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
-theme_override_fonts/font = ExtResource("4_v7viy")
+theme_override_fonts/font = ExtResource("8_ls4em")
 theme_override_font_sizes/font_size = 25
 text = "	Press  'Q' to 
-delete incoming
+'delete' incoming
 projectile with a 
 5 second 
 cooldown"
@@ -336,8 +335,3 @@ text = "Press space to return to menu
 
 "
 label_settings = SubResource("LabelSettings_v7viy")
-
-[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1692018132]
-stream = ExtResource("10_wnhnm")
-volume_db = 10.0
-autoplay = true

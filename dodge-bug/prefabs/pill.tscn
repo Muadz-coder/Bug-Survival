@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://jgmvfu5sjwbt"]
 
 [ext_resource type="Script" uid="uid://dtmqmmwfgvxbh" path="res://scripts/pill.gd" id="1_vamdj"]
-[ext_resource type="AudioStream" uid="uid://cd24xki8fbyxq" path="res://sounds/soundshelfstudio-ui-hyperdrive-ready-ping-537581.mp3" id="3_40p8n"]
 [ext_resource type="AudioStream" uid="uid://dvm8u4k1iy3rc" path="res://sounds/freesound_community-shield-guard-6963.mp3" id="3_gt34p"]
 [ext_resource type="AudioStream" uid="uid://c3njwk85o3uk0" path="res://sounds/jump-sound-8-beat-trampoline.mp3" id="3_v1lyi"]
 [ext_resource type="Texture2D" uid="uid://c6y26vevqom5x" path="res://animation/Armadillo.png" id="5_40p8n"]
+[ext_resource type="AudioStream" uid="uid://blmokigyieups" path="res://sounds/floraphonic-cute-animal-squeak-5-188096.mp3" id="6_782d4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_782d4"]
 atlas = ExtResource("5_40p8n")
@@ -111,20 +111,16 @@ script = ExtResource("1_vamdj")
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=1242452018]
 stream = ExtResource("3_v1lyi")
 
-[node name="ReadySound" type="AudioStreamPlayer2D" parent="." unique_id=1487601211]
-stream = ExtResource("3_40p8n")
-volume_db = 2.0
-
 [node name="InvincibleSound" type="AudioStreamPlayer2D" parent="." unique_id=81602543]
 stream = ExtResource("3_gt34p")
+volume_db = 15.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1700772205]
 texture_filter = 1
 position = Vector2(0, -102.00001)
 scale = Vector2(6.5468755, 8.468749)
 sprite_frames = SubResource("SpriteFrames_ax7qf")
-animation = &"roll"
-frame_progress = 0.72721034
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1280674855]
 position = Vector2(0, -5.5)
@@ -135,3 +131,7 @@ position = Vector2(-8.999998, -17.5)
 rotation = -1.5707964
 scale = Vector2(8.468749, 6.5468755)
 shape = SubResource("RectangleShape2D_3hplm")
+
+[node name="ScreechSound" type="AudioStreamPlayer2D" parent="." unique_id=353533336]
+stream = ExtResource("6_782d4")
+volume_db = 15.0

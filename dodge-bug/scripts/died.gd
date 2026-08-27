@@ -33,11 +33,11 @@ func _ready():
 	# SET TEXT
 	# =========================
 
-	label.text = "[color=#211f30]Fruits collected:[/color]\n[color=#AEEBFF]%s[/color]" % str(Global.points)
+	label.text = "[color=#211f30]Fruits collected:[/color]\n\n[color=#AEEBFF]%s[/color]" % str(Global.points)
 
 	var rounded_time: float = round(Global.time_alive * 10.0) / 10.0
 
-	time_label.text = "[color=#211f30]Time survived(s):[/color]\n[color=#AEEBFF]%.1f s[/color]" % rounded_time
+	time_label.text = "[color=#211f30]Time survived(s):[/color]\n\n[color=#AEEBFF]%.1f s[/color]" % rounded_time
 
 
 	# =========================

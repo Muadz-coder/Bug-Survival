@@ -165,7 +165,7 @@ position = Vector2(1147, 2)
 
 [node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=977913197]
 stream = ExtResource("14_2aecg")
-volume_db = 10.0
+volume_db = 5.0
 autoplay = true
 
 [node name="DangerSound" type="AudioStreamPlayer2D" parent="." unique_id=265349993]

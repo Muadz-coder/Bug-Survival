@@ -19,10 +19,11 @@ var dead := false
 var ready_flash := false
 var flash_on := false
 
-
+@onready var screech_sound: AudioStreamPlayer2D = $ScreechSound
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var jump_sound: AudioStreamPlayer2D = $JumpSound
 @onready var parry_area: Area2D = $ParryArea
+@onready var invicible_sound: AudioStreamPlayer2D = $InvincibleSound
 
 
 
@@ -108,6 +109,7 @@ func start_parry():
 	is_parrying = true
 
 	sprite.play("parry")
+	invicible_sound.play()
 
 
 
@@ -238,7 +240,7 @@ func respawn():
 		return
 
 
-
+	screech_sound.play()
 	dead = true
 
 	Global.timer_running = false

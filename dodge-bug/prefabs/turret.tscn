@@ -29,7 +29,7 @@ texture = ExtResource("3_o5o88")
 stream = ExtResource("4_o5o88")
 
 [node name="Nuzzle" type="Marker2D" parent="." unique_id=24842354]
-position = Vector2(79, 0)
+position = Vector2(90, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=876748472]
 position = Vector2(4, 0)

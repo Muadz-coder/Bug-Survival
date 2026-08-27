@@ -10,7 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://br8yuqwfksuw2" path="res://animation/Bananas1.png" id="5_535sg"]
 [ext_resource type="Texture2D" uid="uid://cptaiw1wm8s8v" path="res://animation/Melon1.png" id="6_d2b6u"]
 [ext_resource type="Texture2D" uid="uid://b1p5nuf1dppvk" path="res://animation/Strawberry1.png" id="7_44asg"]
-[ext_resource type="AudioStream" uid="uid://c2i4jeg2qy4as" path="res://sounds/monume-retro-arcade-game-music-577980.mp3" id="11_d2b6u"]
+[ext_resource type="FontFile" uid="uid://d1q6uh7tmfkva" path="res://fonts/Aldrich,Archivo_Black,Bahianita,Grandstander,Oxanium,etc/Sniglet/Sniglet-Regular.ttf" id="10_igdtg"]
+[ext_resource type="Texture2D" uid="uid://du1tx3g1puwd2" path="res://sprites/laser2.png" id="13_guop3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nc8ix"]
 texture = ExtResource("2_eh6jv")
@@ -21,6 +22,13 @@ corner_radius_top_left = 24
 corner_radius_top_right = 24
 corner_radius_bottom_right = 24
 corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44asg"]
+bg_color = Color(0.4888463, 0.7559121, 0.9134732, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ifeun"]
 size = Vector2(29, 32)
@@ -79,19 +87,170 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bism1")
 
-[node name="Turret" type="StaticBody2D" parent="." unique_id=83025386]
-position = Vector2(463, 95)
+[node name="Panel3" type="Panel" parent="." unique_id=83609815]
+layout_mode = 0
+offset_left = -11.0
+offset_top = 40.0
+offset_right = 245.0
+offset_bottom = 594.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_44asg")
+
+[node name="Panel4" type="Panel" parent="." unique_id=590126089]
+layout_mode = 0
+offset_left = 438.0
+offset_top = 55.0
+offset_right = 879.0
+offset_bottom = 313.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_44asg")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Turret" unique_id=1850369566]
+[node name="WarningL3" type="Label" parent="Panel4" unique_id=792762845]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 15.0
+offset_right = 448.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_igdtg")
+text = "The turret targets you as soon
+as you load to the game. It fires
+reasonably fast bullet at you and
+upon contacting you die."
+
+[node name="WarningL5" type="Label" parent="Panel4" unique_id=372659664]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 139.0
+offset_right = 276.0
+offset_bottom = 240.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_igdtg")
+text = "By colliding with the turret, you
+reset the turret's shooting 
+cooldown, making your chances
+of surviving easier."
+
+[node name="Laser2" type="Sprite2D" parent="Panel4" unique_id=630685560]
+position = Vector2(399, 106.000015)
+scale = Vector2(1.0000005, 0.93750083)
+texture = ExtResource("13_guop3")
+
+[node name="Turret" type="StaticBody2D" parent="Panel4" unique_id=83025386]
+position = Vector2(96, 59.000015)
+rotation = -0.76979345
+scale = Vector2(0.99999994, 0.99999994)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel4/Turret" unique_id=1850369566]
 texture_filter = 1
 position = Vector2(-8.490601, -2.0134277)
 rotation = 1.5705134
 scale = Vector2(2.1169794, 2.2417252)
 texture = ExtResource("2_3rcm4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Turret" unique_id=298836223]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel4/Turret" unique_id=298836223]
 position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_ifeun")
+
+[node name="FruitPanel" type="Panel" parent="." unique_id=1238516161]
+layout_mode = 0
+offset_left = 271.0
+offset_top = 356.0
+offset_right = 662.0
+offset_bottom = 582.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_44asg")
+metadata/_edit_group_ = true
+
+[node name="WarningL4" type="Label" parent="FruitPanel" unique_id=406156300]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 16.0
+offset_right = 341.0
+offset_bottom = 117.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_igdtg")
+text = "The main goal of the game is to
+collect as many fruits as you can
+while trying avoid the things that
+try to kill you. "
+
+[node name="Fruit" type="StaticBody2D" parent="FruitPanel" unique_id=781296147]
+texture_filter = 1
+position = Vector2(388, 237)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="FruitPanel/Fruit" unique_id=231258629]
+position = Vector2(-148.00005, -55.500004)
+scale = Vector2(4.124997, 4.46875)
+texture = SubResource("AtlasTexture_7gny6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FruitPanel/Fruit" unique_id=1812014408]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_ifeun")
+
+[node name="Fruit2" type="StaticBody2D" parent="FruitPanel" unique_id=2132591885]
+texture_filter = 1
+position = Vector2(291, 233)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="FruitPanel/Fruit2" unique_id=150379122]
+position = Vector2(-148.00005, -55.500004)
+scale = Vector2(4.124997, 4.46875)
+texture = SubResource("AtlasTexture_2aecg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FruitPanel/Fruit2" unique_id=978315857]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_ifeun")
+
+[node name="Fruit3" type="StaticBody2D" parent="FruitPanel" unique_id=1472839473]
+texture_filter = 1
+position = Vector2(483, 234)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="FruitPanel/Fruit3" unique_id=1390745158]
+position = Vector2(-148.00005, -55.500004)
+scale = Vector2(4.124997, 4.46875)
+texture = SubResource("AtlasTexture_6dial")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FruitPanel/Fruit3" unique_id=686511478]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_ifeun")
+
+[node name="Fruit4" type="StaticBody2D" parent="FruitPanel" unique_id=583504397]
+texture_filter = 1
+position = Vector2(187, 228)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="FruitPanel/Fruit4" unique_id=1206459052]
+position = Vector2(-148.00005, -55.500004)
+scale = Vector2(4.124997, 4.46875)
+texture = SubResource("AtlasTexture_7nomh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FruitPanel/Fruit4" unique_id=692437372]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_ifeun")
+
+[node name="FruitPanel2" type="Panel" parent="." unique_id=1399597124]
+layout_mode = 0
+offset_left = 685.0
+offset_top = 361.0
+offset_right = 1080.0
+offset_bottom = 587.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_44asg")
+metadata/_edit_group_ = true
+
+[node name="Warning" type="StaticBody2D" parent="." unique_id=1614469385]
+position = Vector2(662, 374)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Warning" unique_id=733147736]
+texture_filter = 1
+position = Vector2(-551, -276)
+scale = Vector2(0.2734375, 0.296875)
+texture = ExtResource("4_gjyxp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Warning" unique_id=1490673951]
+position = Vector2(-547, -267)
 shape = SubResource("RectangleShape2D_ifeun")
 
 [node name="Spike" type="StaticBody2D" parent="." unique_id=209315588]
@@ -108,122 +267,33 @@ texture = ExtResource("4_535sg")
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_ifeun")
 
-[node name="Fruit" type="StaticBody2D" parent="." unique_id=781296147]
-texture_filter = 1
-position = Vector2(1100, 425)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Fruit" unique_id=231258629]
-position = Vector2(-148.00005, -55.500004)
-scale = Vector2(4.124997, 4.46875)
-texture = SubResource("AtlasTexture_7gny6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fruit" unique_id=1812014408]
-position = Vector2(-0.5, 0)
-shape = SubResource("RectangleShape2D_ifeun")
-
-[node name="Fruit2" type="StaticBody2D" parent="." unique_id=2132591885]
-texture_filter = 1
-position = Vector2(1009, 425)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Fruit2" unique_id=150379122]
-position = Vector2(-148.00005, -55.500004)
-scale = Vector2(4.124997, 4.46875)
-texture = SubResource("AtlasTexture_2aecg")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fruit2" unique_id=978315857]
-position = Vector2(-0.5, 0)
-shape = SubResource("RectangleShape2D_ifeun")
-
-[node name="Fruit3" type="StaticBody2D" parent="." unique_id=1472839473]
-texture_filter = 1
-position = Vector2(1197, 425)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Fruit3" unique_id=1390745158]
-position = Vector2(-148.00005, -55.500004)
-scale = Vector2(4.124997, 4.46875)
-texture = SubResource("AtlasTexture_6dial")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fruit3" unique_id=686511478]
-position = Vector2(-0.5, 0)
-shape = SubResource("RectangleShape2D_ifeun")
-
-[node name="Fruit4" type="StaticBody2D" parent="." unique_id=583504397]
-texture_filter = 1
-position = Vector2(911, 425)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Fruit4" unique_id=1206459052]
-position = Vector2(-148.00005, -55.500004)
-scale = Vector2(4.124997, 4.46875)
-texture = SubResource("AtlasTexture_7nomh")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fruit4" unique_id=692437372]
-position = Vector2(-0.5, 0)
-shape = SubResource("RectangleShape2D_ifeun")
-
-[node name="Warning" type="StaticBody2D" parent="." unique_id=1614469385]
-position = Vector2(664, 374)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Warning" unique_id=733147736]
-texture_filter = 1
-position = Vector2(-551, -276)
-scale = Vector2(0.2734375, 0.296875)
-texture = ExtResource("4_gjyxp")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Warning" unique_id=1490673951]
-position = Vector2(-547, -267)
-shape = SubResource("RectangleShape2D_ifeun")
-
 [node name="WarningL" type="Label" parent="." unique_id=735997650]
 layout_mode = 0
-offset_left = 27.0
+offset_left = 25.0
 offset_top = 156.0
-offset_right = 273.0
+offset_right = 271.0
 offset_bottom = 231.0
-theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_igdtg")
 text = "These tiny things are warning 
 that tells you where the saw 
 is going to spawn."
 
-[node name="WarningL3" type="Label" parent="." unique_id=792762845]
+[node name="WarningL3" type="Label" parent="." unique_id=290540995]
 layout_mode = 0
-offset_left = 539.0
-offset_top = 44.0
-offset_right = 793.0
-offset_bottom = 145.0
-theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
-text = "The turret targets you as soon
-as you load to the game. It fires
-reasonably fast bullet at you and
-upon contacting you die."
+offset_left = 711.0
+offset_top = 382.0
+offset_right = 957.0
+offset_bottom = 457.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_igdtg")
+text = "Your score will contain the time you survived in the
+game and the amount of fruits you were able to
+collect through the entirely of that same round.
 
-[node name="WarningL5" type="Label" parent="." unique_id=372659664]
-layout_mode = 0
-offset_left = 367.0
-offset_top = 186.0
-offset_right = 621.0
-offset_bottom = 287.0
-theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
-text = "By colliding with the turret, you
-reset the turret's shooting 
-cooldown, making your chances
-of surviving easier."
-
-[node name="WarningL4" type="Label" parent="." unique_id=406156300]
-layout_mode = 0
-offset_left = 781.0
-offset_top = 200.0
-offset_right = 1037.0
-offset_bottom = 301.0
-theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
-text = "The main goal of the game is to
-collect as many fruits as you can
-while trying avoid the things that
-try to kill you. "
+Your scores will be shown once you die and you will
+be allowed to change or restart the character
+you are currently using."
 
 [node name="Label5" type="Label" parent="." unique_id=1094684294]
 layout_mode = 1
@@ -246,17 +316,12 @@ label_settings = SubResource("LabelSettings_0ce8w")
 
 [node name="WarningL2" type="Label" parent="." unique_id=1370872875]
 layout_mode = 0
-offset_left = 55.0
+offset_left = 53.0
 offset_top = 313.0
-offset_right = 187.0
+offset_right = 185.0
 offset_bottom = 388.0
-theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_igdtg")
 text = "Upon contacting 
 with the saws
 you instantly die"
-
-[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=183473857]
-position = Vector2(55, 313)
-stream = ExtResource("11_d2b6u")
-volume_db = 10.0
-autoplay = true

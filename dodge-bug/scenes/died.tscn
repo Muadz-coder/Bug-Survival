@@ -6,6 +6,8 @@
 [ext_resource type="AudioStream" uid="uid://c8prrid53h5qd" path="res://sounds/emilianodleon-select-button-ui-395763.mp3" id="3_p88vf"]
 [ext_resource type="Texture2D" uid="uid://c33uyd7w3tmiw" path="res://sprites/Free DEMO Pixel Skies Background pack by Digital Moons/Parallax Pixel Skies 240x135px/Demo 01 Parallax Pixel Sky/demo01_PixelSky_layer01.png" id="4_p1qek"]
 [ext_resource type="FontFile" uid="uid://bonnm6u6scpl8" path="res://fonts/Aldrich,Archivo_Black,Bahianita/NORDIC LIGHT.ttf" id="4_p88vf"]
+[ext_resource type="FontFile" uid="uid://dk17dd4h0j62g" path="res://fonts/Aldrich,Archivo_Black,Bahianita,Grandstander,Oxanium,etc/Grandstander/static/Grandstander-Black.ttf" id="7_p1qek"]
+[ext_resource type="FontFile" uid="uid://dn70qiui3gi2r" path="res://fonts/Aldrich,Archivo_Black,Bahianita,Grandstander,Oxanium,etc/Sniglet/Sniglet-ExtraBold.ttf" id="7_p88vf"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_70bww"]
 texture = ExtResource("4_p1qek")
@@ -102,15 +104,15 @@ horizontal_alignment = 1
 layout_mode = 0
 offset_left = 699.0
 offset_top = 410.0
-offset_right = 1152.0
+offset_right = 1170.0
 offset_bottom = 611.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_1x3kl")
 
 [node name="PanelLabel" type="Panel" parent="." unique_id=1890715207]
 layout_mode = 0
-offset_left = 137.0
+offset_left = 116.0
 offset_top = 410.0
-offset_right = 533.0
+offset_right = 569.0
 offset_bottom = 611.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_1x3kl")
 
@@ -121,18 +123,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 51.0
+offset_left = 60.0
 offset_top = 73.0
-offset_right = 520.0
+offset_right = 529.0
 offset_bottom = 222.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
-theme_override_fonts/normal_font = ExtResource("4_p88vf")
+theme_override_fonts/normal_font = ExtResource("7_p1qek")
 theme_override_font_sizes/normal_font_size = 55
 bbcode_enabled = true
 fit_content = true
 scroll_active = false
+scroll_following_visible_characters = true
 horizontal_alignment = 1
 
 [node name="Label" type="RichTextLabel" parent="." unique_id=1172947949]
@@ -142,14 +145,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -535.0
+offset_left = -513.0
 offset_top = 73.0
-offset_right = -103.0
+offset_right = -81.0
 offset_bottom = 222.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
-theme_override_fonts/normal_font = ExtResource("4_p88vf")
+theme_override_fonts/normal_font = ExtResource("7_p1qek")
 theme_override_font_sizes/normal_font_size = 55
 bbcode_enabled = true
 fit_content = true
@@ -168,7 +171,7 @@ theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_hover_color = Color(0.04755766, 0.047557645, 0.047557645, 1)
-theme_override_fonts/font = ExtResource("4_p88vf")
+theme_override_fonts/font = ExtResource("7_p88vf")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_d4luv")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_d4luv")
@@ -187,7 +190,7 @@ offset_right = -151.0
 offset_bottom = 264.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(0.12941177, 0.12156863, 0.1882353, 1)
-theme_override_fonts/font = ExtResource("4_p88vf")
+theme_override_fonts/font = ExtResource("7_p88vf")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_d4luv")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_d4luv")
