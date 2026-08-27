@@ -6,6 +6,8 @@ const JUMP_VELOCITY = -800
 @onready var jump_sound: AudioStreamPlayer2D = $JumpSound
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var screech_sound: AudioStreamPlayer2D = $ScreechSound
+@onready var roll_collision: CollisionShape2D = $RollCollision
+@onready var jump_collision: CollisionShape2D = $JumpCollision
 
 var jump_count = 0
 var max_jumps = 2
@@ -47,6 +49,14 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+	# Collision
+	if is_on_floor():
+		roll_collision.disabled = false
+		jump_collision.disabled = true
+	else:
+		roll_collision.disabled = true
+		jump_collision.disabled = false
 
 	# Animations
 	if not is_on_floor():

@@ -144,9 +144,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v4bnd"]
 size = Vector2(1.1154538, 1.0732223)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ifeun"]
+size = Vector2(92, 74)
+
 [node name="beetle" type="CharacterBody2D" unique_id=878632873 groups=["player"]]
 script = ExtResource("1_kxsg3")
-metadata/_edit_group_ = true
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=556483726]
 stream = ExtResource("3_27kw1")
@@ -156,14 +158,17 @@ texture_filter = 1
 position = Vector2(0, -102.00001)
 scale = Vector2(6.5468755, 8.468749)
 sprite_frames = SubResource("SpriteFrames_3cl3w")
-animation = &"idle"
-frame_progress = 0.9841327
+animation = &"jump"
 
 [node name="RollCollision" type="CollisionShape2D" parent="." unique_id=1083326349]
 position = Vector2(3.000001, -6.999987)
 rotation = -1.5707964
 scale = Vector2(71.71971, 42.86158)
 shape = SubResource("RectangleShape2D_v4bnd")
+
+[node name="JumpCollision" type="CollisionShape2D" parent="." unique_id=1682972796]
+position = Vector2(1, -20)
+shape = SubResource("RectangleShape2D_ifeun")
 
 [node name="ScreechSound" type="AudioStreamPlayer2D" parent="." unique_id=1451850893]
 stream = ExtResource("5_iyk4x")
